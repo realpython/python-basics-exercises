@@ -1,17 +1,19 @@
 # 6.2 review exercises
 
 
-# Create a tuple "cardinal_nums" with "first", "second" and "third"
-cardinal_nums = ("first", "second", "third")
+def cube(num):
+    ''' Returns the cube of the input number '''
+    cubeNum = num * num * num
+    return cubeNum
 
-# Display the second object in the tuple
-print cardinal_nums[1]
+print "0 cubed is", cube(0)
+print "2 cubed is", cube(2)
 
 
-# unpack the tuple into three string and display them
-pos1, pos2, pos3 = cardinal_nums
-print pos1
-print pos2
-print pos3
+def multiply(num1, num2):
+    ''' Returns the result of multiplying two input numbers '''
+    return num1 * num2
 
+multResult = multiply(2, 5)
+print "2 times 5 is", multResult
 

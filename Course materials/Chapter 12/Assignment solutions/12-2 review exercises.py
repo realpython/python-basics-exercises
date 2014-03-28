@@ -1,22 +1,33 @@
 # 12.2 review exercises
 
-# Create a button that takes on the value in an entry box
+import os
+import copy
+from pyPdf import PdfFileReader, PdfFileWriter
 
+path = "C:/Real Python/Course materials/Chapter 8/Practice files"
+inputFileName = os.path.join(path, "Walrus.pdf")
+inputFile = PdfFileReader(file(inputFileName, "rb"))
+outputPDF = PdfFileWriter()
 
-from Tkinter import *
+inputFile.decrypt("IamtheWalrus") # decrypt the input file
 
-def buttonClicked():
-    ''' sets the button text to the text in the entry box '''
-    button.config(text=entry.get())
-
-
-window = Tk()
-# Create and add button
-button = Button(text="   ", command=buttonClicked)
-button.grid(row=1, column=1)
-# Create and add space for user entry of text
-entry = Entry(width=10)
-entry.grid(row=1, column=2)
-
-mainloop()
+for pageNum in range(0, inputFile.getNumPages()):
+    # rotate pages (call everything pageLeft for now; will make a copy)
+    pageLeft = inputFile.getPage(pageNum)
+    pageLeft.rotateCounterClockwise(90)
+    
+    pageRight = copy.copy(pageLeft) # split each page in half
+    upperRight = pageLeft.mediaBox.upperRight # get original page corner
+    
+    # crop and add left-side page
+    pageLeft.mediaBox.upperRight = (upperRight[0]/2, upperRight[1])
+    outputPDF.addPage(pageLeft)
+    # crop and add right-side page
+    pageRight.mediaBox.upperLeft = (upperRight[0]/2, upperRight[1])
+    outputPDF.addPage(pageRight)
+    
+# save new pages to an output file    
+outputFileName = os.path.join(path, "Output/Updated Walrus.pdf")
+with file(outputFileName, "wb") as outputFile:
+    outputPDF.write(outputFile)
 
