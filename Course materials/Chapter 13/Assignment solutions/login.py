@@ -1,4 +1,4 @@
-# 13-1 review exercise
+# 17-1 review exercise
 
 # This script needs to be placed in a project folder with
 # the appropriate YAML configuration file
