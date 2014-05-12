@@ -1,8 +1,12 @@
 # 4.1 review exercises
 
+print 'There are "double quotes" in this string.'
 
-#from __future__ import division
+print "This string's got an apostrophe."
 
-print 5 / 2
-# This line will perform "integer division" until
-# the comment is removed from the "import" line above
+print '''This string was written on multiple lines,
+and it displays across multiple lines'''
+
+print "This one-line string was written out \
+using multiple lines"
+

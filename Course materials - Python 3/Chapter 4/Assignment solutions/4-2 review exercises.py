@@ -1,20 +1,26 @@
 # 4.2 review exercises
 
 
-def cube(num):
-    ''' Returns the cube of the input number '''
-    cubeNum = num * num * num
-    return cubeNum
+# Display the number of letters in the string
+myWord = "antidisestablishmentarianism"
+print(len(myWord))
 
-print("0 cubed is", cube(0))
-print("2 cubed is", cube(2))
+# Concatenate two strings together
+stringLeft = "bat"
+stringRight = "man"
+print(stringLeft + stringRight)
 
-
-def multiply(num1, num2):
-    ''' Returns the result of multiplying two input numbers '''
-    return num1 * num2
-
-multResult = multiply(2, 5)
-print("2 times 5 is", multResult)
+# Display two strings together, with a space in between
+stringOne = "heebie"
+stringTwo = "jeebies"
+print(stringOne, stringTwo)
 
 
+# Use subscripting to display part of a string
+print("bazinga"[2:6])
+
+
+# A more advanced way to do the above example would be:
+myString = "bazinga"
+startIndex = 2
+print(myString[startIndex:len(myString)-startIndex+1])

@@ -1,36 +1,25 @@
 # 6.3 review exercises
 
 
-# Create an empty dictionary
-birthdays = {}
-
-# Add some key-value pairs to the dictionary
-birthdays["Luke Skywalker"] = "5/25/19"
-birthdays["Obi-Wan Kenobi"] = "3/11/57"
-birthdays["Darth Vader"] = "4/1/41"
-
-# Check if "Yoda" and "Darth Vader exist; if not, add them
-if not "Yoda" in birthdays:
-    birthdays["Yoda"] = "unknown"
-if not "Darth Vader" in birthdays:
-    birthdays["Darth Vader"] = "unknown"
-
-## Bonus points: you could instead loop over a list of names to check
-#for name in ["Yoda", "Darth Vader"]:
-#    if not name in birthdays:
-#        birthdays[name] = "unknown"
-
-# Display the contents of the dictionary, one pair at a time
-for name in birthdays:
-    print(name, birthdays[name])
-
-# Remove "Darth Vader"
-del(birthdays["Darth Vader"])
-print(birthdays)
+# print the integer 2 through 10 using a "for" loop
+for i in range(2,11):
+    print(i)
 
 
-# Bonus: could have created dictionary by passing a list to dict()
-birthdays = dict([("Luke Skywalker", "5/25/19"),
-                  ("Obi-Wan Kenobi", "3/11/57"),
-                  ("Darth Vader", "4/1/41")])
+# print the integer 2 through 10 using a "while" loop
+i = 2
+while (i < 11):
+    print(i)
+    i = i + 1
+
+
+def doubles(num):
+    ''' Return the result of multiplying an input number by 2 '''
+    return num * 2
+
+# Call doubles to double the number 2 three times
+myNum = 2
+for i in range(0,3):
+    myNum = doubles(myNum)
+    print(myNum)
 

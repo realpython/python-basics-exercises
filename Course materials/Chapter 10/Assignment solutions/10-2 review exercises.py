@@ -1,22 +1,34 @@
 # 10.2 review exercises
 
-import urllib2
-from bs4 import BeautifulSoup
 
-# Get the full HTML from the "profiles" page
-baseURL = "http://RealPython.com/practice/"
-address = baseURL + "profiles.html"
-htmlPage = urllib2.urlopen(address)
-htmlText = htmlPage.read()
-soup = BeautifulSoup(htmlText)
+# Initial setup
+import os
+import glob
+# This path may need to be changed depending on your setup
+path = "C:/Real Python/Course Materials/Chapter 7/Practice files/images"
 
-# Parse out all the values of the page links
-for anchor in soup.find_all("a"):
-    # Could also have used urlparse.urljoin() to get absolute URL
-    linkAddress = baseURL + anchor["href"]
-    # Display the text in the HTML page of each link
-    linkPage = urllib2.urlopen(linkAddress)
-    linkText = linkPage.read()
-    linkSoup = BeautifulSoup(linkText)
-    print linkSoup.get_text()
+
+# Display the full paths of all files and folders in the main "images" folder
+print 'Full contents of "images" folder:'
+for fileName in os.listdir(path):
+    print os.path.join(path, fileName)
+
+# Display the full paths of any PNG files in the "images" folder
+fileMatches = os.path.join(path, "*.png")
+print 'All PNG files in "images" folder:'
+for fileName in glob.glob(fileMatches):
+    print fileName
+
+# Change all PNGs to JPGs in the "images" folder and its subfolders
+# Could use indexing to get the file extension, but try using os.path.splitext()
+for currentFolder, subfolders, fileNames in os.walk(path):
+    for fileName in fileNames:
+        filePath = os.path.join(currentFolder, fileName)
+        fileTuple = os.path.splitext(filePath) # split into (path, extension)
+        if fileTuple[1].lower() == ".png": # check if extension is PNG
+            os.rename(filePath, fileTuple[0] + ".jpg")
+
+# Check that the two files have been converted to JPGs successfully
+print os.path.exists(os.path.join(path, "png file - not a gif.jpg"))
+print os.path.exists(os.path.join(path, "additional files/one last image.jpg"))
 

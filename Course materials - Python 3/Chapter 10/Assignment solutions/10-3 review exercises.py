@@ -1,33 +1,32 @@
 # 10.3 review exercises
 
-import mechanize
-from bs4 import BeautifulSoup
 
-# Start a mechanize browser and open the login page
-myBrowser = mechanize.Browser()
-myBrowser.open("http://RealPython.com/practice/login.php")
+# Initial setup
+import os
+import csv
+# This path may need to be changed depending on your setup
+path = "C:/Real Python/Course Materials/Chapter 7/Practice files"
 
-# Select the login form and input a username & password
-myBrowser.select_form("login")
-myBrowser["user"] = "zeus"
-myBrowser["pwd"] = "ThunderDude"
-myResponse = myBrowser.submit() # submit form
 
-# Make sure we were redirected to the profiles page
-print myResponse.geturl()
-
-# Return to the previous login page
-myBrowser.back()
-
-# Try to log in with incorrect information
-myBrowser.select_form("login")
-myBrowser["user"] = "Hera"
-myBrowser["pwd"] = "LightningLady"
-myResponse = myBrowser.submit() # submit form
-
-# See if we were redirected to the "error" page by searching for known text
-if myResponse.get_data().find("Wrong username or password!") != -1:
-    print "Login failed."
-else:
-    print "Login success."
+# Read in a CSV and display each row except the header row
+# Append a third column and write out the resulting CSV with a new header
+inFilePath = os.path.join(path, "pastimes.csv")
+outFilePath = os.path.join(path, "Output/categorized pastimes.csv")
+with open(inFilePath, "rb") as inFile, open(outFilePath, "wb") as outFile:
+    csvReader = csv.reader(inFile)
+    csvWriter = csv.writer(outFile)
+    
+    # skip header row and write a new output header row
+    csvReader.next()
+    csvWriter.writerow(["Name", "Favorite Pastime", "Type of pastime"])
+    
+    for row in csvReader:
+        print row
+        # Check if "Favorite Pastime" includes "fighting"
+        if row[1].lower().find("fighting") != -1:
+            row.append("Combat")
+        else:
+            row.append("Other")
+        # Add the new row to the output
+        csvWriter.writerow(row)
 
