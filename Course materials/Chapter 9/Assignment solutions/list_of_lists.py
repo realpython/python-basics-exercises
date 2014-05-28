@@ -13,13 +13,17 @@ def enrollment_stats(list_of_universities):
     return total_students, total_tuition
 
 
-def mean(list):
-    mean = sum(list) / float(len(list))
-    return int(mean)
+def mean(my_list):
+    if len(my_list) == 0:
+        return 'The list is empty'
+    list_sum = 0
+    for i in range(len(my_list)):
+        list_sum += float(my_list[i])
+    return int(list_sum/len(my_list))
 
 
-def median(list):
-    sorted_list = sorted(list)
+def median(my_list):
+    sorted_list = sorted(my_list)
     length = len(sorted_list)
     if not length % 2:
         return (sorted_list[length / 2] + sorts[length / 2 - 1]) / 2.0
