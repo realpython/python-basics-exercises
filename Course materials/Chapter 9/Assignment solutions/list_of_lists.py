@@ -1,27 +1,52 @@
-def total_enrollment(list_of_universities):
+def enrollment_stats(list_of_universities):
 
     # variables
-    total_students = 0
-    total_tuition = 0
+    total_students = []
+    total_tuition = []
 
     # iterate through lists, adding values
     for university in universities:
-        total_students += university[1]
-        total_tuition += university[2] * university[1]
+        total_students.append(university[1])
+        total_tuition.append(university[2])
 
     # return variables
     return total_students, total_tuition
 
 
-universities = [
-    ['California Institute of Technology', 2175, 37704],
-    ['Harvard', 19627, 39849],
-    ['Massachusetts Institute of Technology', 10566, 40732],
-    ['Princeton', 7802, 37000],
-    ['Rice', 5879, 35551],
-    ['Stanford', 19535, 40569],
-    ['Yale', 11701, 40500]
-]
+def mean(list):
+    mean = sum(list) / float(len(list))
+    return int(mean)
 
-# call function
-print total_enrollment(universities)
+
+def median(list):
+    sorted_list = sorted(list)
+    length = len(sorted_list)
+    if not length % 2:
+        return (sorted_list[length / 2] + sorts[length / 2 - 1]) / 2.0
+    return sorted_list[length / 2]
+
+
+if __name__ == '__main__':
+
+    universities = [
+        ['California Institute of Technology', 2175, 37704],
+        ['Harvard', 19627, 39849],
+        ['Massachusetts Institute of Technology', 10566, 40732],
+        ['Princeton', 7802, 37000],
+        ['Rice', 5879, 35551],
+        ['Stanford', 19535, 40569],
+        ['Yale', 11701, 40500]
+    ]
+
+    totals = enrollment_stats(universities)
+
+    print "\n"
+    print "*****" * 5
+    print "Total students:   {}".format(sum(totals[0]))
+    print "Total tuition:  $ {}".format(sum(totals[1]))
+    print "\nStudent mean:     {}".format(mean(totals[0]))
+    print "Student median:   {}".format(median(totals[0]))
+    print "\nTuition mean:   $ {}".format(mean(totals[1]))
+    print "Tuition median: $ {}".format(median(totals[1]))
+    print "*****" * 5
+    print "\n"
