@@ -46,5 +46,9 @@ print isinstance(jim, Dog)
 julie = Dog("Julie", 100)
 print isinstance(julie, Dog)
 
+# is johnny walker an instance of Bulldog()
+johnnywalker = RussellTerrier("Johnny Walker", 4)
+print isinstance(johnnywalker, Bulldog)
+
 # is julie and instance of jim?
 print isinstance(julie, jim)
