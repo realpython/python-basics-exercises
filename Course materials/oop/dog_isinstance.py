@@ -18,24 +18,24 @@ class Dog(object):
         return "%s says %s" % (self.name, sound)
 
 
-# sub class (inherits from Dog() class)
+# sub-class (inherits from Dog() class)
 class RussellTerrier(Dog):
     def run(self, speed):
         return "%s runs %s" % (self.name, speed)
 
 
-# sub class (inherits from Dog() class)
+# sub-class (inherits from Dog() class)
 class Bulldog(Dog):
     def run(self, speed):
         return "%s runs %s" % (self.name, speed)
 
 
-# sub classes inherit attributes and
+# sub-classes inherit attributes and
 # behaviors from the parent class
 jim = Bulldog("Jim", 12)
 print jim.description()
 
-# sub classes have specific attributes
+# sub-classes have specific attributes
 # and behaviors as well
 print jim.run("slow")
 
