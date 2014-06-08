@@ -34,13 +34,13 @@ class Dog(object):
         return "%s is walking!" % (self.name)
 
 
-# sub-class (inherits from Dog() class)
+# child class (inherits from Dog() class)
 class RussellTerrier(Dog):
     def run(self, speed):
         return "%s runs %s" % (self.name, speed)
 
 
-# sub-class (inherits from Dog() class)
+# child class (inherits from Dog() class)
 class Bulldog(Dog):
     def run(self, speed):
         return "%s runs %s" % (self.name, speed)
