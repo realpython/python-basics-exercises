@@ -10,7 +10,7 @@
 8. What's a method?
 9. What's the purpose of `self`?
 10. What's the purpose of the `__init__` method?
-11. Describe how inheritence helps prevent code duplication.
+11. Describe how inheritance helps prevent code duplication.
 12. Can child classes override properties of their parents?
 
 ## Answers
@@ -25,6 +25,6 @@
 8. A function that's defined inside a class.
 9. The first argument of every method references the current instance of the class, which by convention, is named `self`. In the `__init__` method, `self` refers to the newly created object; while in other methods, `self` refers to the instance whose method was called. For more on `__init__` vs. `self`, check out [this](http://stackoverflow.com/a/625098) article.
 10. The `__init__` method initializes an instance of a class. 
-11. Child classes inheriet all of the parent's attributes and behaviors. 
-12.
+11. Child classes inherit all of the parent's attributes and behaviors. 
+12. Yes.
  
