@@ -18,7 +18,7 @@ class Dog(object):
     species = 'mammal'
     is_hungry = True
 
-    # initializer / Instance attributes
+    # initializer / instance attributes
     def __init__(self, name, age):
         self.name = name
         self.age = age
