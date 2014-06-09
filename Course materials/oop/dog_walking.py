@@ -16,6 +16,7 @@ class Dog(object):
 
     # class attribute
     species = 'mammal'
+    is_hungry = True
 
     # initializer / Instance attributes
     def __init__(self, name, age):
@@ -29,6 +30,10 @@ class Dog(object):
     # instance method
     def speak(self, sound):
         return "%s says %s" % (self.name, sound)
+
+    # instance method
+    def eat(self):
+        self.is_hungry = False
 
     def walk(self):
         return "%s is walking!" % (self.name)
