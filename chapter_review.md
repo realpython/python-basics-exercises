@@ -25,4 +25,4 @@
 ## Strings and Methods
 
 1. What does it mean to concatenate a string?
-    - You use string concatenation to join two strings together, using the `+` operator.
+    - String concatenation is used to join two strings together, using the `+` operator.
