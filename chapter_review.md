@@ -32,6 +32,12 @@
 1. What’s the difference between an integer and a floating-point?
     - Integers store whole numbers (i.e., 1, 2, 200, 9876, etc.) while a floating-point (or float) store numbers with decimals (i.e., 2.456, 9.0, 100.7, etc.).
 
+## Fundamentals: Functions and Loops
+
+1. What's the purpose of indentation in Python code?
+    - Code blocks - like functions, if statements, loops, etc. - are defined by indentation. Indenting starts a block, while unindenting ends it. In other words, indentation is how the Python interpreter knows that code is inside of a block. As soon as the interpeter sees a line that isn't indented, that's the end of the block.
+
+
 ## Fundamentals: Conditional logic
 
 1. What are boolean values?
