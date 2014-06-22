@@ -8,7 +8,7 @@
 
 1. Show examples of single and multiple line comments.
 
-    ```
+    ```python
     # single line
     def add_one(num):
         # Returns num plus one
