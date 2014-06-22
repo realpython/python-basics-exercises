@@ -42,3 +42,8 @@
 
 1. What are boolean values?
     - A boolean can only take on one of two values: `True` or `False`.
+
+# File Input and Output
+
+1. What's an escape character?
+    - An escape character is used along another character to represent a different, usually more complex, character. Together, this is called an escape sequence. For example, the escape sequence `\n` (where '\' is the escape character and `n` is the additional character) is interpreted by Python as a newline character while `\t` represents a tab character. Check out the official Python [documentation](https://docs.python.org/2/reference/lexical_analysis.html#string-literals) to view more examples of escape sequences.
