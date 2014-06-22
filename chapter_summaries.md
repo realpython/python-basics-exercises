@@ -3,7 +3,6 @@
 ## Interlude: Leave yourself helpful notes
 
 1. What does it mean to comment your code?
-
     - Comments are used to add helpful notes in order to document what's happening.
 
 1. Show examples of single and multiple line comments.
