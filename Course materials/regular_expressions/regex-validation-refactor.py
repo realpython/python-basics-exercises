@@ -6,6 +6,6 @@ email = raw_input("Please enter your email address: ")
 
 while not validation.search(email):
     print "Please enter your email address correctly!"
-    email = raw_input ("Please enter your email address: ")
+    email = raw_input("Please enter your email address: ")
 
 print "\nYour email address is {}!".format(email)
