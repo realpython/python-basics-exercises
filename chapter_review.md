@@ -79,7 +79,7 @@
 1. What’s the difference between `=` and `==`?
     - `=` is used for assignment; so, assigning values from the right side of the operand to the left. `==` checks to see if the values on either side of the operad are True or False.
 
-1. 1. What will be printed in the following situation? Why?
+1. What will be printed in the following situation? Why?
 
     ```
     x = True
