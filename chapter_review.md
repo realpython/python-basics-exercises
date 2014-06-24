@@ -86,6 +86,9 @@
 1. Given the list, `my_list = [6, "four", 5]`, how would you reassign the second element to the integer 4?
     - `my_list[1] = 4`
 
+1. What's the difference between the `sorted()` function and the `.sort()` method?
+    - `sorted()` is a builtin that makes a copy of the list you wish to sort, then returns a new sorted list. `.sort()`, meanwhile, sorts the list in place; it does not make a copy. `sorted()` can be used on any iterable not just lists, while `.sort()` is just for lists.
+
 
 ## File Input and Output
 
