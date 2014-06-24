@@ -55,6 +55,7 @@
     - In Python 2.x, dividing two integers yields an integer; the remainder is dropped.
 
 1. What will be printed in the following situation?
+
     ```
     def placeholder():
         pass
@@ -62,7 +63,7 @@
     print type(placeholder())
     ```
 
-    The ouput will be `<type 'NoneType'>`. Why is that?
+    The output will be `<type 'NoneType'>`. Why is that?
 
 1. Assuming Python 3.x, what will be printed - `print(type(9/10))`?
     - In Python 3.x, dividing two integers yields a float.
@@ -77,6 +78,19 @@
 
 1. What’s the difference between `=` and `==`?
     - `=` is used for assignment; so, assigning values from the right side of the operand to the left. `==` checks to see if the values on either side of the operad are True or False.
+
+1. 1. What will be printed in the following situation? Why?
+
+    ```
+    x = True
+    y = False
+    z = False
+
+    print x OR y And z
+    ```
+
+    Answer: `True` will be printed because `AND` has a higher precedence than `OR` - so it's evaluated first.
+
 
 ## Fundamentals: Lists and Dictionaries
 
