@@ -1,5 +1,10 @@
 # Chapter Questions
 
+## Getting Started
+
+1. What’s the difference between a variable and a value?
+    - A variable is a name for a value while a value is an integer, string, list, etc.
+
 ## Interlude: Leave yourself helpful notes
 
 1. What does it mean to comment your code?
