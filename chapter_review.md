@@ -54,7 +54,7 @@
 1. Assuming Python 2.x, what will be printed - `print type(9/10)`?
     - In Python 2.x, dividing two integers yields an integer; the remainder is dropped.
 
-1. 1. What will be printed in the following situation?
+1. What will be printed in the following situation?
     ```
     def placeholder():
         pass
