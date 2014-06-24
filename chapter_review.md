@@ -32,6 +32,9 @@
 1. What does it mean to concatenate a string?
     - String concatenation is used to join two strings together, using the `+` operator.
 
+1. What will `"REAL PYTHON".lower()` return?
+    - `'real python'`
+
 ## Fundamentals: Working with Strings
 
 1. What’s the difference between an integer and a floating-point?
@@ -42,6 +45,8 @@
 1. What's the purpose of indentation in Python code?
     - Code blocks - like functions, if statements, loops, etc. - are defined by indentation. Indenting starts a block, while unindenting ends it. In other words, indentation is how the Python interpreter knows that code is inside of a block. As soon as the interpeter sees a line that isn't indented, that's the end of the block.
 
+1. Assuming Python 2.7.x, what will be printed - `print type(9/10)`?
+    - In Python 2.7.x, dividing two integers yields an integer; the remainder is dropped.
 
 ## Fundamentals: Conditional logic
 
