@@ -117,6 +117,15 @@
         print row
     ```
 
+1. Print each item from the following list, `my_list = [[5, 5, 5, 5], [4, 4, 4, 4], [3, 3, 3, 3], [2, 2, 2, 2], [1, 1, 1, 1]]`, on a separate line.
+
+    ```
+    for row in my_list:
+        for item in row:
+            print item
+    ```
+
+
 ## File Input and Output
 
 1. What's an escape character?
