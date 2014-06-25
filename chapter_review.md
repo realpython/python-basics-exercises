@@ -103,6 +103,12 @@
 1. What's the difference between the `sorted()` function and the `.sort()` method?
     - `sorted()` is a builtin that makes a copy of the list you wish to sort, then returns a new sorted list. `.sort()`, meanwhile, sorts the list in place; it does not make a copy. `sorted()` can be used on any iterable not just lists, while `.sort()` is just for lists.
 
+1. Print each item of the following list, `my_list = [5, 4, 3, 2, 1]`, on a separate line.
+
+    ```
+    for item in my_list:
+        print item
+    ```
 
 ## File Input and Output
 
