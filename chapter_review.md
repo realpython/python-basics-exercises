@@ -8,6 +8,9 @@
 1. Are variable names case sensitive?
     - Yes
 
+1. What's the value of b in this situation - `a = b = c = 9`?
+    - 9
+
 ## Interlude: Leave yourself helpful notes
 
 1. What does it mean to comment your code?
