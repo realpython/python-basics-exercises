@@ -3,8 +3,8 @@
 
 '''
 In order to run correctly, this script first needs to
-be placed in the Chapter 7 "Practice files" folder.
-(File paths are covered in section 7.2)
+be placed in the Chapter 10 "Practice files" folder.
+(File paths are covered in section 10.2)
 '''
 
 # Read a text file by looping over individual lines
@@ -42,4 +42,3 @@ with open("poem.txt", "r") as poemIn, open("output.txt", "w") as poemOut:
 # (Need to start on a new line, so add "\n" to the beginning.)
 with open("output.txt", "a") as poemAppend:
     poemAppend.write("\nThus ends the haiku.")
-

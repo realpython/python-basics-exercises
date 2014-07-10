@@ -1,4 +1,4 @@
-# 2.3 first_letter.py
+# 4.3 first_letter.py
 # Return the upper-case first letter entered by the user
 
 userInput = input("Tell me your password: ")

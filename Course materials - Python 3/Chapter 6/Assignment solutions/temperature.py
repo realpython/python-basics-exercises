@@ -1,9 +1,11 @@
-# 4.2 temperature.py
+# 6.2 temperature.py
 # Convert Celsius and Fahrenheit temperatures using functions
+
 
 def convertCtoF(celTemp):
     farTemp = celTemp * 9/5 + 32
     return farTemp
+
 
 def convertFtoC(farTemp):
     celTemp = (farTemp - 32) * 5/9

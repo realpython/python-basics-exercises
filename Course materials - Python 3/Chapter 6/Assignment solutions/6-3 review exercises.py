@@ -2,7 +2,7 @@
 
 
 # print the integer 2 through 10 using a "for" loop
-for i in range(2,11):
+for i in range(2, 11):
     print(i)
 
 
@@ -19,7 +19,6 @@ def doubles(num):
 
 # Call doubles to double the number 2 three times
 myNum = 2
-for i in range(0,3):
+for i in range(0, 3):
     myNum = doubles(myNum)
     print(myNum)
-

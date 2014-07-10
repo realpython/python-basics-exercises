@@ -33,4 +33,3 @@ print birthdays
 birthdays = dict([("Luke Skywalker", "5/25/19"),
                   ("Obi-Wan Kenobi", "3/11/57"),
                   ("Darth Vader", "4/1/41")])
-

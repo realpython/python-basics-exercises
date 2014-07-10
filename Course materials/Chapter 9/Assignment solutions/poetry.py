@@ -3,11 +3,17 @@
 
 from random import choice
 
-noun = ["fossil", "horse", "aardvark", "judge", "chef", "mango", "extrovert", "gorilla"]
-verb = ["kicks", "jingles", "bounces", "slurps", "meows", "explodes", "curdles"]
-adjective = ["furry", "balding", "incredulous", "fragrant", "exuberant", "glistening"]
-preposition = ["against", "after", "into", "beneath", "upon", "for", "in", "like", "over", "within"]
-adverb = ["curiously", "extravagantly", "tantalizingly", "furiously", "sensuously"]
+noun = ["fossil", "horse", "aardvark", "judge",
+        "chef", "mango", "extrovert", "gorilla"]
+verb = ["kicks", "jingles", "bounces", "slurps",
+        "meows", "explodes", "curdles"]
+adjective = ["furry", "balding", "incredulous",
+            "fragrant", "exuberant", "glistening"]
+preposition = ["against", "after", "into", "beneath",
+                "upon", "for", "in", "like", "over", "within"]
+adverb = ["curiously", "extravagantly",
+            "tantalizingly", "furiously", "sensuously"]
+
 
 def makePoem():
     ''' create a randomly generated poem, returned as a multi-line string'''
@@ -19,7 +25,7 @@ def makePoem():
     while n1 == n2:
         n2 = choice(noun)
     while n1 == n3 or n2 == n3:
-        n3 = choice(noun)   
+        n3 = choice(noun)
 
     # Pull three different verbs
     v1 = choice(verb)
@@ -37,8 +43,8 @@ def makePoem():
     while adj1 == adj2:
         adj2 = choice(adjective)
     while n1 == n3 or n2 == n3:
-        adj3 = choice(adjective)   
-         
+        adj3 = choice(adjective)
+
     # Pull two different prepositions
     prep1 = choice(preposition)
     prep2 = choice(preposition)
@@ -48,17 +54,19 @@ def makePoem():
     # Pull one adverb
     adv1 = choice(adverb)
 
-    if "aeiou".find(adj1[0]) != -1: # first letter is a vowel
+    if "aeiou".find(adj1[0]) != -1:  # first letter is a vowel
         article = "An"
     else:
         article = "A"
 
     # add lines to poem
     poem = "{} {} {}\n\n".format(article, adj1, n1)
-    poem = poem + "{} {} {} {} {} the {} {}\n".format(article, adj1, n1, v1, prep1, adj2, n2)
+    poem = poem + "{} {} {} {} {} the {} {}\n".format(
+        article, adj1, n1, v1, prep1, adj2, n2
+    )
     poem = poem + "{}, the {} {}\n".format(adv1, n1, v2)
     poem = poem + "the {} {} {} a {} {}".format(n2, v3, prep2, adj3, n3)
-    
+
     return poem
 
 print makePoem()

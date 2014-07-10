@@ -9,4 +9,3 @@ and it displays across multiple lines'''
 
 print "This one-line string was written out \
 using multiple lines"
-

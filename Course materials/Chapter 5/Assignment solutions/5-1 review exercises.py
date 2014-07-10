@@ -21,4 +21,3 @@ print float(myFloatString) * 7
 myString = "mp"
 myInt = 3
 print myString + str(myInt)
-

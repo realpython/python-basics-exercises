@@ -1,32 +1,35 @@
 import webapp2
 from random import choice
 
+
 def checkUnique(wordList):
     '''check that all items in a list are unique and return True or False'''
     uniqueWords = []
     for word in wordList:
         if word not in uniqueWords:
             uniqueWords.append(word)
-    return len(wordList)==len(uniqueWords)
+    return len(wordList) == len(uniqueWords)
+
 
 def makePoem(nouns, verbs, adjectives, adverbs, prepositions):
     '''create a randomly generated poem, returned as a multi-line string'''
-    
-    noun = nouns.split(",") 
+
+    noun = nouns.split(",")
     verb = verbs.split(",")
     adjective = adjectives.split(",")
     adverb = adverbs.split(",")
     preposition = prepositions.split(",")
-    
+
     # make sure that all lists consist of unique words
     if not (checkUnique(noun) and checkUnique(verb) and checkUnique(adjective)
             and checkUnique(adverb) and checkUnique(preposition)):
         return "Please do not enter duplicate words."
-    
+
     # check that we have enough words to make a poem
-    if len(noun)<3 or len(verb)<3 or len(adjective)<3 or len(preposition)<2 or len(adverb)<1:
+    if len(noun) < 3 or len(verb) < 3 or len(adjective) < 3 \
+            or len(preposition) < 2 or len(adverb) < 1:
         return "Please enter more words..."
-    
+
     # Pull three nouns randomly
     n1 = choice(noun)
     n2 = choice(noun)
@@ -35,7 +38,7 @@ def makePoem(nouns, verbs, adjectives, adverbs, prepositions):
     while n1 == n2:
         n2 = choice(noun)
     while n1 == n3 or n2 == n3:
-        n3 = choice(noun)   
+        n3 = choice(noun)
 
     # Pull three different verbs
     v1 = choice(verb)
@@ -53,8 +56,8 @@ def makePoem(nouns, verbs, adjectives, adverbs, prepositions):
     while adj1 == adj2:
         adj2 = choice(adjective)
     while n1 == n3 or n2 == n3:
-        adj3 = choice(adjective)   
-         
+        adj3 = choice(adjective)
+
     # Pull two different prepositions
     prep1 = choice(preposition)
     prep2 = choice(preposition)
@@ -64,17 +67,20 @@ def makePoem(nouns, verbs, adjectives, adverbs, prepositions):
     # Pull one adverb
     adv1 = choice(adverb)
 
-    if "aeiou".find(adj1[0]) != -1: # first letter is a vowel
+    if "aeiou".find(adj1[0]) != -1:  # first letter is a vowel
         article = "An"
     else:
         article = "A"
 
     # add lines to poem
     poem = "{} {} {}<br /><br />".format(article, adj1, n1)
-    poem = poem + "{} {} {} {} {} the {} {}<br />".format(article, adj1, n1, v1, prep1, adj2, n2)
+    poem = poem + "{} {} {} {} {} the {} {}<br />".format(
+        article, adj1, n1, v1, prep1, adj2, n2
+    )
     poem = poem + "{}, the {} {}<br />".format(adv1, n1, v2)
     poem = poem + "the {} {} {} a {} {}".format(n2, v3, prep2, adj3, n3)
     return poem
+
 
 class MainPage(webapp2.RequestHandler):
     def get(self):
@@ -84,7 +90,7 @@ class MainPage(webapp2.RequestHandler):
         adverbs = self.request.get("adverbs")
         prepositions = self.request.get("prepositions")
         poem = makePoem(nouns, verbs, adjectives, adverbs, prepositions)
-        
+
         self.response.headers["Content-Type"] = "text/html"
         self.response.write("""
           <html>

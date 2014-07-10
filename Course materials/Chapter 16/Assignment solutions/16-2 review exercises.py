@@ -5,6 +5,7 @@
 
 from Tkinter import *
 
+
 def buttonClicked():
     ''' sets the button text to the text in the entry box '''
     button.config(text=entry.get())
@@ -19,4 +20,3 @@ entry = Entry(width=10)
 entry.grid(row=1, column=2)
 
 mainloop()
-

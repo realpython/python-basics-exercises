@@ -5,6 +5,7 @@
 
 import webapp2
 
+
 class MainPage(webapp2.RequestHandler):
     def get(self):
         username = self.request.get("myName")
@@ -12,7 +13,7 @@ class MainPage(webapp2.RequestHandler):
             welcomeString = ""
         else:
             welcomeString = "Hi there, {}!".format(username)
-        
+
         self.response.headers["Content-Type"] = "text/html"
         self.response.write("""
           <html>

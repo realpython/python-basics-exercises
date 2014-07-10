@@ -15,4 +15,3 @@ print version.find(str(vNum))
 # Try to find an upper-case "X" in user input:
 myInput = raw_input("Type something: ")
 print myInput.find("X")
-

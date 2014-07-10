@@ -4,7 +4,7 @@
 import os
 from pyPdf import PdfFileReader, PdfFileWriter
 
-path = "C:/Real Python/Course materials/Chapter 8/Practice files"
+path = "C:/Real Python/Course materials/Chapter 12/Practice files"
 inputFileName1 = os.path.join(path, "Emperor cover sheet.pdf")
 inputFile1 = PdfFileReader(file(inputFileName1, "rb"))
 inputFileName2 = os.path.join(path, "The Emperor.pdf")

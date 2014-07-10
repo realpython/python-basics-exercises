@@ -24,4 +24,3 @@ for tag in ["Name: .*?[\n<]", "Favorite Color: .*?[\n<]"]:
     result = re.sub(".*: ", "", matchResults.group())
     # Remove extra spaces and newline padding along with opening HTML tag
     print result.strip(" \n<")
-

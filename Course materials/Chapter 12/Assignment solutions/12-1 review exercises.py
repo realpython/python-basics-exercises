@@ -4,7 +4,7 @@
 import os
 from pyPdf import PdfFileReader, PdfFileWriter
 
-path = "C:/Real Python/Course materials/Chapter 8/Practice files"
+path = "C:/Real Python/Course materials/Chapter 12/Practice files"
 inputFileName = os.path.join(path, "The Whistling Gypsy.pdf")
 inputFile = PdfFileReader(file(inputFileName, "rb"))
 
@@ -19,7 +19,7 @@ with open(outputFileName, "w") as outputFile:
     # Extract every page of text
     for pageNum in range(0, inputFile.getNumPages()):
         text = inputFile.getPage(pageNum).extractText()
-        text = text.encode("utf-8") # convert text to unicode
+        text = text.encode("utf-8")  # convert text to unicode
         outputFile.write(text)
 
 # Save file without cover page
@@ -30,4 +30,3 @@ for pageNum in range(1, inputFile.getNumPages()):
 outputFileName = os.path.join(path, "Output/The Whistling Gypsy un-covered.pdf")
 with file(outputFileName, "wb") as outputFile:
     outputPDF.write(outputFile)
-

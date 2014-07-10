@@ -16,5 +16,3 @@ def multiply(num1, num2):
 
 multResult = multiply(2, 5)
 print("2 times 5 is", multResult)
-
-

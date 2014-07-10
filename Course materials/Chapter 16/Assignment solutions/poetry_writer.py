@@ -5,17 +5,19 @@ from Tkinter import *
 import tkFileDialog
 from random import choice
 
+
 def checkUnique(wordList):
     '''check that all items in a list are unique and return True or False'''
     uniqueWords = []
     for word in wordList:
         if word not in uniqueWords:
             uniqueWords.append(word)
-    return len(wordList)==len(uniqueWords)
+    return len(wordList) == len(uniqueWords)
+
 
 def makePoem():
     '''create a randomly generated poem, returned as a multi-line string'''
-    
+
     # split the user input into lists
     noun = entryNoun.get().split(",")
     verb = entryVerb.get().split(",")
@@ -28,11 +30,14 @@ def makePoem():
             and checkUnique(adverb) and checkUnique(preposition)):
         resultPoem.config(text="Please do not enter duplicate words.")
         return
-    
+
     # make sure that we got enough words from the user to make a poem
-    if len(noun)<3 or len(verb)<3 or len(adjective)<3 or len(preposition)<2 or len(adverb)<1:
-        resultPoem.config(text="Did you think you could get away that easily?\n\
-            Enter at least three nouns, three verbs, three adjectives, two prepositions and an adverb!")
+    if len(noun) < 3 or len(verb) < 3 or len(adjective) < 3 \
+            or len(preposition) < 2 or len(adverb) < 1:
+        resultPoem.config(
+            text="Did you think you could get away that easily?\n\
+            Enter at least three nouns, three verbs, three adjectives, two prepositions and an adverb!"
+        )
         return
 
     # otherwise, we can go ahead with generating a poem:
@@ -46,7 +51,7 @@ def makePoem():
     while n1 == n2:
         n2 = choice(noun)
     while n1 == n3 or n2 == n3:
-        n3 = choice(noun)   
+        n3 = choice(noun)
 
     # pull three different verbs
     v1 = choice(verb)
@@ -64,8 +69,8 @@ def makePoem():
     while adj1 == adj2:
         adj2 = choice(adjective)
     while n1 == n3 or n2 == n3:
-        adj3 = choice(adjective)   
-         
+        adj3 = choice(adjective)
+
     # pull two different prepositions
     prep1 = choice(preposition)
     prep2 = choice(preposition)
@@ -75,18 +80,20 @@ def makePoem():
     # pull one adverb
     adv1 = choice(adverb)
 
-    if "aeiou".find(adj1[0]) != -1: # first letter is a vowel
+    if "aeiou".find(adj1[0]) != -1:  # first letter is a vowel
         article = "An"
     else:
         article = "A"
 
     # put it all together into a poem
     poem = "{} {} {}\n\n".format(article, adj1, n1)
-    poem = poem + "{} {} {} {} {} the {} {}\n".format(article, adj1, n1, v1, prep1, adj2, n2)
+    poem = poem + "{} {} {} {} {} the {} {}\n".format(
+        article, adj1, n1, v1, prep1, adj2, n2
+    )
     poem = poem + "{}, the {} {}\n".format(adv1, n1, v2)
     poem = poem + "the {} {} {} a {} {}".format(n2, v3, prep2, adj3, n3)
 
-    # place the resulting poem into the label 
+    # place the resulting poem into the label
     resultPoem.config(text=poem)
 
 
@@ -94,10 +101,12 @@ def makePoem():
 window = Tk()
 window.title("Make your own poem!")
 frame = Frame()
-frame.grid(padx=5, pady=5) # pad top and left of frame 5 pixels before grid
+frame.grid(padx=5, pady=5)  # pad top and left of frame 5 pixels before grid
 
 # create and add text labels for text entry boxes
-labelDirections = Label(frame, text="Enter your favorite words, separated by commas:")
+labelDirections = Label(
+    frame, text="Enter your favorite words, separated by commas:"
+)
 labelDirections.grid(row=1, column=1, sticky=S+W, columnspan=2)
 labelNoun = Label(frame, text="Nouns:")
 labelNoun.grid(row=2, column=1, sticky=S+E)
@@ -130,13 +139,14 @@ btnCreate.grid(row=7, column=1, columnspan=2)
 resultPoem = Label(frame)
 resultPoem.grid(row=9, column=1, rowspan=5, columnspan=2)
 
+
 # function to save the poem displayed in the output box into a text file
 def saveFile():
     typeList = [("Text files", "*.txt")]
     fileName = tkFileDialog.asksaveasfilename(filetypes=typeList,
                                               defaultextension=".txt")
     print fileName
-    if fileName != "": # save file if user entered a file name
+    if fileName != "":  # save file if user entered a file name
         outputFile = open(fileName, "w")
         outputFile.writelines(resultPoem.cget("text"))
         outputFile.close()
@@ -145,7 +155,4 @@ def saveFile():
 btnSave = Button(frame, text="Save your poem", command=saveFile)
 btnSave.grid(row=15, column=1, columnspan=2)
 
-mainloop() # start the application
-
-
-
+mainloop()  # start the application

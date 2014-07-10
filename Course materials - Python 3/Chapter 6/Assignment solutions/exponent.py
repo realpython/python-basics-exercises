@@ -1,4 +1,4 @@
-# 4.1 exponent.py
+# 6.1 exponent.py
 # Receive two input numbers and calculate their power
 
 base = input("Enter a base: ")

@@ -21,10 +21,9 @@ for i in range(0, 3):
     # Grab the timestamp
     myTimeTags = mySoup.find_all("span", id="yfs_market_time")
     myTime = myTimeTags[0].string
-    myTime = myTime[:myTime.find(" - ")] # trim string to just the time
-    
+    myTime = myTime[:myTime.find(" - ")]  # trim string to just the time
+
     print "The price of YHOO is: {} on {}".format(myPrice, myTime)
 
-    if i<2: # Wait a minute if this isn't the last request
+    if i < 2:  # Wait a minute if this isn't the last request
         sleep(60)
-

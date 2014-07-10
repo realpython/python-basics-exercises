@@ -1,4 +1,4 @@
-# 5.3 factors.py
+# 8.3 factors.py
 # display all the factors of a number chosen by the user
 
 num = int(input("Enter a positive integer: "))

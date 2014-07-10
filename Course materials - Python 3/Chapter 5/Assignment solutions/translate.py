@@ -1,4 +1,4 @@
-# 3.3 translate.py
+# 5.3 translate.py
 # Turn a user's input into leetspeak
 
 myText = input("Enter some text: ")

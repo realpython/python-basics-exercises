@@ -1,9 +1,10 @@
-# 13-1 review exercise
+# 17-1 review exercise
 
 # This script needs to be placed in a project folder with
 # the appropriate YAML configuration file
 
 import webapp2
+
 
 class MainPage(webapp2.RequestHandler):
     def get(self):
@@ -12,7 +13,7 @@ class MainPage(webapp2.RequestHandler):
             welcomeString = ""
         else:
             welcomeString = "Hi there, {}!".format(username)
-        
+
         self.response.headers["Content-Type"] = "text/html"
         self.response.write("""
           <html>

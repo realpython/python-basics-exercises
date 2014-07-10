@@ -5,7 +5,7 @@
 import os
 import glob
 # This path may need to be changed depending on your setup
-path = "C:/Real Python/Course Materials/Chapter 7/Practice files/images"
+path = "C:/Real Python/Course Materials/Chapter 10/Practice files/images"
 
 
 # Display the full paths of all files and folders in the main "images" folder
@@ -24,11 +24,10 @@ for fileName in glob.glob(fileMatches):
 for currentFolder, subfolders, fileNames in os.walk(path):
     for fileName in fileNames:
         filePath = os.path.join(currentFolder, fileName)
-        fileTuple = os.path.splitext(filePath) # split into (path, extension)
-        if fileTuple[1].lower() == ".png": # check if extension is PNG
+        fileTuple = os.path.splitext(filePath)  # split into (path, extension)
+        if fileTuple[1].lower() == ".png":  # check if extension is PNG
             os.rename(filePath, fileTuple[0] + ".jpg")
 
 # Check that the two files have been converted to JPGs successfully
 print os.path.exists(os.path.join(path, "png file - not a gif.jpg"))
 print os.path.exists(os.path.join(path, "additional files/one last image.jpg"))
-

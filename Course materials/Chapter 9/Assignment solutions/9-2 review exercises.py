@@ -13,5 +13,3 @@ pos1, pos2, pos3 = cardinal_nums
 print pos1
 print pos2
 print pos3
-
-

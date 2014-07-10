@@ -4,7 +4,7 @@
 from matplotlib import pyplot as plt
 import csv
 import os
-path = "C:/Real Python/Course materials/Chapter 11/Practice files"
+path = "C:/Real Python/Course materials/Chapter 15/Practice files"
 
 years = []
 temperatures = []
@@ -12,7 +12,7 @@ pirates = []
 
 with open(os.path.join(path, "pirates.csv"), "rb") as myFile:
     myFileReader = csv.reader(myFile)
-    myFileReader.next() # skip header row
+    myFileReader.next()  # skip header row
     for year, temperature, pirateCount in myFileReader:
         years.append(year)
         temperatures.append(temperature)

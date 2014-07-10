@@ -11,15 +11,15 @@ trials = 100000
 for trial in range(0, trials):
     A_win = 0
     B_win = 0
-    if random() < .87: # 1st region
+    if random() < .87:  # 1st region
         A_win += 1
     else:
         B_win += 1
-    if random() < .65: # 2nd region
+    if random() < .65:  # 2nd region
         A_win += 1
     else:
         B_win += 1
-    if random() < .17: # 3rd region
+    if random() < .17:  # 3rd region
         A_win += 1
     else:
         B_win += 1

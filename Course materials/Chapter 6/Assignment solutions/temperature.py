@@ -3,9 +3,11 @@
 
 from __future__ import division
 
+
 def convertCtoF(celTemp):
     farTemp = celTemp * 9/5 + 32
     return farTemp
+
 
 def convertFtoC(farTemp):
     celTemp = (farTemp - 32) * 5/9

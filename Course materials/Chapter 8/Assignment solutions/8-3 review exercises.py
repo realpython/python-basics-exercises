@@ -10,4 +10,3 @@ elif len(myInput) > 5:
     print "Your input is greater than 5 characters long."
 else:
     print "Your input is 5 characters long."
-

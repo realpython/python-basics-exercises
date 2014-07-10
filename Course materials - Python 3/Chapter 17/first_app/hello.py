@@ -1,6 +1,7 @@
 import webapp2
 import cgi
 
+
 class MainPage(webapp2.RequestHandler):
     def get(self):
         self.response.headers["Content-Type"] = "text/html"
@@ -14,6 +15,7 @@ class MainPage(webapp2.RequestHandler):
               </form>
             </body>
           </html>""")
+
 
 class Greeting(webapp2.RequestHandler):
     def post(self):

@@ -1,5 +1,6 @@
-# 4.3 invest.py
+# 6.3 invest.py
 # calculate compound interest to track the growth of an investment
+
 
 def invest(amount, rate, time):
     print("principal amount: ${}".format(amount))

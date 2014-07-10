@@ -19,4 +19,3 @@ for anchor in soup.find_all("a"):
     linkText = linkPage.read()
     linkSoup = BeautifulSoup(linkText)
     print linkSoup.get_text()
-

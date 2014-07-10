@@ -11,4 +11,3 @@ print "hello"
 # display the contents of a string variable
 myString = "hi"
 print myString
-

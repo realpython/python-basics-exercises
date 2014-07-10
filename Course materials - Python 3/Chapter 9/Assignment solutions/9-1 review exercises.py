@@ -33,4 +33,3 @@ print(food[0:2])
 myBreakfast = "cookies, cookies, cookies"
 breakfast = myBreakfast.split(", ")
 print(breakfast)
-

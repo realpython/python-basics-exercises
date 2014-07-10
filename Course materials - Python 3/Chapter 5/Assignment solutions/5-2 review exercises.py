@@ -15,4 +15,3 @@ print("{1} kg is the weight of the {0}.".format(animal, weight))
 
 # Use format() to print new objects inside a string
 print("{} kg is the weight of the {}.".format(0.2, "newt"))
-
