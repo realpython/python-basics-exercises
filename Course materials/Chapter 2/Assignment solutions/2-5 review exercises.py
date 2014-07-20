@@ -9,5 +9,5 @@ print "hello"
 
 
 # display the contents of a string variable
-myString = "hi"
-print myString
+my_string = "hi"
+print my_string
