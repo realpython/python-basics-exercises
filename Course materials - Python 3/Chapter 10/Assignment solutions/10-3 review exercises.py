@@ -10,17 +10,17 @@ path = "C:/Real Python/Course Materials/Chapter 10/Practice files"
 
 # Read in a CSV and display each row except the header row
 # Append a third column and write out the resulting CSV with a new header
-inFilePath = os.path.join(path, "pastimes.csv")
-outFilePath = os.path.join(path, "Output/categorized pastimes.csv")
-with open(inFilePath, "rb") as inFile, open(outFilePath, "wb") as outFile:
-    csvReader = csv.reader(inFile)
-    csvWriter = csv.writer(outFile)
+in_file_path = os.path.join(path, "pastimes.csv")
+out_file_path = os.path.join(path, "Output/categorized pastimes.csv")
+with open(in_file_path, "rb") as inFile, open(out_file_path, "wb") as outFile:
+    csv_reader = csv.reader(inFile)
+    csv_writer = csv.writer(outFile)
 
     # skip header row and write a new output header row
-    csvReader.next()
-    csvWriter.writerow(["Name", "Favorite Pastime", "Type of pastime"])
+    csv_reader.next()
+    csv_writer.writerow(["Name", "Favorite Pastime", "Type of pastime"])
 
-    for row in csvReader:
+    for row in csv_reader:
         print row
         # Check if "Favorite Pastime" includes "fighting"
         if row[1].lower().find("fighting") != -1:
@@ -28,4 +28,4 @@ with open(inFilePath, "rb") as inFile, open(outFilePath, "wb") as outFile:
         else:
             row.append("Other")
         # Add the new row to the output
-        csvWriter.writerow(row)
+        csv_writer.writerow(row)
