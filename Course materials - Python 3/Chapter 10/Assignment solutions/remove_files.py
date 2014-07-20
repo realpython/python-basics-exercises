@@ -4,13 +4,13 @@
 import os
 
 path = "C:/Real Python/Course materials/Chapter 10/Practice files/little pics"
-for currentFolder, subfolders, fileNames in os.walk(path):
-    for fileName in fileNames:
-        fullPath = os.path.join(currentFolder, fileName)
+for current_folder, subfolders, file_names in os.walk(path):
+    for file_name in file_names:
+        full_path = os.path.join(current_folder, file_name)
         # check if file is a JPG
-        checkJPG = fileName.lower().endswith(".jpg")
+        check_JPG = file_name.lower().endswith(".jpg")
         # check if size is less than 2Kb
-        checkSize = os.path.getsize(fullPath) < 2000
-        if checkJPG and checkSize:  # both conditions must be True
-            print 'Deleting "{}"...'.format(fileName)
-            os.remove(fullPath)
+        check_size = os.path.getsize(full_path) < 2000
+        if check_JPG and check_size:  # both conditions must be True
+            print 'Deleting "{}"...'.format(file_name)
+            os.remove(full_path)
