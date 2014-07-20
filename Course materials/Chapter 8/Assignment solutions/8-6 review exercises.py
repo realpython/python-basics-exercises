@@ -13,5 +13,6 @@ trials = 10000
 total = 0
 for trial in range(0, trials):
     total += randint(1, 6)
-avgResult = total / trials
-print "The average result of {} throws was {}".format(trials, avgResult)
+
+avg_result = total / trials
+print "The average result of {} throws was {}".format(trials, avg_result)
