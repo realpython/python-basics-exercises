@@ -5,28 +5,28 @@ import os
 from pyPdf import PdfFileReader, PdfFileWriter
 
 path = "C:/Real Python/Course materials/Chapter 12/Practice files"
-inputFileName = os.path.join(path, "The Whistling Gypsy.pdf")
-inputFile = PdfFileReader(file(inputFileName, "rb"))
+input_file_name = os.path.join(path, "The Whistling Gypsy.pdf")
+input_file = PdfFileReader(file(input_file_name, "rb"))
 
 # Display meta-data about file
-print "Title:", inputFile.getDocumentInfo().title
-print "Author:", inputFile.getDocumentInfo().author
-print "Number of pages:", inputFile.getNumPages()
+print "Title:", input_file.getDocumentInfo().title
+print "Author:", input_file.getDocumentInfo().author
+print "Number of pages:", input_file.getNumPages()
 
 # Specify and open output text file
-outputFileName = os.path.join(path, "Output/The Whistling Gypsy.txt")
-with open(outputFileName, "w") as outputFile:
+output_file_name = os.path.join(path, "Output/The Whistling Gypsy.txt")
+with open(output_file_name, "w") as output_file:
     # Extract every page of text
-    for pageNum in range(0, inputFile.getNumPages()):
-        text = inputFile.getPage(pageNum).extractText()
+    for page_num in range(0, input_file.getNumPages()):
+        text = input_file.getPage(page_num).extractText()
         text = text.encode("utf-8")  # convert text to unicode
-        outputFile.write(text)
+        output_file.write(text)
 
 # Save file without cover page
-outputPDF = PdfFileWriter()
-for pageNum in range(1, inputFile.getNumPages()):
-    outputPDF.addPage(inputFile.getPage(pageNum))
+output_PDF = PdfFileWriter()
+for page_num in range(1, input_file.getNumPages()):
+    output_PDF.addPage(input_file.getPage(page_num))
 
-outputFileName = os.path.join(path, "Output/The Whistling Gypsy un-covered.pdf")
-with file(outputFileName, "wb") as outputFile:
-    outputPDF.write(outputFile)
+output_file_name = os.path.join(path, "Output/The Whistling Gypsy un-covered.pdf")
+with file(output_file_name, "wb") as output_file:
+    output_PDF.write(output_file)
