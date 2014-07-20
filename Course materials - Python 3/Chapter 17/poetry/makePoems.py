@@ -2,16 +2,16 @@ import webapp2
 from random import choice
 
 
-def checkUnique(wordList):
+def check_unique(word_list):
     '''check that all items in a list are unique and return True or False'''
-    uniqueWords = []
-    for word in wordList:
-        if word not in uniqueWords:
-            uniqueWords.append(word)
-    return len(wordList) == len(uniqueWords)
+    unique_words = []
+    for word in word_list:
+        if word not in unique_words:
+            unique_words.append(word)
+    return len(word_list) == len(unique_words)
 
 
-def makePoem(nouns, verbs, adjectives, adverbs, prepositions):
+def make_poem(nouns, verbs, adjectives, adverbs, prepositions):
     '''create a randomly generated poem, returned as a multi-line string'''
 
     noun = nouns.split(",")
@@ -21,8 +21,8 @@ def makePoem(nouns, verbs, adjectives, adverbs, prepositions):
     preposition = prepositions.split(",")
 
     # make sure that all lists consist of unique words
-    if not (checkUnique(noun) and checkUnique(verb) and checkUnique(adjective)
-            and checkUnique(adverb) and checkUnique(preposition)):
+    if not (check_unique(noun) and check_unique(verb) and check_unique(adjective)
+            and check_unique(adverb) and check_unique(preposition)):
         return "Please do not enter duplicate words."
 
     # check that we have enough words to make a poem
@@ -89,7 +89,7 @@ class MainPage(webapp2.RequestHandler):
         adjectives = self.request.get("adjectives")
         adverbs = self.request.get("adverbs")
         prepositions = self.request.get("prepositions")
-        poem = makePoem(nouns, verbs, adjectives, adverbs, prepositions)
+        poem = make_poem(nouns, verbs, adjectives, adverbs, prepositions)
 
         self.response.headers["Content-Type"] = "text/html"
         self.response.write("""
@@ -113,4 +113,4 @@ class MainPage(webapp2.RequestHandler):
           </html>""".format(nouns, verbs, adjectives, adverbs, prepositions, poem))
 
 routes = [('/', MainPage)]
-myApp = webapp2.WSGIApplication(routes, debug=True)
+my_app = webapp2.WSGIApplication(routes, debug=True)
