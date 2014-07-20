@@ -20,11 +20,11 @@ class MainPage(webapp2.RequestHandler):
 class Greeting(webapp2.RequestHandler):
     def post(self):
         username = cgi.escape(self.request.get("myName"))
-        welcomeString = """<html><body>
+        welcome_string = """<html><body>
                         Hi there, {}!
                         </body></html>""".format(username)
         self.response.headers["Content-Type"] = "text/html"
-        self.response.write(welcomeString)
+        self.response.write(welcome_string)
 
 routes = [('/', MainPage), ('/welcome', Greeting)]
-myApp = webapp2.WSGIApplication(routes, debug=True)
+my_app = webapp2.WSGIApplication(routes, debug=True)
