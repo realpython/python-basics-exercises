@@ -15,7 +15,7 @@ adverb = ["curiously", "extravagantly",
             "tantalizingly", "furiously", "sensuously"]
 
 
-def makePoem():
+def make_poem():
     ''' create a randomly generated poem, returned as a multi-line string'''
     # Pull three nouns randomly
     n1 = choice(noun)
@@ -69,4 +69,4 @@ def makePoem():
 
     return poem
 
-print(makePoem())
+print(make_poem())
