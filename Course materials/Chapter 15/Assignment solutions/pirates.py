@@ -10,10 +10,10 @@ years = []
 temperatures = []
 pirates = []
 
-with open(os.path.join(path, "pirates.csv"), "rb") as myFile:
-    myFileReader = csv.reader(myFile)
-    myFileReader.next()  # skip header row
-    for year, temperature, pirateCount in myFileReader:
+with open(os.path.join(path, "pirates.csv"), "rb") as my_file:
+    my_file_reader = csv.reader(my_file)
+    my_file_reader.next()  # skip header row
+    for year, temperature, pirateCount in my_file_reader:
         years.append(year)
         temperatures.append(temperature)
         pirates.append(pirateCount)
