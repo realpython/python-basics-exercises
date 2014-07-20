@@ -30,6 +30,6 @@ food.remove("cookies")
 print(food[0:2])
 
 # Create a "breakfast" list full of cookies and display it
-myBreakfast = "cookies, cookies, cookies"
-breakfast = myBreakfast.split(", ")
+my_breakfast = "cookies, cookies, cookies"
+breakfast = my_breakfast.split(", ")
 print(breakfast)
