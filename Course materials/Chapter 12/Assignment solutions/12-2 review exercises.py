@@ -5,28 +5,28 @@ import copy
 from pyPdf import PdfFileReader, PdfFileWriter
 
 path = "C:/Real Python/Course materials/Chapter 12/Practice files"
-inputFileName = os.path.join(path, "Walrus.pdf")
-inputFile = PdfFileReader(file(inputFileName, "rb"))
-outputPDF = PdfFileWriter()
+input_file_name = os.path.join(path, "Walrus.pdf")
+input_file = PdfFileReader(file(input_file_name, "rb"))
+output_PDF = PdfFileWriter()
 
-inputFile.decrypt("IamtheWalrus")  # decrypt the input file
+input_file.decrypt("IamtheWalrus")  # decrypt the input file
 
-for pageNum in range(0, inputFile.getNumPages()):
-    # rotate pages (call everything pageLeft for now; will make a copy)
-    pageLeft = inputFile.getPage(pageNum)
-    pageLeft.rotateCounterClockwise(90)
+for page_num in range(0, input_file.getNumPages()):
+    # rotate pages (call everything page_left for now; will make a copy)
+    page_left = input_file.getPage(page_num)
+    page_left.rotateCounterClockwise(90)
 
-    pageRight = copy.copy(pageLeft)  # split each page in half
-    upperRight = pageLeft.mediaBox.upperRight  # get original page corner
+    page_right = copy.copy(page_left)  # split each page in half
+    upper_right = page_left.mediaBox.upperRight  # get original page corner
 
     # crop and add left-side page
-    pageLeft.mediaBox.upperRight = (upperRight[0]/2, upperRight[1])
-    outputPDF.addPage(pageLeft)
+    page_left.mediaBox.upperRight = (upper_right[0]/2, upper_right[1])
+    output_PDF.addPage(page_left)
     # crop and add right-side page
-    pageRight.mediaBox.upperLeft = (upperRight[0]/2, upperRight[1])
-    outputPDF.addPage(pageRight)
+    page_right.mediaBox.upperLeft = (upper_right[0]/2, upper_right[1])
+    output_PDF.addPage(page_right)
 
 # save new pages to an output file
-outputFileName = os.path.join(path, "Output/Updated Walrus.pdf")
-with file(outputFileName, "wb") as outputFile:
-    outputPDF.write(outputFile)
+output_file_name = os.path.join(path, "Output/Updated Walrus.pdf")
+with file(output_file_name, "wb") as output_file:
+    output_PDF.write(output_file)
