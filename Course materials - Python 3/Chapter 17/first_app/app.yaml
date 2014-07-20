@@ -6,4 +6,4 @@ threadsafe: false
 
 handlers:
 - url: /.*
-  script: temperature.myApp
+  script: temperature.my_app
