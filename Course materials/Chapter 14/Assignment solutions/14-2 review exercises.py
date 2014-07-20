@@ -4,18 +4,18 @@ import urllib2
 from bs4 import BeautifulSoup
 
 # Get the full HTML from the "profiles" page
-baseURL = "http://RealPython.com/practice/"
-address = baseURL + "profiles.html"
-htmlPage = urllib2.urlopen(address)
-htmlText = htmlPage.read()
-soup = BeautifulSoup(htmlText)
+base_URL = "http://RealPython.com/practice/"
+address = base_URL + "profiles.html"
+html_page = urllib2.urlopen(address)
+html_text = html_page.read()
+soup = BeautifulSoup(html_text)
 
 # Parse out all the values of the page links
 for anchor in soup.find_all("a"):
     # Could also have used urlparse.urljoin() to get absolute URL
-    linkAddress = baseURL + anchor["href"]
+    link_address = base_URL + anchor["href"]
     # Display the text in the HTML page of each link
-    linkPage = urllib2.urlopen(linkAddress)
-    linkText = linkPage.read()
-    linkSoup = BeautifulSoup(linkText)
-    print linkSoup.get_text()
+    link_page = urllib2.urlopen(link_address)
+    link_text = link_page.read()
+    link_soup = BeautifulSoup(link_text)
+    print link_soup.get_text()
