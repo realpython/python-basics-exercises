@@ -6,8 +6,8 @@
 repeat = True
 while repeat:
     try:
-        myInput = raw_input("Type an integer: ")
-        print int(myInput)
+        my_input = raw_input("Type an integer: ")
+        print int(my_input)
         repeat = False
     except ValueError:
         print "try again"
