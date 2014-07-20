@@ -6,14 +6,14 @@
 from Tkinter import *
 
 
-def buttonClicked():
+def button_clicked():
     ''' sets the button text to the text in the entry box '''
     button.config(text=entry.get())
 
 
 window = Tk()
 # Create and add button
-button = Button(text="   ", command=buttonClicked)
+button = Button(text="   ", command=button_clicked)
 button.grid(row=1, column=1)
 # Create and add space for user entry of text
 entry = Entry(width=10)
