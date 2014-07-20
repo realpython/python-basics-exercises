@@ -10,9 +10,9 @@ class MainPage(webapp2.RequestHandler):
     def get(self):
         username = self.request.get("myName")
         if username == "":
-            welcomeString = ""
+            welcome_string = ""
         else:
-            welcomeString = "Hi there, {}!".format(username)
+            welcome_string = "Hi there, {}!".format(username)
 
         self.response.headers["Content-Type"] = "text/html"
         self.response.write("""
@@ -25,7 +25,7 @@ class MainPage(webapp2.RequestHandler):
                 <input type="submit" value="Greet me!">
               </form>
             </body>
-          </html>""".format(welcomeString))
+          </html>""".format(welcome_string))
 
 routes = [('/', MainPage)]
-myApp = webapp2.WSGIApplication(routes, debug=True)
+my_app = webapp2.WSGIApplication(routes, debug=True)
