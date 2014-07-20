@@ -10,23 +10,23 @@ path = "C:/Real Python/Course Materials - Python 3/Chapter 10/Practice files/ima
 
 # Display the full paths of all files and folders in the main "images" folder
 print('Full contents of "images" folder:')
-for fileName in os.listdir(path):
-    print(os.path.join(path, fileName))
+for file_name in os.listdir(path):
+    print(os.path.join(path, file_name))
 
 # Display the full paths of any PNG files in the "images" folder
-fileMatches = os.path.join(path, "*.png")
+file_matches = os.path.join(path, "*.png")
 print('All PNG files in "images" folder:')
-for fileName in glob.glob(fileMatches):
-    print(fileName)
+for file_name in glob.glob(file_matches):
+    print(file_name)
 
 # Change all PNGs to JPGs in the "images" folder and its subfolders
 # Could use indexing to get the file extension, but try using os.path.splitext()
-for currentFolder, subfolders, fileNames in os.walk(path):
-    for fileName in fileNames:
-        filePath = os.path.join(currentFolder, fileName)
-        fileTuple = os.path.splitext(filePath)  # split into (path, extension)
-        if fileTuple[1].lower() == ".png":  # check if extension is PNG
-            pass  # os.rename(filePath, fileTuple[0] + ".jpg")
+for current_folder, subfolders, file_names in os.walk(path):
+    for file_name in file_names:
+        file_path = os.path.join(current_folder, file_name)
+        file_tuple = os.path.splitext(file_path)  # split into (path, extension)
+        if file_tuple[1].lower() == ".png":  # check if extension is PNG
+            pass  # os.rename(file_path, file_tuple[0] + ".jpg")
 
 # Check that the two files have been converted to JPGs successfully
 print(os.path.exists(os.path.join(path, "png file - not a gif.jpg")))
