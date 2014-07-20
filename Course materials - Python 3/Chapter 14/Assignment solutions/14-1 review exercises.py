@@ -3,24 +3,24 @@
 import urllib2
 
 # Get the full HTML from the "dionysus" page
-myAddress = "http://RealPython.com/practice/dionysus.html"
-htmlPage = urllib2.urlopen(myAddress)
-htmlText = htmlPage.read()
+my_address = "http://RealPython.com/practice/dionysus.html"
+html_page = urllib2.urlopen(my_address)
+html_text = html_page.read()
 
 # Get the "Name" and "Favorite Color" using find()
 for tag in ["Name: ", "Favorite Color: "]:
-    tagStart = htmlText.find(tag) + len(tag)
-    tagEnd = htmlText[tagStart:].find("<")
+    tag_start = html_text.find(tag) + len(tag)
+    tag_end = html_text[tag_start:].find("<")
     # Remove extra spaces and newline padding
-    print htmlText[tagStart:tagStart+tagEnd].strip(" \n")
+    print html_text[tag_start:tag_start+tag_end].strip(" \n")
 
 
 # Get the "Name" and "Favorite Color" using regular expressions
 import re
 # Match anything up until a new line or HTML tag; non-greedy
 for tag in ["Name: .*?[\n<]", "Favorite Color: .*?[\n<]"]:
-    matchResults = re.search(tag, htmlText)
+    match_results = re.search(tag, html_text)
     # Remove the "Name: " or "Favorite Color: " label from first result
-    result = re.sub(".*: ", "", matchResults.group())
+    result = re.sub(".*: ", "", match_results.group())
     # Remove extra spaces and newline padding along with opening HTML tag
     print result.strip(" \n<")
