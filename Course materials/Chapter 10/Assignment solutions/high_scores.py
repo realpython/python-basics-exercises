@@ -3,18 +3,18 @@
 
 import csv
 import os
-myPath = "C:/Real Python/Course materials/Chapter 10/Practice files"
+my_path = "C:/Real Python/Course materials/Chapter 10/Practice files"
 
-highScoresDict = {}
-with open(os.path.join(myPath, "scores.csv"), "rb") as myFile:
-    myFileReader = csv.reader(myFile)
-    for name, score in myFileReader:  # get each name/score pair
+high_scores_dict = {}
+with open(os.path.join(my_path, "scores.csv"), "rb") as myFile:
+    my_file_reader = csv.reader(myFile)
+    for name, score in my_file_reader:  # get each name/score pair
         score = int(score)  # convert string score to integer
-        if name in highScoresDict:  # already had an entry for that name
-            if score > highScoresDict[name]:  # new score is higher
-                highScoresDict[name] = score
+        if name in high_scores_dict:  # already had an entry for that name
+            if score > high_scores_dict[name]:  # new score is higher
+                high_scores_dict[name] = score
         else:  # haven't seen this name yet; add it to dictionary
-            highScoresDict[name] = score
+            high_scores_dict[name] = score
 
-for name in sorted(highScoresDict):
-    print name, highScoresDict[name]
+for name in sorted(high_scores_dict):
+    print name, high_scores_dict[name]
