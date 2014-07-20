@@ -3,8 +3,8 @@
 
 # Run in an infinite loop until the user types "q" or "Q"
 while True:
-    myInput = raw_input('Type "q" or "Q" to quit: ')
-    if myInput.upper() == "Q":
+    my_input = raw_input('Type "q" or "Q" to quit: ')
+    if my_input.upper() == "Q":
         break
 
 # Display every number from 1 through 50 except multiples of 3
