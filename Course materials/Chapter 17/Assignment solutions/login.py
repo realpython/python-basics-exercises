@@ -28,4 +28,4 @@ class MainPage(webapp2.RequestHandler):
           </html>""".format(welcomeString))
 
 routes = [('/', MainPage)]
-myApp = webapp2.WSGIApplication(routes, debug=True)
+my_app = webapp2.WSGIApplication(routes, debug=True)
