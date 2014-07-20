@@ -5,23 +5,23 @@ import numpy
 
 
 # Create a 3x3 array of the number 3 through 11 using reshape()
-firstMatrix = numpy.arange(3, 12)
-firstMatrix = firstMatrix.reshape(3, 3)
+first_matrix = numpy.arange(3, 12)
+first_matrix = first_matrix.reshape(3, 3)
 
 # Display the min, max and mean of all entries in the matrix
-print "Min is", firstMatrix.min()
-print "Max is", firstMatrix.max()
-print "Mean is", firstMatrix.mean()
+print "Min is", first_matrix.min()
+print "Max is", first_matrix.max()
+print "Mean is", first_matrix.mean()
 
 # Square every entry and save in a new matrix
-secondMatrix = firstMatrix ** 2
+second_matrix = first_matrix ** 2
 
-# Put firstMatrix on top of secondMatrix
-thirdMatrix = numpy.vstack([firstMatrix, secondMatrix])
+# Put first_matrix on top of second_matrix
+third_matrix = numpy.vstack([first_matrix, second_matrix])
 
-# Calculate the dot product of thirdMatrix by firstMatrix
-print numpy.dot(thirdMatrix, firstMatrix)
+# Calculate the dot product of third_matrix by first_matrix
+print numpy.dot(third_matrix, first_matrix)
 
-# Reshape thirdMatrix into a 3x3x2 matrix
-thirdMatrix = thirdMatrix.reshape(3, 3, 2)
-print thirdMatrix
+# Reshape third_matrix into a 3x3x2 matrix
+third_matrix = third_matrix.reshape(3, 3, 2)
+print third_matrix
