@@ -20,8 +20,8 @@ second_matrix = first_matrix ** 2
 third_matrix = numpy.vstack([first_matrix, second_matrix])
 
 # Calculate the dot product of third_matrix by first_matrix
-print numpy.dot(third_matrix, first_matrix)
+print(numpy.dot(third_matrix, first_matrix))
 
 # Reshape third_matrix into a 3x3x2 matrix
 third_matrix = third_matrix.reshape(3, 3, 2)
-print third_matrix
+print(third_matrix)

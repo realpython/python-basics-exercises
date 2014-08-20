@@ -144,7 +144,7 @@ def save_file():
     type_list = [("Text files", "*.txt")]
     file_name = tkFileDialog.asksaveasfilename(filetypes=type_list,
                                               defaultextension=".txt")
-    print file_name
+    print(file_name)
     if file_name != "":  # save file if user entered a file name
         output_file = open(file_name, "w")
         output_file.writelines(result_poem.cget("text"))

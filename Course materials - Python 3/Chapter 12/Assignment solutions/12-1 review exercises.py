@@ -9,9 +9,9 @@ input_file_name = os.path.join(path, "The Whistling Gypsy.pdf")
 input_file = PdfFileReader(file(input_file_name, "rb"))
 
 # Display meta-data about file
-print "Title:", input_file.getDocumentInfo().title
-print "Author:", input_file.getDocumentInfo().author
-print "Number of pages:", input_file.getNumPages()
+print("Title:", input_file.getDocumentInfo().title)
+print("Author:", input_file.getDocumentInfo().author)
+print("Number of pages:", input_file.getNumPages())
 
 # Specify and open output text file
 output_file_name = os.path.join(path, "Output/The Whistling Gypsy.txt")

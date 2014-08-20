@@ -12,7 +12,7 @@ for tag in ["Name: ", "Favorite Color: "]:
     tag_start = html_text.find(tag) + len(tag)
     tag_end = html_text[tag_start:].find("<")
     # Remove extra spaces and newline padding
-    print html_text[tag_start:tag_start+tag_end].strip(" \n")
+    print(html_text[tag_start:tag_start+tag_end].strip(" \n"))
 
 
 # Get the "Name" and "Favorite Color" using regular expressions
@@ -23,4 +23,4 @@ for tag in ["Name: .*?[\n<]", "Favorite Color: .*?[\n<]"]:
     # Remove the "Name: " or "Favorite Color: " label from first result
     result = re.sub(".*: ", "", match_results.group())
     # Remove extra spaces and newline padding along with opening HTML tag
-    print result.strip(" \n<")
+    print(result.strip(" \n<"))

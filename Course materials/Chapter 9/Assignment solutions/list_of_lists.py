@@ -23,11 +23,11 @@ def mean(my_list):
 
 
 def median(my_list):
-    sorted_list = sorted(my_list)
-    length = len(sorted_list)
+    sorts = sorted(my_list)
+    length = len(sorts)
     if not length % 2:
-        return (sorted_list[length / 2] + sorts[length / 2 - 1]) / 2.0
-    return sorted_list[length / 2]
+        return (sorts[int(length / 2)] + sorts[int(length / 2 - 1)]) / 2.0
+    return sorts[int(length / 2)]
 
 
 if __name__ == '__main__':

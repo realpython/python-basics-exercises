@@ -23,11 +23,11 @@ def mean(my_list):
 
 
 def median(my_list):
-    sorted_list = sorted(my_list)
-    length = len(sorted_list)
+    sorts = sorted(my_list)
+    length = len(sorts)
     if not length % 2:
-        return (sorted_list[length / 2] + sorts[length / 2 - 1]) / 2.0
-    return sorted_list[length / 2]
+        return (sorts[int(length / 2)] + sorts[int(length / 2 - 1)]) / 2.0
+    return sorts[int(length / 2)]
 
 
 if __name__ == '__main__':
@@ -39,10 +39,12 @@ if __name__ == '__main__':
         ['Princeton', 7802, 37000],
         ['Rice', 5879, 35551],
         ['Stanford', 19535, 40569],
-        ['Yale', 11701, 40500]
+        ['Yale', 11701, 40500],
     ]
 
     totals = enrollment_stats(universities)
+
+    print(totals[0])
 
     print("\n")
     print("*****" * 5)

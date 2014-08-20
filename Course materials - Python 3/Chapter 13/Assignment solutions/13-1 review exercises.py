@@ -24,4 +24,4 @@ with sqlite3.connect(':memory:') as connection:
     # Display the names and IQs of everyone classified as Human
     c.execute("SELECT Name, IQ FROM Roster WHERE Species = 'Human'")
     for row in c.fetchall():
-        print row
+        print(row)

@@ -14,7 +14,7 @@ my_browser["pwd"] = "ThunderDude"
 my_response = my_browser.submit()  # submit form
 
 # Make sure we were redirected to the profiles page
-print my_response.geturl()
+print(my_response.geturl())
 
 # Return to the previous login page
 my_browser.back()
@@ -27,6 +27,6 @@ my_response = my_browser.submit()  # submit form
 
 # See if we were redirected to the "error" page by searching for known text
 if my_response.get_data().find("Wrong username or password!") != -1:
-    print "Login failed."
+    print("Login failed.")
 else:
-    print "Login success."
+    print("Login success.")

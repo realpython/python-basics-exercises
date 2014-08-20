@@ -23,7 +23,7 @@ for i in range(0, 3):
     my_time = my_time_tags[0].string
     my_time = my_time[:my_time.find(" - ")]  # trim string to just the time
 
-    print "The price of YHOO is: {} on {}".format(my_price, my_time)
+    print("The price of YHOO is: {} on {}".format(my_price, my_time))
 
     if i < 2:  # Wait a minute if this isn't the last request
         sleep(60)

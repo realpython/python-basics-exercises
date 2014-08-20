@@ -18,4 +18,4 @@ for anchor in soup.find_all("a"):
     link_page = urllib2.urlopen(link_address)
     link_text = link_page.read()
     link_soup = BeautifulSoup(link_text)
-    print link_soup.get_text()
+    print(link_soup.get_text())
