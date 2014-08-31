@@ -3,7 +3,7 @@
 import urllib2
 
 # Get the full HTML from the "dionysus" page
-my_address = "http://RealPython.com/practice/dionysus.html"
+my_address = "https://realpython.com/practice/dionysus.html"
 html_page = urllib2.urlopen(my_address)
 html_text = html_page.read()
 

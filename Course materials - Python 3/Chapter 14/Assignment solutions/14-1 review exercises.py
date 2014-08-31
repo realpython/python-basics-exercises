@@ -1,11 +1,11 @@
 # 14.1 review exercises
 
-import urllib2
+from urllib.request import urlopen
 
 # Get the full HTML from the "dionysus" page
-my_address = "http://RealPython.com/practice/dionysus.html"
-html_page = urllib2.urlopen(my_address)
-html_text = html_page.read()
+my_address = "https://realpython.com/practice/dionysus.html"
+html_page = urlopen(my_address)
+html_text = html_page.read().decode('utf-8')
 
 # Get the "Name" and "Favorite Color" using find()
 for tag in ["Name: ", "Favorite Color: "]:

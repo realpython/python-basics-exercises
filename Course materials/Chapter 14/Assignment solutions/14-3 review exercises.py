@@ -5,7 +5,7 @@ import mechanize
 
 # Start a mechanize browser and open the login page
 my_browser = mechanize.Browser()
-my_browser.open("http://RealPython.com/practice/login.php")
+my_browser.open("https://realpython.com/practice/login.php")
 
 # Select the login form and input a username & password
 my_browser.select_form("login")

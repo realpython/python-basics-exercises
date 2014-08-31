@@ -4,7 +4,7 @@ import urllib2
 from bs4 import BeautifulSoup
 
 # Get the full HTML from the "profiles" page
-base_URL = "http://RealPython.com/practice/"
+base_URL = "https://realpython.com/practice/"
 address = base_URL + "profiles.html"
 html_page = urllib2.urlopen(address)
 html_text = html_page.read()
