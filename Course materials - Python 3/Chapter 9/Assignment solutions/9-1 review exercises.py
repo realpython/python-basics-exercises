@@ -33,3 +33,18 @@ print(food[0:2])
 my_breakfast = "cookies, cookies, cookies"
 breakfast = my_breakfast.split(", ")
 print(breakfast)
+
+"""
+Define a function that takes a list of numbers, `[2, 4, 8, 16, 32, 64]`, as the
+argument and then outputs only the numbers from the list that fall between 1
+and 20 (inclusive)
+"""
+
+
+def print_list(list_of_nums):
+    for num in list_of_nums:
+        if num >= 2 and num <= 20:
+            print(num)
+
+list_of_numbers = [2, 4, 8, 16, 32, 64]
+print_list(list_of_numbers)
