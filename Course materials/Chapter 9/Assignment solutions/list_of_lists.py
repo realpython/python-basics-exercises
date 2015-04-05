@@ -5,7 +5,7 @@ def enrollment_stats(list_of_universities):
     total_tuition = []
 
     # iterate through lists, adding values
-    for university in universities:
+    for university in list_of_universities:
         total_students.append(university[1])
         total_tuition.append(university[2])
 
