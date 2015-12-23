@@ -14,4 +14,4 @@ for trial in range(1, trials):
         flips += 1
     flips += 1
 
-print("The average number of coin flips was {0}".format(flips/trials))
+print("The average number of coin flips was {0}".format(flips / trials))
