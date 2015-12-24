@@ -1,5 +1,5 @@
- # 10.3 high_scores.py
- # Read in CSV data containing names and scores; display a high score list
+# 10.3 high_scores.py
+# Read in CSV data containing names and scores; display a high score list
 
 import csv
 import os
