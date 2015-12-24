@@ -8,11 +8,11 @@ noun = ["fossil", "horse", "aardvark", "judge",
 verb = ["kicks", "jingles", "bounces", "slurps",
         "meows", "explodes", "curdles"]
 adjective = ["furry", "balding", "incredulous",
-            "fragrant", "exuberant", "glistening"]
+             "fragrant", "exuberant", "glistening"]
 preposition = ["against", "after", "into", "beneath",
-                "upon", "for", "in", "like", "over", "within"]
+               "upon", "for", "in", "like", "over", "within"]
 adverb = ["curiously", "extravagantly",
-            "tantalizingly", "furiously", "sensuously"]
+          "tantalizingly", "furiously", "sensuously"]
 
 
 def make_poem():

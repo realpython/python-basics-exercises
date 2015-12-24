@@ -19,7 +19,7 @@ def mean(my_list):
     list_sum = 0
     for i in range(len(my_list)):
         list_sum += float(my_list[i])
-    return int(list_sum/len(my_list))
+    return int(list_sum / len(my_list))
 
 
 def median(my_list):

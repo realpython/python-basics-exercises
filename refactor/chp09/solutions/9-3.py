@@ -10,13 +10,13 @@ birthdays["Obi-Wan Kenobi"] = "3/11/57"
 birthdays["Darth Vader"] = "4/1/41"
 
 # Check if "Yoda" and "Darth Vader exist; if not, add them
-if not "Yoda" in birthdays:
+if "Yoda" not in birthdays:
     birthdays["Yoda"] = "unknown"
-if not "Darth Vader" in birthdays:
+if "Darth Vader" not in birthdays:
     birthdays["Darth Vader"] = "unknown"
 
-## Bonus points: you could instead loop over a list of names to check
-#for name in ["Yoda", "Darth Vader"]:
+# Bonus points: you could instead loop over a list of names to check
+# for name in ["Yoda", "Darth Vader"]:
 #    if not name in birthdays:
 #        birthdays[name] = "unknown"
 
