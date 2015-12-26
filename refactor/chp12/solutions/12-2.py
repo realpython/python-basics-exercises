@@ -20,10 +20,10 @@ for page_num in range(0, input_file.getNumPages()):
     upper_right = page_left.mediaBox.upperRight  # get original page corner
 
     # crop and add left-side page
-    page_left.mediaBox.upperRight = (upper_right[0]/2, upper_right[1])
+    page_left.mediaBox.upperRight = (upper_right[0] / 2, upper_right[1])
     output_PDF.addPage(page_left)
     # crop and add right-side page
-    page_right.mediaBox.upperLeft = (upper_right[0]/2, upper_right[1])
+    page_right.mediaBox.upperLeft = (upper_right[0] / 2, upper_right[1])
     output_PDF.addPage(page_right)
 
 # save new pages to an output file
