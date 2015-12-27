@@ -25,7 +25,7 @@ print("Title: ", login_title.text)
 form = login_html.form
 form.select("input")[0]["value"] = "wrong"
 form.select("input")[1]["value"] = "password"
-error_page = my_browser.submit(form, login_page.url) # submit form
+error_page = my_browser.submit(form, login_page.url)  # submit form
 
 # check for string
 if error_page.soup.text.find("Wrong username or password!") != -1:
