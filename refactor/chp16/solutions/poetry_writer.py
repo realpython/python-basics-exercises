@@ -26,8 +26,11 @@ def make_poem():
     preposition = entry_prep.get().split(",")
 
     # make sure that all lists consist of unique words
-    if not (check_unique(noun) and check_unique(verb) and check_unique(adjective)
-            and check_unique(adverb) and check_unique(preposition)):
+    if not (check_unique(noun) and
+            check_unique(verb) and
+            check_unique(adjective) and
+            check_unique(adverb) and check_unique(preposition)
+            ):
         result_poem.config(text="Please do not enter duplicate words.")
         return
 
@@ -106,17 +109,17 @@ frame.grid(padx=5, pady=5)  # pad top and left of frame 5 pixels before grid
 label_directions = Label(
     frame, text="Enter your favorite words, separated by commas:"
 )
-label_directions.grid(row=1, column=1, sticky=S+W, columnspan=2)
+label_directions.grid(row=1, column=1, sticky=S + W, columnspan=2)
 label_noun = Label(frame, text="Nouns:")
-label_noun.grid(row=2, column=1, sticky=S+E)
+label_noun.grid(row=2, column=1, sticky=S + E)
 label_verb = Label(frame, text="Verbs:")
-label_verb.grid(row=3, column=1, sticky=S+E)
+label_verb.grid(row=3, column=1, sticky=S + E)
 label_adj = Label(frame, text="Adjectives:")
-label_adj.grid(row=4, column=1, sticky=S+E)
+label_adj.grid(row=4, column=1, sticky=S + E)
 label_prep = Label(frame, text="Prepositions:")
-label_prep.grid(row=5, column=1, sticky=S+E)
+label_prep.grid(row=5, column=1, sticky=S + E)
 label_adv = Label(frame, text="Adverbs:")
-label_adv.grid(row=6, column=1, sticky=S+E)
+label_adv.grid(row=6, column=1, sticky=S + E)
 
 # create and add space for user entry of text
 entry_noun = Entry(frame, width=80)
@@ -143,7 +146,7 @@ result_poem.grid(row=9, column=1, rowspan=5, columnspan=2)
 def save_file():
     type_list = [("Text files", "*.txt")]
     file_name = filedialog.asksaveasfilename(filetypes=type_list,
-                                              defaultextension=".txt")
+                                             defaultextension=".txt")
     print(file_name)
     if file_name != "":  # save file if user entered a file name
         output_file = open(file_name, "w")

@@ -23,7 +23,7 @@ if page_start is None:  # exit on "Cancel"
 #    1) input page number isn't a (non-negative) digit
 # or 2) input page number is 0
 # or 3) page number is greater than total number of pages
-while (not page_start.isdigit() or page_start == 
+while (not page_start.isdigit() or page_start ==
         "0" or int(page_start) > total_pages):
     msgbox("Please provide a valid page number.", "Whoops!")
     page_start = enterbox(
@@ -41,8 +41,8 @@ if page_end is None:  # exit on "Cancel"
 # or 2) input page number is 0
 # or 3) input page number is greater than total number of pages
 # or 4) input page number for end is less than page number for beginning
-while (not page_end.isdigit() or page_end == "0" 
-        or int(page_end) > total_pages or int(page_end) < int(page_start)):
+while (not page_end.isdigit() or page_end == "0" or
+       int(page_end) > total_pages or int(page_end) < int(page_start)):
     msgbox("Please provide a valid page number.", "Whoops!")
     page_end = enterbox(
         "Enter the number of the last page to use:", "Where to end?"
@@ -61,7 +61,7 @@ if output_file_name is None:
 # read in file, write new file with trimmed page range and save the new file
 output_PDF = PdfFileWriter()
 # subtract 1 from supplied start page number to get correct index value
-for page_num in range(int(page_start)-1, int(page_end)):
+for page_num in range(int(page_start) - 1, int(page_end)):
     page = input_file.getPage(page_num)
     output_PDF.addPage(page)
 output_file = open(output_file_name, "wb")
