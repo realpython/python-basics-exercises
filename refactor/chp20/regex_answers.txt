@@ -1,0 +1,6 @@
+1. Blank lines - ^\s*\n
+1. Spaces from the beginning of each line - ^\s+
+1. Bracketed numbers (e.g., '[1]') - \[\d+\]
+1. The first column of numbers - ^\d+\s+
+1. 'Inc.', ', Inc.', 'Inc', and 'Incorporated' - (,* |,)(Incorporated|Inc\.*)
+1. Space between the area code, '(XXX)', and the phone number, 'XXX-XXXX' - find - (\(\d{3}\))(\s)(\d{3}-\d{4}) then replace - $1$3
