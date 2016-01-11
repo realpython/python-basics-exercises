@@ -1,8 +1,15 @@
 # 8.2 review exercises
 
 
-# Test whether these expressions are True or False
-print((1 <= 1) and (1 != 1))
-print(not (1 != 2))
-print(("good" != "bad") or False)
-print(("good" != "Good") and not (1 == 1))
+# Create a tuple "cardinal_nums" with "first", "second" and "third"
+cardinal_nums = ("first", "second", "third")
+
+# Display the second object in the tuple
+print(cardinal_nums[1])
+
+
+# unpack the tuple into three string and display them
+pos1, pos2, pos3 = cardinal_nums
+print(pos1)
+print(pos2)
+print(pos3)

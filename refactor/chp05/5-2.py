@@ -1,17 +1,24 @@
 # 5.2 review exercises
 
-weight = 0.2
-animal = "newt"
 
-# Concatenate a number and a string in one print statement
-print(str(weight) + " kg is the weight of the newt.")
+# print the integer 2 through 10 using a "for" loop
+for i in range(2, 11):
+    print(i)
 
-# Use format() to print a number and a string inside of another string
-print("{} kg is the weight of the {}.".format(weight, animal))
 
-# Use format() to add objects inside a string using index numbers
-# (Here we reversed the arguments - just because we could.)
-print("{1} kg is the weight of the {0}.".format(animal, weight))
+# print the integer 2 through 10 using a "while" loop
+i = 2
+while (i < 11):
+    print(i)
+    i = i + 1
 
-# Use format() to print new objects inside a string
-print("{} kg is the weight of the {}.".format(0.2, "newt"))
+
+def doubles(num):
+    ''' Return the result of multiplying an input number by 2 '''
+    return num * 2
+
+# Call doubles to double the number 2 three times
+my_num = 2
+for i in range(0, 3):
+    my_num = doubles(my_num)
+    print(my_num)

@@ -1,23 +1,18 @@
 # 5.1 review exercises
 
 
-# Store an integer as a string
-my_integer_string = "6"
+def cube(num):
+    ''' Returns the cube of the input number '''
+    cube_num = num * num * num
+    return cube_num
 
-# Convert the 'integer' string into an int object using int()
-# Multiply the integer by 7 and display the result
-print(int(my_integer_string) * 7)
-
-
-# Store a floating-point number as a string
-my_float_string = "6.01"
-
-# Convert the 'float' string into a number using float()
-# Multiply the number by 7 and display the result
-print(float(my_float_string) * 7)
+print("0 cubed is", cube(0))
+print("2 cubed is", cube(2))
 
 
-# Create a string and an int object, then display them together
-my_string = "mp"
-my_int = 3
-print(my_string + str(my_int))
+def multiply(num1, num2):
+    ''' Returns the result of multiplying two input numbers '''
+    return num1 * num2
+
+mult_result = multiply(2, 5)
+print("2 times 5 is", mult_result)
