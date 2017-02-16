@@ -42,7 +42,7 @@ def make_poem():
     adj3 = choice(adjective)
     while adj1 == adj2:
         adj2 = choice(adjective)
-    while n1 == n3 or n2 == n3:
+    while adj1 == adj3 or adj2 == adj3:
         adj3 = choice(adjective)
 
     # Pull two different prepositions
