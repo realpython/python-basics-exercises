@@ -17,5 +17,5 @@ print(hello)
 # We meant to print the string "hello";
 # a variable named 'hello' doesn't exist yet.
 # This line could have been:
-# myString = "hello"
-# print(myString)
+# my_string = "hello"
+# print(my_string)
