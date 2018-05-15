@@ -1,4 +1,5 @@
-# 15.1 review exercises
+# 1.16.3- Create GUI Application with Tkinter
+# Solutions to review exercise #2
 
 # Create a button that takes on the value in an entry box
 
@@ -9,6 +10,7 @@ from tkinter import *
 def button_clicked():
     ''' sets the button text to the text in the entry box '''
     button.config(text=entry.get())
+
 
 window = Tk()
 # Create and add button

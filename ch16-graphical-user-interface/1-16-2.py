@@ -1,4 +1,6 @@
-# chapter 15 partial_PDF.py
+# 1.16.2 - Assignment: Use GUI Elements to Help a User Modify Files
+# Solution to assignment
+
 # save part of a PDF based on a user-supplied page range using a GUI
 
 from easygui import *
