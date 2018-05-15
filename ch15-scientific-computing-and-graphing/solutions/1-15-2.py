@@ -1,9 +1,13 @@
-# chapter 14 pirates.py
+# 1.15.2 - Use matplotlib for Plotting Graphs
+# Solution to review exercise #2
+
 # Graph pirates versus global warming
 
 from matplotlib import pyplot as plt
 import csv
 import os
+
+# Change `path` to actual path on your system
 path = "C:/Real Python/refactor/chp15/practice_files"
 
 years = []
