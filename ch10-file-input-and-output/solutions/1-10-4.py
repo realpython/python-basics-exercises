@@ -1,8 +1,13 @@
-# chapter 9 high_scores.py
+# 1.10.4 - Assignment: Create a High Scores List From CSV Data
+# Solution to assignment
+
+
 # Read in CSV data containing names and scores; display a high score list
 
 import csv
 import os
+
+# Change my_path to the correct path on your system
 my_path = "C:/Real Python/refactor/chp10/practice_files"
 
 high_scores_dict = {}

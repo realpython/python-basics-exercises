@@ -1,4 +1,5 @@
-# 9.2 review exercises
+# 1.10.1 - Use More Complicated Folder Structures
+# Solutions to review exercises
 
 
 # Initial setup

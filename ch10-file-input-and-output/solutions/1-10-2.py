@@ -1,4 +1,7 @@
-# chapter 9 remove_files.py
+# 1-10-2 Assignment: Use Pattern Matching to Delete Files
+# Solution to Assignment
+
+
 # Remove JPG files from multiple folders based on file size
 
 import os

@@ -1,3 +1,6 @@
+# 1.10.5 - Assignment: Split a CSV File
+# Solution to assignment
+
 import sys
 import os
 import csv
