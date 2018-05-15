@@ -1,9 +1,12 @@
-# 11.1 review exercises
+# 1.12 - Interact with PDF Files
+# Solutions to review exercises
 
 
 import os
 from pyPdf import PdfFileReader, PdfFileWriter
 
+
+# Exercise 1
 path = "C:/Real Python/refactor/chp12/practice_files"
 input_file_name = os.path.join(path, "The Whistling Gypsy.pdf")
 input_file = PdfFileReader(open(input_file_name, "rb"))
@@ -13,6 +16,8 @@ print("Title:", input_file.getDocumentInfo().title)
 print("Author:", input_file.getDocumentInfo().author)
 print("Number of pages:", input_file.getNumPages())
 
+
+# Exercise 2
 # Specify and open output text file
 output_file_name = os.path.join(path, "Output/The Whistling Gypsy.txt")
 with open(output_file_name, "w") as output_file:
@@ -22,6 +27,8 @@ with open(output_file_name, "w") as output_file:
         text = text.encode("utf-8")  # convert text to unicode
         output_file.write(text)
 
+
+# Exercise 3
 # Save file without cover page
 output_PDF = PdfFileWriter()
 for page_num in range(1, input_file.getNumPages()):

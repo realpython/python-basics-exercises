@@ -1,4 +1,7 @@
-# chapter 11 cover_the_emperor.py
+# 1.12.2 - Assignment: Add a Cover Sheet to a PDF File
+# Solution to assignment
+
+
 # Add a cover sheet to a PDF; save the full output as a new PDF
 
 import os
