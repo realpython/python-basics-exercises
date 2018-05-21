@@ -46,8 +46,6 @@ universities = [
 
 totals = enrollment_stats(universities)
 
-print(totals[0])
-
 print("\n")
 print("*****" * 5)
 print("Total students:   {}".format(sum(totals[0])))
