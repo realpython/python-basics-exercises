@@ -129,6 +129,5 @@ def parse_file(arguments):
             current_chunk += 1
 
 
-if __name__ == "__main__":
-    arguments = get_arguments()
-    parse_file(arguments)
+arguments = get_arguments()
+parse_file(arguments)
