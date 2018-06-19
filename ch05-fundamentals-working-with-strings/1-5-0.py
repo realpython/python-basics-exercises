@@ -25,3 +25,11 @@ print(float(my_float_string) * 7)
 my_string = "mp"
 my_int = 3
 print(my_string + str(my_int))
+
+# Exercise 4
+# Get two numbers from the user, multiple them,
+# and display the result
+a = input("Enter a number: ")
+b = input("Enter another number: ")
+product = float(a) * float(b)
+print("The product of " + a + " and " + b + " is " + str(product))
