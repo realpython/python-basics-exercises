@@ -16,16 +16,5 @@ print("{} kg is the weight of the {}.".format(weight, animal))
 
 
 # Exercise 3
-# Use format() to add objects inside a string using index numbers
-# (Here we reversed the arguments - just because we could.)
-print("{1} kg is the weight of the {0}.".format(animal, weight))
-
-
-# Exercise 4
-# Use format() to print new objects inside a string
-print("{} kg is the weight of the {}.".format(0.2, "newt"))
-
-
-# Exercise 5
-# Use formatted string literal to reference objects inside a string
+# Use formatted string literal (f-string) to reference objects inside a string
 print(f"{weight} kg is the weight of the {animal}.")
