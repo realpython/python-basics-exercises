@@ -22,7 +22,7 @@ with open(in_file_path, "r") as in_file, open(out_file_path, "w") as out_file:
     csv_writer.writerow(["Name", "Favorite Pastime", "Type of pastime"])
 
     for row in csv_reader:
-        print row
+        print(row)
         # Check if "Favorite Pastime" includes "fighting"
         if row[1].lower().find("fighting") != -1:
             row.append("Combat")
