@@ -22,4 +22,4 @@ with open(os.path.join(my_path, "scores.csv"), "r") as myFile:
             high_scores_dict[name] = score
 
 for name in sorted(high_scores_dict):
-    print name, high_scores_dict[name]
+    print(name, high_scores_dict[name])
