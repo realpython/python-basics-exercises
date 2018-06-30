@@ -13,12 +13,12 @@ path = "C:/Real Python/refactor/chp10/practice_files"
 # Append a third column and write out the resulting CSV with a new header
 in_file_path = os.path.join(path, "pastimes.csv")
 out_file_path = os.path.join(path, "Output/categorized pastimes.csv")
-with open(in_file_path, "rb") as inFile, open(out_file_path, "wb") as outFile:
+with open(in_file_path, "r") as inFile, open(out_file_path, "w") as outFile:
     csv_reader = csv.reader(inFile)
     csv_writer = csv.writer(outFile)
 
     # skip header row and write a new output header row
-    csv_reader.next()
+    next(csv_reader)
     csv_writer.writerow(["Name", "Favorite Pastime", "Type of pastime"])
 
     for row in csv_reader:
