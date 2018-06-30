@@ -32,3 +32,8 @@ for current_folder, subfolders, file_names in os.walk(path):
 # Check that the two files have been converted to JPGs successfully
 print(os.path.exists(os.path.join(path, "png file - not a gif.jpg")))
 print(os.path.exists(os.path.join(path, "additional files/one last image.jpg")))
+
+# Exercise 5
+os.mkdir("Output")
+with open("Output/python.txt", "w") as out_file:
+    out_file.write("I was put here by Python!")
