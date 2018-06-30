@@ -11,7 +11,7 @@ import os
 my_path = "C:/Real Python/refactor/chp10/practice_files"
 
 high_scores_dict = {}
-with open(os.path.join(my_path, "scores.csv"), "rb") as myFile:
+with open(os.path.join(my_path, "scores.csv"), "r") as myFile:
     my_file_reader = csv.reader(myFile)
     for name, score in my_file_reader:  # get each name/score pair
         score = int(score)  # convert string score to integer
