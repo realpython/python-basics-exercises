@@ -13,7 +13,7 @@ my_poem = open("poem.txt", "r")
 for line in my_poem.readlines():
     # Replace automatic line break at end of line;
     # file already contains newline characters
-    print(line,)
+    print(line, end="")
 my_poem.close()
 
 # Print some blank lines to separate the two examples
@@ -22,7 +22,7 @@ print("\n\n")
 # Use "with" to automatically close a file when finished
 with open("poem.txt", "r") as my_poem:
     for line in my_poem.readlines():
-        print(line,)
+        print(line, end="")
 
 # Write the contents of one file into another, line-by-line
 poem_in = open("poem.txt", "r")
