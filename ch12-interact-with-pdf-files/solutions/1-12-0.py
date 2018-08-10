@@ -3,7 +3,7 @@
 
 
 import os
-from pyPdf import PdfFileReader, PdfFileWriter
+from pyPDF2 import PdfFileReader, PdfFileWriter
 
 
 # Exercise 1
