@@ -5,12 +5,12 @@ from urllib.request import urlopen
 
 # Exercise 1
 # Get the full HTML from the "dionysus" page
-my_address = "https://realpython.com/practice/dionysus.html"
-html_page = urlopen(my_address)
+url = "http://olympus.realpython.org/profiles/dionysus"
+html_page = urlopen(url)
 html_text = html_page.read().decode('utf-8')
 
 # Exercise 2
-# Get the "Name" and "Favorite Color" using find()
+# Get the "Name" and "Favorite Color" using .find()
 for tag in ["Name: ", "Favorite Color: "]:
     tag_start = html_text.find(tag) + len(tag)
     tag_end = html_text[tag_start:].find("<")
@@ -21,6 +21,7 @@ for tag in ["Name: ", "Favorite Color: "]:
 # Exercise 3
 # Get the "Name" and "Favorite Color" using regular expressions
 import re
+
 # Match anything up until a new line or HTML tag; non-greedy
 for tag in ["Name: .*?[\n<]", "Favorite Color: .*?[\n<]"]:
     match_results = re.search(tag, html_text)
