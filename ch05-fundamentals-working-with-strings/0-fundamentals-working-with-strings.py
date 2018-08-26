@@ -1,4 +1,4 @@
-# 1.5.0 - Fundamentals: Working with Strings
+# 5.0 - Fundamentals: Working with Strings
 # Solutions to review exercies
 
 

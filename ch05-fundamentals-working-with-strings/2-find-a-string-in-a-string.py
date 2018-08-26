@@ -1,4 +1,4 @@
-# 1.5.2 - Find a String in a String
+# 5.2 - Find a String in a String
 # Solutions to review exercies
 
 
