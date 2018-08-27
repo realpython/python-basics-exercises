@@ -1,4 +1,4 @@
-# 1.6.6 - Print Numbers in Style
+# 6.7 - Print Numbers in Style
 # Solutions to Review Exercises
 
 # Exercise 1
