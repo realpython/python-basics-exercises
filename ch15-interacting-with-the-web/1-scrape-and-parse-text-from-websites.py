@@ -5,9 +5,9 @@ from urllib.request import urlopen
 
 # Exercise 1
 # Get the full HTML from the "dionysus" page
-my_address = "https://realpython.com/practice/dionysus.html"
+my_address = "http://olympus.realpython.org/profiles/dionysus"
 html_page = urlopen(my_address)
-html_text = html_page.read().decode('utf-8')
+html_text = html_page.read().decode("utf-8")
 
 # Exercise 2
 # Get the "Name" and "Favorite Color" using find()
