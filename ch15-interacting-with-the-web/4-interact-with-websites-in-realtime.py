@@ -1,28 +1,31 @@
 # 15.4 - Interact With Websites in Real-Time
 # Solutions to review exercise
 
+# Make sure BeautifulSoup is installed first with:
+# pip3 install MechanicalSoup
+
 from time import sleep
 import mechanicalsoup
 
 my_browser = mechanicalsoup.Browser()
 
-# obtain 1 stock quote per minute for the next 3 minutes
-for i in range(0, 3):
-
-    page = my_browser.get("http://finance.yahoo.com/q?s=yhoo")
+# Obtain 1 dice roll result every 10 seconds for the next minute
+for i in range(0, 6):
+    page = my_browser.get("http://olympus.realpython.org/dice")
     html_text = page.soup
 
-    # return a list of all the tags where the id is 'yfs_184_yhoo'
-    my_price_tag = html_text.select("#yfs_l84_yhoo")
-    # take the BeautifulSoup string out of the first tag
-    my_price = my_price_tag[0].text
+    # Return a list of all the tags where the id is 'yfs_184_yhoo'
+    dice_result_tag = html_text.select("#result")
+
+    # Take the BeautifulSoup string out of the first tag
+    dice_result = dice_result_tag[0].text
 
     # Grab the timestamp
-    my_time_tag = page.soup.select("#yfs_market_time")
-    my_time = my_time_tag[0].text
-    my_time = my_time[:my_time.find(" - ")]  # trim string to just the time
+    time_tag = page.soup.select("#time")
+    time = time_tag[0].text
+    time = time[:time.find(" - ")]  # Trim string to just the time
 
-    print("The price of YHOO is: {} on {}".format(my_price, my_time))
+    print(f"Rolled a '{dice_result}' on {time}")
 
-    if i < 2:  # wait a minute if this isn't the last request
-        sleep(60)
+    if i < 5:  # Wait 10 seconds if this wasn't the last request
+        sleep(10)
