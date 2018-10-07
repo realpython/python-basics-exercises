@@ -1,4 +1,4 @@
-# 4.0 Fundamentals: Strings and Methods
+# 4.0 - Strings and Methods
 # Solutions to review exercies
 
 
