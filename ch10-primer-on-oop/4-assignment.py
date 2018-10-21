@@ -1,41 +1,45 @@
-class Animal():
+# 10.4 - Assignment: Model a Farm
+# Solutions to assignment
 
-    # class attributes
+
+class Animal:
+
+    # Class attributes
     stuff_in_belly = 0
     position = 0
 
-    # initializer
+    # Initializer
     def __init__(self, name, color):
         self.name = name
         self.color = color
 
-    # instance methods
+    # Instance methods
     def talk(self):
-        return "Hello. I'm {}".format(self.name)
+        return f"Hello. I'm {self.name}"
 
     def walk(self, walk_increment):
-        self.position += walk_increment
+        self.position = self.position + walk_increment
         return self.position
 
     def run(self, run_increment):
-        self.position += run_increment
+        self.position = self.position + run_increment
         return self.position
 
     def feed(self):
-        self.stuff_in_belly += 1
+        self.stuff_in_belly = self.stuff_in_belly + 1
         if self.stuff_in_belly > 3:
             return self.poop()
         else:
-            return "{} is eating.".format(self.name)
+            return f"{self.name} is eating."
 
-    def hungry(self):
+    def is_hungry(self):
         if self.stuff_in_belly < 2:
-            return "{} is hungry".format(self.name)
+            return f"{self.name} is hungry"
         else:
-            return "{} is not hungry".format(self.name)
+            return f"{self.name} is not hungry"
 
     def poop(self):
-        self.stuff_in_belly == 0
+        self.stuff_in_belly = 0
         return "Ate too much ... need to find a bathroom"
 
 
@@ -45,7 +49,7 @@ class Dog(Animal):
         return "Bark! Bark!"
 
     def fetch(self):
-        return "{} is fetching.".format(self.name)
+        return f"{self.name} is fetching."
 
 
 class Sheep(Animal):
@@ -63,25 +67,25 @@ class Pig(Animal):
 # create a dog
 dog = Dog("Blitzer", "yellow")
 # output the dog's attributes
-print("Our dog's name is {}.".format(dog.name))
-print("And he's {}.".format(dog.color))
+print(f"Our dog's name is {dog.name}.")
+print(f"And he's {dog.color}.")
 # output some behavior
-print("Say something, {}.".format(dog.name))
+print(f"Say something, {dog.name}.")
 print(dog.talk())
 print("Go fetch!")
 print(dog.fetch())
 # walk the dog
-print("{} is at position {}.".format(dog.name, dog.walk(2)))
+print(f"{dog.name} is at position {dog.walk(2)}.")
 # run the dog
-print("{} is now at position {}".format(dog.name, dog.run(4)))
+print(f"{dog.name} is now at position {dog.run(4)}")
 # feed the dog
 print(dog.feed())
 # is the dog hungry
-print(dog.hungry())
+print(dog.is_hungry())
 # feed the dog more
 print(dog.feed())
 print(dog.feed())
-print(dog.hungry())
+print(dog.is_hungry())
 print(dog.feed())
 
 print("\n")
