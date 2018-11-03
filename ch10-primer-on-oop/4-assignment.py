@@ -14,8 +14,14 @@ class Animal:
         self.color = color
 
     # Instance methods
-    def talk(self):
-        return f"Hello. I'm {self.name}"
+    def talk(self, sound=None):
+        """Return the string "<name> says <sound>"
+
+        If `sound` is left out, returns "Hello, I'm <name>"
+        """
+        if sound is None:
+            return f"Hello. I'm {self.name}!"
+        return f"{self.name} says {sound}"
 
     def walk(self, walk_increment):
         self.position = self.position + walk_increment
@@ -45,8 +51,8 @@ class Animal:
 
 class Dog(Animal):
 
-    def talk(self):
-        return "Bark! Bark!"
+    def talk(self, sound="Bark Bark!"):
+        return super().talk(sound)
 
     def fetch(self):
         return f"{self.name} is fetching."
@@ -54,35 +60,46 @@ class Dog(Animal):
 
 class Sheep(Animal):
 
-    def talk(self):
-        return "Baaa Baaa"
+    def talk(self, sound="Baaa Baaa"):
+        return super().talk(sound)
 
 
 class Pig(Animal):
 
-    def talk(self):
-        return "Oink Oink"
+    def talk(self, sound="Oink Oink"):
+        return super().talk(sound)
 
 
-# create a dog
+# The following code illustrates how to use the classes defined above.
+# It is not necesarrily a part of the solution, and is included for
+# illustration purposes only.
+
+# Create a dog
 dog = Dog("Blitzer", "yellow")
-# output the dog's attributes
+
+# Output the dog's attributes
 print(f"Our dog's name is {dog.name}.")
 print(f"And he's {dog.color}.")
-# output some behavior
+
+# Output some behavior
 print(f"Say something, {dog.name}.")
 print(dog.talk())
 print("Go fetch!")
 print(dog.fetch())
-# walk the dog
+
+# Walk the dog
 print(f"{dog.name} is at position {dog.walk(2)}.")
-# run the dog
+
+# Run the dog
 print(f"{dog.name} is now at position {dog.run(4)}")
-# feed the dog
+
+# Feed the dog
 print(dog.feed())
-# is the dog hungry
+
+# Is the dog hungry?
 print(dog.is_hungry())
-# feed the dog more
+
+# Feed the dog more
 print(dog.feed())
 print(dog.feed())
 print(dog.is_hungry())
@@ -90,12 +107,20 @@ print(dog.feed())
 
 print("\n")
 
+# Create a sheep
 sheep = Sheep("Shaun", "white")
+
+# The sheep talks!
 print(sheep.talk())
+
+# When the sheep runs, the distance is returned
 print(sheep.run(2))
 print(sheep.run(2))
 
 print("\n")
 
+# Create a pig
 pig = Pig("Carl", "pink")
+
+# Pigs love to oink!
 print(pig.talk())
