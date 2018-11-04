@@ -4,16 +4,16 @@
 
 def enrollment_stats(list_of_universities):
 
-    # variables
+    # Variables
     total_students = []
     total_tuition = []
 
-    # iterate through lists, adding values
+    # Iterate through lists, adding values
     for university in list_of_universities:
         total_students.append(university[1])
         total_tuition.append(university[2])
 
-    # return variables
+    # Return variables
     return total_students, total_tuition
 
 

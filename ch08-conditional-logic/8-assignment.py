@@ -25,7 +25,7 @@ for trial in range(0, trials):
         A_win += 1
     else:
         B_win += 1
-    # determine overall election outcome
+    # Determine overall election outcome
     if A_win > B_win:
         total_A_wins += 1
     else:
