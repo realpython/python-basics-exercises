@@ -4,6 +4,7 @@
 
 # Calculate compound interest to track the growth of an investment
 
+
 def invest(amount, rate, time):
     print("principal amount: ${}".format(amount))
     print("annual rate of return:", rate)
@@ -13,5 +14,5 @@ def invest(amount, rate, time):
     print()
 
 
-invest(100, .05, 8)
-invest(2000, .025, 5)
+invest(100, 0.05, 8)
+invest(2000, 0.025, 5)

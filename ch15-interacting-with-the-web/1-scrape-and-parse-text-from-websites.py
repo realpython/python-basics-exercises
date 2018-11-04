@@ -7,7 +7,7 @@ from urllib.request import urlopen
 # Get the full HTML from the "dionysus" page
 url = "http://olympus.realpython.org/profiles/dionysus"
 html_page = urlopen(url)
-html_text = html_page.read().decode('utf-8')
+html_text = html_page.read().decode("utf-8")
 
 # Exercise 2
 # Get the "Name" and "Favorite Color" using .find()
@@ -15,7 +15,7 @@ for tag in ["Name: ", "Favorite Color: "]:
     tag_start = html_text.find(tag) + len(tag)
     tag_end = html_text[tag_start:].find("<")
     # Remove extra spaces and newline padding
-    print(html_text[tag_start:tag_start + tag_end].strip(" \n"))
+    print(html_text[tag_start : tag_start + tag_end].strip(" \n"))
 
 
 # Exercise 3

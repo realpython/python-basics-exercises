@@ -6,16 +6,22 @@
 
 from random import choice
 
-noun = ["fossil", "horse", "aardvark", "judge",
-        "chef", "mango", "extrovert", "gorilla"]
-verb = ["kicks", "jingles", "bounces", "slurps",
-        "meows", "explodes", "curdles"]
-adjective = ["furry", "balding", "incredulous",
-             "fragrant", "exuberant", "glistening"]
-preposition = ["against", "after", "into", "beneath",
-               "upon", "for", "in", "like", "over", "within"]
-adverb = ["curiously", "extravagantly",
-          "tantalizingly", "furiously", "sensuously"]
+noun = ["fossil", "horse", "aardvark", "judge", "chef", "mango", "extrovert", "gorilla"]
+verb = ["kicks", "jingles", "bounces", "slurps", "meows", "explodes", "curdles"]
+adjective = ["furry", "balding", "incredulous", "fragrant", "exuberant", "glistening"]
+preposition = [
+    "against",
+    "after",
+    "into",
+    "beneath",
+    "upon",
+    "for",
+    "in",
+    "like",
+    "over",
+    "within",
+]
+adverb = ["curiously", "extravagantly", "tantalizingly", "furiously", "sensuously"]
 
 
 def make_poem():

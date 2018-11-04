@@ -35,12 +35,16 @@ for name in birthdays:
 
 # Exercise 5
 # Remove "Darth Vader"
-del(birthdays["Darth Vader"])
+del (birthdays["Darth Vader"])
 print(birthdays)
 
 
 # Exercise 6 (Bonus)
 # Create dictionary by passing a list to dict()
-birthdays = dict([("Luke Skywalker", "5/25/19"),
-                  ("Obi-Wan Kenobi", "3/11/57"),
-                  ("Darth Vader", "4/1/41")])
+birthdays = dict(
+    [
+        ("Luke Skywalker", "5/25/19"),
+        ("Obi-Wan Kenobi", "3/11/57"),
+        ("Darth Vader", "4/1/41"),
+    ]
+)

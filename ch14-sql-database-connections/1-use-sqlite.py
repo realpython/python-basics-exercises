@@ -4,7 +4,7 @@
 import sqlite3
 
 # Create a temporary database connection in RAM
-with sqlite3.connect(':memory:') as connection:
+with sqlite3.connect(":memory:") as connection:
     c = connection.cursor()
 
     # Exercise 1
@@ -16,14 +16,13 @@ with sqlite3.connect(':memory:') as connection:
     roster_data = (
         ("Jean-Baptiste Zorg", "Human", 122),
         ("Korben Dallas", "Meat Popsicle", 100),
-        ("Ak'not", "Mangalore", -5)
+        ("Ak'not", "Mangalore", -5),
     )
     c.executemany("INSERT INTO Roster VALUES(?, ?, ?)", roster_data)
 
     # Exercise 3
     # Update the Species of Korben Dallas to "Human"
-    c.execute("UPDATE Roster SET Species=? WHERE Name=?",
-              ('Human', 'Korben Dallas'))
+    c.execute("UPDATE Roster SET Species=? WHERE Name=?", ("Human", "Korben Dallas"))
 
     # Exercise 4
     # Display the names and IQs of everyone classified as Human

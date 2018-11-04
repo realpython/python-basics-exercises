@@ -11,7 +11,7 @@ for i in range(2, 11):
 # Exercise 2
 # print the integer 2 through 10 using a "while" loop
 i = 2
-while (i < 11):
+while i < 11:
     print(i)
     i = i + 1
 

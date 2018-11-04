@@ -26,7 +26,6 @@ print(f"{philo.name}'s coat is {philo.coat_color}.")
 
 # Exercise 2
 class Car:
-
     def __init__(self, color, mileage):
         self.color = color
         self.mileage = mileage
@@ -41,7 +40,6 @@ for car in (blue_car, red_car):
 
 # Exercise 3
 class Car:
-
     def __init__(self, color, mileage):
         self.color = color
         self.mileage = mileage

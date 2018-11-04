@@ -50,7 +50,6 @@ class Animal:
 
 
 class Dog(Animal):
-
     def talk(self, sound="Bark Bark!"):
         return super().talk(sound)
 
@@ -59,13 +58,11 @@ class Dog(Animal):
 
 
 class Sheep(Animal):
-
     def talk(self, sound="Baaa Baaa"):
         return super().talk(sound)
 
 
 class Pig(Animal):
-
     def talk(self, sound="Oink Oink"):
         return super().talk(sound)
 

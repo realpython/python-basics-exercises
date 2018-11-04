@@ -4,6 +4,7 @@
 
 # Convert Celsius and Fahrenheit temperatures using functions
 
+
 def convert_cel_to_far(cel_temp):
     far_temp = cel_temp * 9 / 5 + 32
     return far_temp
