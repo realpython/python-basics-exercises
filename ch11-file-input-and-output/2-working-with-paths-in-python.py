@@ -26,7 +26,8 @@ for file_name in glob.glob(file_matches):
 
 # Exercise 3
 # Change all PNGs to JPGs in the "images" folder and its subfolders
-# Could use indexing to get the file extension, but try using os.path.splitext()
+# Could use indexing to get the file extension, but try using
+# os.path.splitext()
 for current_folder, subfolders, file_names in os.walk(path):
     for file_name in file_names:
         file_path = os.path.join(current_folder, file_name)

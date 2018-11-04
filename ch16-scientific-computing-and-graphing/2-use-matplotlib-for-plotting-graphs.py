@@ -11,9 +11,9 @@ first_matrix = np.arange(3, 12).reshape(3, 3)
 
 # Exercise 2
 # Display the min, max and mean of all entries in the matrix
-print(f"Min is {first_matrix.min(}")
+print(f"Min is {first_matrix.min()}")
 print(f"Max is {first_matrix.max()}")
-print(f"Mean is {first_matrix.mean()}"}
+print(f"Mean is {first_matrix.mean()}")
 
 # Exercise 3
 # Square every entry and save in a new matrix

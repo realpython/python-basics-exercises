@@ -38,7 +38,8 @@ def make_poem():
             or len(preposition) < 2 or len(adverb) < 1:
         result_poem.config(
             text="Did you think you could get away that easily?\n\
-            Enter at least three nouns, three verbs, three adjectives, two prepositions and an adverb!")
+            Enter at least three nouns, three verbs, three adjectives, \
+            two prepositions and an adverb!")
         return
 
     # otherwise, we can go ahead with generating a poem:

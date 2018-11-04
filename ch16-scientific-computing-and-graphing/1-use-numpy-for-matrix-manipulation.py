@@ -12,9 +12,9 @@ first_matrix = first_matrix.reshape(3, 3)
 
 # Exercise 2
 # Display the min, max and mean of all entries in the matrix
-print "Min is", first_matrix.min()
-print "Max is", first_matrix.max()
-print "Mean is", first_matrix.mean()
+print("Min is", first_matrix.min())
+print("Max is", first_matrix.max())
+print("Mean is", first_matrix.mean())
 
 # Exercise 3
 # Square every entry and save in a new matrix
