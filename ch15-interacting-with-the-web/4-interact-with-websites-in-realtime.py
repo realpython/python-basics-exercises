@@ -23,7 +23,7 @@ for i in range(0, 6):
     # Grab the timestamp
     time_tag = page.soup.select("#time")
     time = time_tag[0].text
-    time = time[:time.find(" - ")]  # Trim string to just the time
+    time = time[: time.find(" - ")]  # Trim string to just the time
 
     print(f"Rolled a '{dice_result}' on {time}")
 

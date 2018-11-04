@@ -5,6 +5,7 @@
 # Initial setup
 import os
 import csv
+
 # This path may need to be changed depending on your setup
 path = "C:/Real Python/refactor/chp10/practice_files"
 

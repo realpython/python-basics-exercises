@@ -27,4 +27,4 @@ print("bazinga"[2:6])
 # A more advanced way to do the above example would be:
 my_string = "bazinga"
 start_index = 2
-print(my_string[start_index:len(my_string) - start_index + 1])
+print(my_string[start_index : len(my_string) - start_index + 1])

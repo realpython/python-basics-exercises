@@ -38,12 +38,23 @@ def get_arguments():
 
     # Use arparse to get command line arguments
     parser = argparse.ArgumentParser()
-    parser.add_argument("-i", "--input_file", required=True,
-                        help="csv input file (with extension)", type=str)
-    parser.add_argument("-o", "--output_file", required=True,
-                        help="csv output file (without extension)", type=str)
-    parser.add_argument("-r", "--row_limit", required=True,
-                        help="row limit to split csv at", type=int)
+    parser.add_argument(
+        "-i",
+        "--input_file",
+        required=True,
+        help="csv input file (with extension)",
+        type=str,
+    )
+    parser.add_argument(
+        "-o",
+        "--output_file",
+        required=True,
+        help="csv output file (without extension)",
+        type=str,
+    )
+    parser.add_argument(
+        "-r", "--row_limit", required=True, help="row limit to split csv at", type=int
+    )
     args = parser.parse_args()
 
     # Check if the input_file exits
@@ -75,8 +86,9 @@ def is_valid_csv(parser, file_name, row_limit):
     # row_count = sum(1 for row in csv.reader(open(file_name)))
     if row_limit > row_count:
         parser.error(
-            "The 'row_count' of '{}' is > the number of rows in '{}'!"
-            .format(row_limit, file_name)
+            "The 'row_count' of '{}' is > the number of rows in '{}'!".format(
+                row_limit, file_name
+            )
         )
         sys.exit(1)
 
@@ -89,10 +101,10 @@ def parse_file(arguments):
     input_file = arguments[0]
     output_file = arguments[1]
     row_limit = arguments[2]
-    output_path = '.'  # Current directory
+    output_path = "."  # Current directory
 
     # Read CSV, split into list of lists
-    with open(input_file, 'r') as input_csv:
+    with open(input_file, "r") as input_csv:
         datareader = csv.reader(input_csv)
         all_rows = []
         for row in datareader:
@@ -104,18 +116,17 @@ def parse_file(arguments):
         # Split list of list into chunks
         current_chunk = 1
         for i in range(0, len(all_rows), row_limit):  # Loop through list
-            chunk = all_rows[i:i + row_limit]  # Create single chunk
+            chunk = all_rows[i : i + row_limit]  # Create single chunk
 
             current_output = os.path.join(  # Create new output file
-                output_path,
-                "{}-{}.csv".format(output_file, current_chunk)
+                output_path, "{}-{}.csv".format(output_file, current_chunk)
             )
 
             # Add header
             chunk.insert(0, header)
 
             # Write chunk to output file
-            with open(current_output, 'w') as output_csv:
+            with open(current_output, "w") as output_csv:
                 writer = csv.writer(output_csv)
                 writer = writer.writerows(chunk)
 

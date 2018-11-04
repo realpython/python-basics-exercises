@@ -6,7 +6,7 @@ import random
 
 
 def check_unique(word_list):
-    '''check that all items in a list are unique and return True or False'''
+    """check that all items in a list are unique and return True or False"""
     unique_words = []
     for word in word_list:
         if word not in unique_words:
@@ -15,7 +15,7 @@ def check_unique(word_list):
 
 
 def make_poem():
-    '''create a randomly generated poem, returned as a multi-line string'''
+    """create a randomly generated poem, returned as a multi-line string"""
 
     # split the user input into lists
     noun = entry_noun.get().split(",")
@@ -25,21 +25,29 @@ def make_poem():
     preposition = entry_prep.get().split(",")
 
     # make sure that all lists consist of unique words
-    if not (check_unique(noun) and
-            check_unique(verb) and
-            check_unique(adjective) and
-            check_unique(adverb) and check_unique(preposition)
-            ):
+    if not (
+        check_unique(noun)
+        and check_unique(verb)
+        and check_unique(adjective)
+        and check_unique(adverb)
+        and check_unique(preposition)
+    ):
         result_poem.config(text="Please do not enter duplicate words.")
         return
 
     # make sure that we got enough words from the user to make a poem
-    if len(noun) < 3 or len(verb) < 3 or len(adjective) < 3 \
-            or len(preposition) < 2 or len(adverb) < 1:
+    if (
+        len(noun) < 3
+        or len(verb) < 3
+        or len(adjective) < 3
+        or len(preposition) < 2
+        or len(adverb) < 1
+    ):
         result_poem.config(
             text="Did you think you could get away that easily?\n\
             Enter at least three nouns, three verbs, three adjectives, \
-            two prepositions and an adverb!")
+            two prepositions and an adverb!"
+        )
         return
 
     # otherwise, we can go ahead with generating a poem:
@@ -146,8 +154,7 @@ result_poem.grid(row=9, column=1, rowspan=5, columnspan=2)
 def save_file():
     type_list = [("Text files", "*.txt")]
     file_name = tk.filedialog.asksaveasfilename(
-        filetypes=type_list,
-        defaultextension="*.txt"
+        filetypes=type_list, defaultextension="*.txt"
     )
     print(file_name)
     if file_name != "":  # save file if user entered a file name

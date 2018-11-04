@@ -2,11 +2,11 @@
 # Solutions to review exercises
 
 
-'''
+"""
 In order to run correctly, this script first needs to
 be placed in the Chapter 10 "practice_files" folder.
 (File paths are covered in section 10.2)
-'''
+"""
 
 # Read a text file by looping over individual lines
 my_poem = open("poem.txt", "r")

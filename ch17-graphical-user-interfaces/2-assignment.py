@@ -16,17 +16,14 @@ input_file = PdfFileReader(open(input_file_name, "rb"))
 total_pages = input_file.getNumPages()
 
 # let the user choose a beginning page
-page_start = enterbox(
-    "Enter the number of the first page to use:", "Where to begin?"
-)
+page_start = enterbox("Enter the number of the first page to use:", "Where to begin?")
 if page_start is None:  # exit on "Cancel"
     exit()
 # check for possible problems and try again:
 #    1) input page number isn't a (non-negative) digit
 # or 2) input page number is 0
 # or 3) page number is greater than total number of pages
-while (not page_start.isdigit() or page_start ==
-        "0" or int(page_start) > total_pages):
+while not page_start.isdigit() or page_start == "0" or int(page_start) > total_pages:
     msgbox("Please provide a valid page number.", "Whoops!")
     page_start = enterbox(
         "Enter the number of the first page to use:", "Where to begin?"
@@ -43,12 +40,14 @@ if page_end is None:  # exit on "Cancel"
 # or 2) input page number is 0
 # or 3) input page number is greater than total number of pages
 # or 4) input page number for end is less than page number for beginning
-while (not page_end.isdigit() or page_end == "0" or
-       int(page_end) > total_pages or int(page_end) < int(page_start)):
+while (
+    not page_end.isdigit()
+    or page_end == "0"
+    or int(page_end) > total_pages
+    or int(page_end) < int(page_start)
+):
     msgbox("Please provide a valid page number.", "Whoops!")
-    page_end = enterbox(
-        "Enter the number of the last page to use:", "Where to end?"
-    )
+    page_end = enterbox("Enter the number of the last page to use:", "Where to end?")
     if page_end is None:  # exit on "Cancel"
         exit()
 

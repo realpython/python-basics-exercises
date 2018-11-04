@@ -20,7 +20,7 @@ soup = BeautifulSoup(html_text, features="html.parser")
 for anchor in soup.find_all("a"):
     # Could also have used urlparse.urljoin() to get absolute URL
     link_address = base_URL + anchor["href"]
-    print(f'--- Fetching {link_address}:')
+    print(f"--- Fetching {link_address}:")
 
     # Exercise 3
     # Display the text in the HTML page of each link
