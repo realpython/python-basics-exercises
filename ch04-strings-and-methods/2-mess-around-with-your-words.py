@@ -1,4 +1,4 @@
-# 4.1 - Mess Around With Your Words
+# 4.2 - Basic String Operations
 # Solutions to review exercies
 
 

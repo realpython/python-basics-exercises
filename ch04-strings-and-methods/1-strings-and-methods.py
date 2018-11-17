@@ -1,4 +1,4 @@
-# 4.0 - Strings and Methods
+# 4.1 - Master String Basics
 # Solutions to review exercies
 
 
