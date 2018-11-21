@@ -1,4 +1,4 @@
-# 4.1 - Mess Around With Your Words
+# 4.2 - Basic String Operations
 # Solutions to review exercies
 
 
@@ -18,6 +18,13 @@ print(string_left + string_right)
 string_one = "heebie"
 string_two = "jeebies"
 print(string_one, string_two)
+
+
+# Exercise 3
+# Display two strings together, with a space in between
+string_one = "heebie"
+string_two = "jeebies"
+print(string_one + " " + string_two)
 
 
 # Exercise 4
