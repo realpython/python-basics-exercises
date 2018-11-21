@@ -37,16 +37,16 @@ string2 = "becomes"
 string3 = "BEAR"
 string4 = "  bEautiful"
 
-print (string1.startswidth("re"))
-print (string2.startswidth("re"))
-print (string3.startswidth("re"))
-print (string4.startswidth("re"))
+print(string1.startswidth("re"))
+print(string2.startswidth("re"))
+print(string3.startswidth("re"))
+print(string4.startswidth("re"))
 
 string1 = string1.lower()
 string3 = string2.lower()
 string4 = string4.strip().lower()
 
-print (string1.startswidth("re"))
-print (string2.startswidth("re"))
-print (string3.startswidth("re"))
-print (string4.startswidth("re"))
+print(string1.startswidth("re"))
+print(string2.startswidth("re"))
+print(string3.startswidth("re"))
+print(string4.startswidth("re"))
