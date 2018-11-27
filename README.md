@@ -16,9 +16,9 @@ Alternatively, you can download the entire repository as a `.zip` file from the 
 
 ## Running the Code Examples
 
-To run the code examples, first make sure you have Python 3 installed on your machine. **The code examples WILL NOT work with Python 2.** If you need help installing Python 3, check out Real Python's [Python 3 Installation & Setup Guide](https://realpython.com/installing-python/).
+To run the code examples, first make sure you have Python 3 installed on your machine. If you need help installing Python 3, check out our [Python 3 Installation & Setup Guide](https://realpython.com/installing-python/).
 
-To run the `3-store-a-variable.py` file, type `python3 3-store-a-variable.py` into your terminal. Here's how that looks, with output:
+Example: To run the `3-store-a-variable.py` exercise, type `python3 3-store-a-variable.py` into your terminal. Here's how that looks, with output:
 
 ```console
 $ python3 ch03-first-python-program/3-store-a-variable.py
