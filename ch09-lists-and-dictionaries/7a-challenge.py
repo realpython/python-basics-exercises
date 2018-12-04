@@ -1,5 +1,5 @@
-# 10.7 - Assignment: Cats With Hats
-# Solution to assignment
+# 9.7 - Challenge: Cats With Hats
+# Solution to challenge
 
 
 def get_cats_with_hats(array_of_cats):

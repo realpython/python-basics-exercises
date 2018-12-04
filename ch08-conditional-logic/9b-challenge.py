@@ -1,5 +1,5 @@
-# 9.9 - Assignment: Simulate a Coin Toss Experiement
-# Alternative solution to assignment
+# 8.9 - Challenge: Simulate a Coin Toss Experiement
+# Alternative solution to challenge
 
 
 # Simulate the results of a series of coin tosses and track the results
@@ -17,4 +17,4 @@ for trial in range(1, trials):
         flips += 1
     flips += 1
 
-print("The average number of coin flips was {0}".format(flips / trials))
+print(f"The average number of coin flips was {flips / trials}")

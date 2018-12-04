@@ -1,5 +1,5 @@
-# 10.7 - Assignment: Cats With Hats
-# Alternative solution to assignment
+# 9.7 - Challenge: Cats With Hats
+# Alternative solution to challenge
 
 
 number_of_cats = 100

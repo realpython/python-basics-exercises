@@ -1,5 +1,5 @@
-# 17.6 - Assignment: Return of the Poet
-# Solution to assignment
+# 17.6 - Challenge: Return of the Poet
+# Solution to challenge
 
 import tkinter as tk
 import random
@@ -96,12 +96,10 @@ def make_poem():
         article = "A"
 
     # put it all together into a poem
-    poem = "{} {} {}\n\n".format(article, adj1, n1)
-    poem = poem + "{} {} {} {} {} the {} {}\n".format(
-        article, adj1, n1, v1, prep1, adj2, n2
-    )
-    poem = poem + "{}, the {} {}\n".format(adv1, n1, v2)
-    poem = poem + "the {} {} {} a {} {}".format(n2, v3, prep2, adj3, n3)
+    poem = f"{article} {adj1} {n1}\n\n"
+    poem = poem + f"{article} {adj1} {n1} {v1} {prep1} the {adj2} {n2}\n"
+    poem = poem + f"{adv1}, the {n1} {v2}\n"
+    poem = poem + f"the {n2} {v3} {prep2} a {adj3} {n3}"
 
     # place the resulting poem into the label
     result_poem.config(text=poem)

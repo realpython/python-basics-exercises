@@ -7,7 +7,9 @@ from pyPDF2 import PdfFileReader, PdfFileWriter
 
 
 # Exercise 1
-path = "C:/Real Python/refactor/chp12/practice_files"
+path = "C:/python-basics-exercises/ch13-interact-with-pdf-files/\
+        practice_files"
+
 input_file_name = os.path.join(path, "Walrus.pdf")
 input_file = PdfFileReader(open(input_file_name, "rb"))
 output_PDF = PdfFileWriter()

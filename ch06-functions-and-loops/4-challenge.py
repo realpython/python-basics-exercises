@@ -1,16 +1,16 @@
-# 7.4 - Assignment: Track Your Investments
-# Solution to Assignment
+# 6.4 - Challenge: Track Your Investments
+# Solution to challenge
 
 
 # Calculate compound interest to track the growth of an investment
 
 
 def invest(amount, rate, time):
-    print("principal amount: ${}".format(amount))
+    print(f"principal amount: ${amount}")
     print("annual rate of return:", rate)
     for t in range(1, time + 1):
         amount = amount * (1 + rate)
-        print("year {}: ${}".format(t, amount))
+        print(f"year {t}: ${amount}")
     print()
 
 

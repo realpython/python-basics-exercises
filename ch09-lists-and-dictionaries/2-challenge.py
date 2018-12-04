@@ -1,5 +1,5 @@
-# 10.2 - Assignment: List of Lists
-# Solution to assignment
+# 9.2 - Challenge: List of Lists
+# Solution to challenge
 
 
 def enrollment_stats(list_of_universities):
@@ -48,11 +48,11 @@ totals = enrollment_stats(universities)
 
 print("\n")
 print("*****" * 5)
-print("Total students:   {}".format(sum(totals[0])))
-print("Total tuition:  $ {}".format(sum(totals[1])))
-print("\nStudent mean:     {}".format(mean(totals[0])))
-print("Student median:   {}".format(median(totals[0])))
-print("\nTuition mean:   $ {}".format(mean(totals[1])))
-print("Tuition median: $ {}".format(median(totals[1])))
+print(f"Total students:   {sum(totals[0])}")
+print(f"Total tuition:  $ {sum(totals[1])}")
+print(f"\nStudent mean:     {mean(totals[0])}")
+print(f"Student median:   {median(totals[0])}")
+print(f"\nTuition mean:   $ {mean(totals[1])}")
+print(f"Tuition median: $ {median(totals[1])}")
 print("*****" * 5)
 print("\n")

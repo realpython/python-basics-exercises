@@ -1,5 +1,5 @@
-# 4.5 - Assignment: Pick Apart Your User's Input
-# Solution to assignment
+# 4.5 - Challenge: Pick Apart Your User's Input
+# Solution to code challenge
 
 
 # Return the upper-case first letter entered by the user

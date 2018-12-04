@@ -1,13 +1,13 @@
-# 17.2 - Assignment: Use GUI Elements to Help a User Modify Files
-# Solution to assignment
+# 17.2 - Challenge: Use GUI Elements to Help a User Modify Files
+# Solution to challenge
 
 # save part of a PDF based on a user-supplied page range using a GUI
 
-from easygui import *
+import easygui as gui
 from PyPDF2 import PdfFileReader, PdfFileWriter
 
 # let the user choose an input file
-input_file_name = fileopenbox("", "Select a PDF to trim...", "*.pdf")
+input_file_name = gui.fileopenbox("", "Select a PDF to trim...", "*.pdf")
 if input_file_name is None:  # exit on "Cancel"
     exit()
 
@@ -16,7 +16,7 @@ input_file = PdfFileReader(open(input_file_name, "rb"))
 total_pages = input_file.getNumPages()
 
 # let the user choose a beginning page
-page_start = enterbox("Enter the number of the first page to use:", "Where to begin?")
+page_start = gui.enterbox("Enter the number of the first page to use:", "Where to begin?")
 if page_start is None:  # exit on "Cancel"
     exit()
 # check for possible problems and try again:
@@ -24,15 +24,15 @@ if page_start is None:  # exit on "Cancel"
 # or 2) input page number is 0
 # or 3) page number is greater than total number of pages
 while not page_start.isdigit() or page_start == "0" or int(page_start) > total_pages:
-    msgbox("Please provide a valid page number.", "Whoops!")
-    page_start = enterbox(
+    gui.msgbox("Please provide a valid page number.", "Whoops!")
+    page_start = gui.enterbox(
         "Enter the number of the first page to use:", "Where to begin?"
     )
     if page_start is None:  # exit on "Cancel"
         exit()
 
 # let the user choose an ending page
-page_end = enterbox("Enter the number of the last page to use:", "Where to end?")
+page_end = gui.enterbox("Enter the number of the last page to use:", "Where to end?")
 if page_end is None:  # exit on "Cancel"
     exit()
 # check for possible problems and try again:
@@ -46,16 +46,16 @@ while (
     or int(page_end) > total_pages
     or int(page_end) < int(page_start)
 ):
-    msgbox("Please provide a valid page number.", "Whoops!")
-    page_end = enterbox("Enter the number of the last page to use:", "Where to end?")
+    gui.msgbox("Please provide a valid page number.", "Whoops!")
+    page_end = gui.enterbox("Enter the number of the last page to use:", "Where to end?")
     if page_end is None:  # exit on "Cancel"
         exit()
 
 # let the user choose an output file name
-output_file_name = filesavebox("", "Save the trimmed PDF as...", "*.pdf")
+output_file_name = gui.filesavebox("", "Save the trimmed PDF as...", "*.pdf")
 while input_file_name == output_file_name:  # cannot use same file as input
-    msgbox("Cannot overwrite original file!", "Please choose another file...")
-    output_file_name = filesavebox("", "Save the trimmed PDF as...", "*.pdf")
+    gui.msgbox("Cannot overwrite original file!", "Please choose another file...")
+    output_file_name = gui.filesavebox("", "Save the trimmed PDF as...", "*.pdf")
 if output_file_name is None:
     exit()  # exit on "Cancel"
 

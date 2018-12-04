@@ -1,4 +1,4 @@
-# 7.1 - Write Your Own Functions
+# 6.1 - Write Your Own Functions
 # Solutions to review exercises
 
 

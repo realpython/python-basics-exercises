@@ -1,5 +1,5 @@
-# 11.5 - Assignment: Create a High Scores List From CSV Data
-# Solution to assignment
+# 11.5 - Challenge: Create a High Scores List From CSV Data
+# Solution to challenge
 
 
 # Read in CSV data containing names and scores; display a high score list
@@ -8,10 +8,10 @@ import csv
 import os
 
 # Change my_path to the correct path on your system
-my_path = "C:/Real Python/refactor/chp10/practice_files"
+path = "C:/python-basics-exercises/ch11-file-input-and-output/practice_files"
 
 high_scores_dict = {}
-with open(os.path.join(my_path, "scores.csv"), "r") as myFile:
+with open(os.path.join(path, "scores.csv"), "r") as myFile:
     my_file_reader = csv.reader(myFile)
     for name, score in my_file_reader:  # get each name/score pair
         score = int(score)  # convert string score to integer

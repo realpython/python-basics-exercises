@@ -1,4 +1,4 @@
-# 10.3 - Instantiate an Object
+# 10.3 - Inherit From Other Classes
 # Solutions to review exercises
 
 

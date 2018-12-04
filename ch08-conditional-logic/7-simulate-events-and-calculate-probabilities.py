@@ -1,4 +1,4 @@
-# 9.7 - Simulate Events and Calculate Probabilities
+# 8.7 - Simulate Events and Calculate Probabilities
 # Solutions to review exercises
 
 
@@ -17,4 +17,4 @@ total = 0
 for trial in range(0, trials):
     total += randint(1, 6)
 avg_result = total / trials
-print("The average result of {} throws was {}".format(trials, avg_result))
+print(f"The average result of {trials} throws was {avg_result}")

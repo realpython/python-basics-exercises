@@ -1,4 +1,4 @@
-# 9.6 - Recover From Errors
+# 8.6 - Recover From Errors
 # Solution to review exercises
 
 

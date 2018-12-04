@@ -1,4 +1,4 @@
-# 10.4 - Make Permanent Lists
+# 9.4 - Make Permanent Lists
 # Solutions to review exercises
 
 

@@ -1,5 +1,5 @@
-# 9.9 - Simulate a Coin Toss Experiment
-# Solution to assignment
+# 8.9 - Challenge: Simulate a Coin Toss Experiment
+# Solution to challenge
 
 
 # Simulate the results of a series of coin tosses and track the results

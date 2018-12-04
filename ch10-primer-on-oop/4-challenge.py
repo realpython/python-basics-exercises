@@ -1,5 +1,5 @@
-# 10.4 - Assignment: Model a Farm
-# Solutions to assignment
+# 10.4 - Challenge: Model a Farm
+# Solutions to challenge
 
 
 class Animal:

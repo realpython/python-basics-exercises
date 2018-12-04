@@ -1,4 +1,4 @@
-# 9.2 - Add Some Logic
+# 8.2 - Add Some Logic
 # Solutions to review exercises
 
 

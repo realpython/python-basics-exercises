@@ -1,5 +1,5 @@
-# 9.8 - Assignment: Simulate an Election
-# Solution to assignment
+# 8.8 - Challenge: Simulate an Election
+# Solution to challenge
 
 
 # Simulate the results of an election using a Monte Carlo simulation

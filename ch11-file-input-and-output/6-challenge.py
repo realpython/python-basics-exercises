@@ -1,5 +1,5 @@
-# 11.6 - Assignment: Split a CSV File
-# Solution to assignment
+# 11.6 - Challenge: Split a CSV File
+# Solution to challenge
 
 import sys
 import os
@@ -69,7 +69,7 @@ def get_arguments():
 def is_valid_file(parser, file_name):
     """Ensure that the input_file exists."""
     if not os.path.exists(file_name):
-        parser.error("The file '{}' does not exist!".format(file_name))
+        parser.error(f"The file '{file_name}' does not exist!")
         sys.exit(1)
 
 
@@ -86,9 +86,7 @@ def is_valid_csv(parser, file_name, row_limit):
     # row_count = sum(1 for row in csv.reader(open(file_name)))
     if row_limit > row_count:
         parser.error(
-            "The 'row_count' of '{}' is > the number of rows in '{}'!".format(
-                row_limit, file_name
-            )
+            f"The 'row_count' of '{row_limit}' is > the number of rows in '{file_name}'!"
         )
         sys.exit(1)
 
@@ -115,11 +113,13 @@ def parse_file(arguments):
 
         # Split list of list into chunks
         current_chunk = 1
-        for i in range(0, len(all_rows), row_limit):  # Loop through list
-            chunk = all_rows[i : i + row_limit]  # Create single chunk
-
-            current_output = os.path.join(  # Create new output file
-                output_path, "{}-{}.csv".format(output_file, current_chunk)
+        # Loop through list
+        for i in range(0, len(all_rows), row_limit):
+            # Create single chunk
+            chunk = all_rows[i : i + row_limit]
+            # Create new output file
+            current_output = os.path.join(
+                output_path, f"{output_file}-{current_chunk}.csv"
             )
 
             # Add header
@@ -132,9 +132,9 @@ def parse_file(arguments):
 
             # Output info
             print()
-            print("Chunk # {}:".format(current_chunk))
-            print("Filepath: {}".format(current_output))
-            print("# of rows: {}".format(len(chunk)))
+            print(f"Chunk # {current_chunk}:")
+            print(f"Filepath: {current_output}")
+            print(f"# of rows: {len(chunk)}")
 
             # Create new chunk
             current_chunk += 1

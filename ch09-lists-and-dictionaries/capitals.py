@@ -1,5 +1,5 @@
-# 10.6 - Assignment: Capital City Loop
-# capitals.py
+# 10.6 - Challenge: Capital City Loop
+# This is the capitals.py module to be used in the solution to the challenge.
 
 
 capitals_dict = {

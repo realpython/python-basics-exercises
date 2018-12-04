@@ -1,5 +1,5 @@
-# 6.4 - Assignment: Perform Calculations on User Input
-# Solution to Assignment
+# 5.2 - Challenge: Perform Calculations on User Input
+# Solution to challenge
 
 
 # Receive two input numbers and calculate their power

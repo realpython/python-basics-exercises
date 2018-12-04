@@ -1,5 +1,5 @@
-# 10.7 - Assignment: Cats With Hats
-# Alternative solution to assignment using dictionaries
+# 9.7 - Challenge: Cats With Hats
+# Alternative solution to challenge using dictionaries
 
 
 theCats = {}
@@ -17,6 +17,6 @@ for i in range(1, 101):
 
 for cats, hats in theCats.items():
     if theCats[cats]:
-        print("Cat {} has a hat.".format(cats))
+        print(f"Cat {cats} has a hat.")
     else:
-        print("Cat {} is hatless!".format(cats))
+        print(f"Cat {cats} is hatless!")

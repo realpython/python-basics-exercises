@@ -1,5 +1,5 @@
-# 4.9 - Assignment: Turn Your User Into a l33t h4x0r
-# Solution to assignment
+# 4.9 - Challenge: Turn Your User Into a L33t H4x0r
+# Solution to challenge
 
 
 # Turn a user's input into leetspeak

@@ -1,5 +1,5 @@
-# 13.3 - Assignment: Add a Cover Sheet to a PDF File
-# Solution to assignment
+# 13.3 - Challenge: Add a Cover Sheet to a PDF File
+# Solution to challenge
 
 
 # Add a cover sheet to a PDF; save the full output as a new PDF
@@ -7,7 +7,8 @@
 import os
 from pyPDF2 import PdfFileReader, PdfFileWriter
 
-path = "C:/Real Python/Course materials/Chapter 12/Practice files"
+path = "C:/python-basics-exercises/ch13-interact-with-pdf-files/\
+        practice_files"
 
 input_file_name1 = os.path.join(path, "Emperor cover sheet.pdf")
 input_file1 = PdfFileReader(open(input_file_name1, "rb"))

@@ -1,5 +1,5 @@
-# 7.2 - Assignment: Convert temperatures
-# Solution to assignment
+# 6.2 - Challenge: Convert temperatures
+# Solution to challenge
 
 
 # Convert Celsius and Fahrenheit temperatures using functions
@@ -16,7 +16,7 @@ def convert_far_to_cel(far_temp):
 
 
 temp1 = 72
-print("{} degrees F = {} degrees C".format(temp1, convert_far_to_cel(temp1)))
+print(f"{temp1} degrees F = {convert_far_to_cel(temp1)} degrees C")
 
 temp2 = 37
-print("{} degrees C = {} degrees F".format(temp2, convert_cel_to_far(temp2)))
+print(f"{temp2} degrees C = {convert_cel_to_far(temp2)} degrees F")

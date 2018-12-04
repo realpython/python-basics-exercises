@@ -1,5 +1,5 @@
-# 9.9 - Assignment: Simulate a Coin Toss Experiement
-# Alternative solution to assignment using functions
+# 8.9 - Challenge: Simulate a Coin Toss Experiement
+# Alternative solution to challenge using functions
 
 
 # Simulate the results of a series of coin tosses and track the results
@@ -26,4 +26,4 @@ def flip_trial_avg(num_trials):
     return total / num_trials
 
 
-print("The average number of coin flips was {0}".format(flip_trial_avg(10000)))
+print(f"The average number of coin flips was {flip_trial_avg(10000)}")

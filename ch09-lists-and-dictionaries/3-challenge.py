@@ -1,5 +1,5 @@
-# 10.3 - Assignment: Wax Poetic
-# Solution to assignment
+# 9.3 - Challenge: Wax Poetic
+# Solution to challenge
 
 
 # Generate a random poem based on a set structure
@@ -69,12 +69,10 @@ def make_poem():
         article = "A"
 
     # add lines to poem
-    poem = "{} {} {}\n\n".format(article, adj1, n1)
-    poem = poem + "{} {} {} {} {} the {} {}\n".format(
-        article, adj1, n1, v1, prep1, adj2, n2
-    )
-    poem = poem + "{}, the {} {}\n".format(adv1, n1, v2)
-    poem = poem + "the {} {} {} a {} {}".format(n2, v3, prep2, adj3, n3)
+    poem = f"{article} {adj1} {n1}\n\n"
+    poem = poem + f"{article} {adj1} {n1} {v1} {prep1} the {adj2} {n2}\n"
+    poem = poem + f"{adv1}, the {n1} {v2}\n"
+    poem = poem + f"the {n2} {v3} {prep2} a {adj3} {n3}"
 
     return poem
 
