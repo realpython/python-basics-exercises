@@ -1,4 +1,17 @@
+# flake8 linter configuration
+# This file is for internal use only and is not a solution to any exercise
+
 [flake8]
+ignore = 
+    # Whitespace before `:` (black artifact)
+    E203
+    # Module level import not at top of file (ignored to keep imports grouped
+    # logically in files with solutions for multiple exercises)
+    E402
+    # Line too long (> 79 chars, line length handled by black)
+    E501
+    # Line break before binary operatory (black artifact)
+    W503
 exclude = 
     .git
     __pychache__
