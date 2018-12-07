@@ -4,8 +4,7 @@
 
 # Exercise 1
 # The parent `Dog` class (given in exercise)
-class Dog(object):
-
+class Dog:
     species = "Canis familiaris"
 
     def __init__(self, name, age):
@@ -27,8 +26,7 @@ class GoldenRetriever(Dog):
 
 # Exercise 2
 # Modified Dog class
-class Dog(object):
-
+class Dog:
     species = "Canis familiaris"
 
     def __init__(self, name, age):
