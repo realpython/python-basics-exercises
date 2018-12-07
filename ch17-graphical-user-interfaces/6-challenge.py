@@ -2,6 +2,7 @@
 # Solution to challenge
 
 import tkinter as tk
+from tkinter import filedialog
 import random
 
 
@@ -151,7 +152,7 @@ result_poem.grid(row=9, column=1, rowspan=5, columnspan=2)
 # function to save the poem displayed in the output box into a text file
 def save_file():
     type_list = [("Text files", "*.txt")]
-    file_name = tk.filedialog.asksaveasfilename(
+    file_name = filedialog.asksaveasfilename(
         filetypes=type_list, defaultextension="*.txt"
     )
     print(file_name)
