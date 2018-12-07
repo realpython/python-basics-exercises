@@ -53,7 +53,11 @@ def get_arguments():
         type=str,
     )
     parser.add_argument(
-        "-r", "--row_limit", required=True, help="row limit to split csv at", type=int
+        "-r",
+        "--row_limit",
+        required=True,
+        help="row limit to split csv at",
+        type=int,
     )
     args = parser.parse_args()
 

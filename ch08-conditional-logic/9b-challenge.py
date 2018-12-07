@@ -7,7 +7,7 @@
 from random import randint
 
 
-trials = 100000
+trials = 100_000
 flips = 0
 
 for trial in range(1, trials):

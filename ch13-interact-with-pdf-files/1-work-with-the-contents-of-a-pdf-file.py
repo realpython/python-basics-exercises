@@ -36,6 +36,8 @@ output_PDF = PdfFileWriter()
 for page_num in range(1, input_file.getNumPages()):
     output_PDF.addPage(input_file.getPage(page_num))
 
-output_file_name = os.path.join(path, "Output/The Whistling Gypsy un-covered.pdf")
+output_file_name = os.path.join(
+    path, "Output/The Whistling Gypsy un-covered.pdf"
+)
 with open(output_file_name, "wb") as output_file:
     output_PDF.write(output_file)

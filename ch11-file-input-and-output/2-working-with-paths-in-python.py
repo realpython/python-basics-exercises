@@ -33,7 +33,9 @@ for file_name in glob.glob(file_matches):
 for current_folder, subfolders, file_names in os.walk(path):
     for file_name in file_names:
         file_path = os.path.join(current_folder, file_name)
-        file_tuple = os.path.splitext(file_path)  # split into (path, extension)
+        file_tuple = os.path.splitext(
+            file_path
+        )  # split into (path, extension)
         if file_tuple[1].lower() == ".png":  # check if extension is PNG
             pass  # os.rename(file_path, file_tuple[0] + ".jpg")
 
@@ -41,7 +43,9 @@ for current_folder, subfolders, file_names in os.walk(path):
 # Exercsie 4
 # Check that the two files have been converted to JPGs successfully
 print(os.path.exists(os.path.join(path, "png file - not a gif.jpg")))
-print(os.path.exists(os.path.join(path, "additional files/one last image.jpg")))
+print(
+    os.path.exists(os.path.join(path, "additional files/one last image.jpg"))
+)
 
 
 # Exercise 5

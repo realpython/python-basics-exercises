@@ -22,7 +22,9 @@ with sqlite3.connect(":memory:") as connection:
 
     # Exercise 3
     # Update the Species of Korben Dallas to "Human"
-    c.execute("UPDATE Roster SET Species=? WHERE Name=?", ("Human", "Korben Dallas"))
+    c.execute(
+        "UPDATE Roster SET Species=? WHERE Name=?", ("Human", "Korben Dallas")
+    )
 
     # Exercise 4
     # Display the names and IQs of everyone classified as Human
