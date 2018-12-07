@@ -1,0 +1,11 @@
+[tool.black]
+line-length = 79
+py36 = true
+include = '\.pyi?$'
+exclude = '''
+/(
+    ch03-first-python-program
+  | \.venv
+  | venv
+)/
+'''

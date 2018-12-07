@@ -1,0 +1,6 @@
+[flake8]
+exclude = 
+    .git
+    __pychache__
+    venv
+    ch03-first-python-program
