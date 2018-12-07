@@ -30,8 +30,3 @@ print(string_one + " " + string_two)
 # Exercise 4
 # Use subscripting to display part of a string
 print("bazinga"[2:6])
-
-# A more advanced way to do the above example would be:
-my_string = "bazinga"
-start_index = 2
-print(my_string[start_index : len(my_string) - start_index + 1])
