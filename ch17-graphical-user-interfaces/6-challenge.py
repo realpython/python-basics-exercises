@@ -163,7 +163,9 @@ def generate_poem():
 
     # Put it all together into a poem
     poem = f"{article} {adj1} {noun1}\n\n"
-    poem = poem + f"{article} {adj1} {noun1} {verb1} {prep1} the {adj2} {noun2}\n"
+    poem = (
+        poem + f"{article} {adj1} {noun1} {verb1} {prep1} the {adj2} {noun2}\n"
+    )
     poem = poem + f"{adv1}, the {noun1} {verb2}\n"
     poem = poem + f"the {noun2} {verb3} {prep2} a {adj3} {noun3}"
 
