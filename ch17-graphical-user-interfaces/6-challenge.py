@@ -3,7 +3,7 @@
 
 # Please note that there are many ways to solve this challenge. The code
 # contained in this solution is just one way. If your solution is different,
-# but work, then you did a great job!
+# but works, then you did a great job!
 
 import tkinter as tk
 from tkinter import filedialog
