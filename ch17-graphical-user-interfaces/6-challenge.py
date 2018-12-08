@@ -1,12 +1,77 @@
 # 17.6 - Challenge: Return of the Poet
 # Solution to challenge
 
+# Please note that there are many ways to solve this challenge. The code
+# contained in this solution is just one way. If your solution is different,
+# but work, then you did a great job!
+
 import tkinter as tk
 from tkinter import filedialog
 import random
 
 
-def check_unique(word_list):
+# Create the application window
+window = tk.Tk()
+window.title("Make your own poem!")
+
+# Application Header Frame
+header_frame = tk.Frame()
+header_label = tk.Label(master=header_frame)
+header_label["text"] = "Enter your favorite words, separated by commas."
+header_label.pack()
+header_frame.pack(padx=5, pady=5)
+
+# Application Input Frame
+input_frame = tk.Frame()
+# Label widgets for text entry boxes
+label_noun = tk.Label(input_frame, text="Nouns:")
+label_verb = tk.Label(input_frame, text="Verbs:")
+label_adj = tk.Label(input_frame, text="Adjectives:")
+label_prep = tk.Label(input_frame, text="Prepositions:")
+label_adv = tk.Label(input_frame, text="Adverbs:")
+# Entry widgets for entering nouns, verbs, etc.
+entry_noun = tk.Entry(input_frame, width=80)
+entry_verb = tk.Entry(input_frame, width=80)
+entry_adj = tk.Entry(input_frame, width=80)
+entry_prep = tk.Entry(input_frame, width=80)
+entry_adv = tk.Entry(input_frame, width=80)
+# Add each label and entry widget to the input_frame using the .grid()
+# geometry manager.
+label_noun.grid(row=2, column=1, sticky=tk.E)
+entry_noun.grid(row=2, column=2)
+label_verb.grid(row=3, column=1, sticky=tk.E)
+entry_verb.grid(row=3, column=2)
+label_adj.grid(row=4, column=1, sticky=tk.E)
+entry_adj.grid(row=4, column=2)
+label_prep.grid(row=5, column=1, sticky=tk.E)
+entry_prep.grid(row=5, column=2)
+label_adv.grid(row=6, column=1, sticky=tk.E)
+entry_adv.grid(row=6, column=2)
+input_frame.pack(padx=5, pady=5)
+# Button widget for generating a poem
+generate_frame = tk.Frame(master=window)
+generate_frame.pack(pady=10)
+generate_button = tk.Button(generate_frame, text="Generate")
+generate_button.pack()
+
+# Application Result Frame
+# Displays the generated poem
+result_frame = tk.Frame(master=window)
+result_frame["relief"] = tk.GROOVE
+result_frame["borderwidth"] = 5
+result_label = tk.Label(master=result_frame)
+result_label["text"] = "Your poem:"
+result_label.pack(pady=10)
+result_poem = tk.Label(result_frame)
+result_poem["text"] = "Press the 'Generate' button to display your poem."
+result_poem.pack(padx=5)
+save_button = tk.Button(result_frame, text="Save to file")
+save_button.pack(pady=10)
+result_frame.pack(fill=tk.X, padx=5, pady=5)
+
+
+# Button command functions
+def are_unique(word_list):
     """Check that all items in a list are unique and return True or False"""
     unique_words = []
     for word in word_list:
@@ -15,25 +80,25 @@ def check_unique(word_list):
     return len(word_list) == len(unique_words)
 
 
-def make_poem():
-    """Create a randomly generated poem, returned as a multi-line string"""
+def generate_poem():
+    """Generate a poem and assign it to the `result_poem` Label widget"""
 
-    # split the user input into lists
+    # Split the user input into lists
     noun = entry_noun.get().split(",")
     verb = entry_verb.get().split(",")
     adjective = entry_adj.get().split(",")
     adverb = entry_adv.get().split(",")
     preposition = entry_prep.get().split(",")
 
-    # make sure that all lists consist of unique words
+    # Make sure that all lists consist of unique words
     if not (
-        check_unique(noun)
-        and check_unique(verb)
-        and check_unique(adjective)
-        and check_unique(adverb)
-        and check_unique(preposition)
+        are_unique(noun)
+        and are_unique(verb)
+        and are_unique(adjective)
+        and are_unique(adverb)
+        and are_unique(preposition)
     ):
-        result_poem.config(text="Please do not enter duplicate words.")
+        result_poem["text"] = "Please do not enter duplicate words."
         return
 
     # Make sure that we got enough words from the user to make a poem
@@ -44,113 +109,69 @@ def make_poem():
         or len(preposition) < 2
         or len(adverb) < 1
     ):
-        result_poem.config(
-            text="Did you think you could get away that easily?\n\
-            Enter at least three nouns, three verbs, three adjectives, \
-            two prepositions and an adverb!"
+        result_poem["text"] = (
+            "There was a problem with your input!\n"
+            "Enter at least three nouns, three verbs, three adjectives, "
+            "two prepositions and an adverb!"
         )
         return
 
     # Otherwise, we can go ahead with generating a poem:
 
-    # Pull three nouns randomly
-    n1 = random.choice(noun)
-    n2 = random.choice(noun)
-    n3 = random.choice(noun)
+    # Get three nouns randomly
+    noun1 = random.choice(noun)
+    noun2 = random.choice(noun)
+    noun3 = random.choice(noun)
 
     # Make sure that all the nouns are different
-    while n1 == n2:
-        n2 = random.choice(noun)
-    while n1 == n3 or n2 == n3:
-        n3 = random.choice(noun)
+    while noun1 == noun2:
+        noun2 = random.choice(noun)
+    while noun1 == noun3 or noun2 == noun3:
+        noun3 = random.choice(noun)
 
-    # Pull three different verbs
-    v1 = random.choice(verb)
-    v2 = random.choice(verb)
-    v3 = random.choice(verb)
-    while v1 == v2:
-        v2 = random.choice(verb)
-    while v1 == v3 or v2 == v3:
-        v3 = random.choice(verb)
+    # Get three different verbs
+    verb1 = random.choice(verb)
+    verb2 = random.choice(verb)
+    verb3 = random.choice(verb)
+    while verb1 == verb2:
+        verb2 = random.choice(verb)
+    while verb1 == verb3 or verb2 == verb3:
+        verb3 = random.choice(verb)
 
-    # Pull three different adjectives
+    # Get three different adjectives
     adj1 = random.choice(adjective)
     adj2 = random.choice(adjective)
     adj3 = random.choice(adjective)
     while adj1 == adj2:
         adj2 = random.choice(adjective)
-    while n1 == n3 or n2 == n3:
+    while adj1 == adj3 or adj2 == adj3:
         adj3 = random.choice(adjective)
 
-    # Pull two different prepositions
+    # Get two different prepositions
     prep1 = random.choice(preposition)
     prep2 = random.choice(preposition)
     while prep1 == prep2:
         prep2 = random.choice(preposition)
 
-    # Pull one adverb
+    # Get one adverb
     adv1 = random.choice(adverb)
 
-    if "aeiou".find(adj1[0]) != -1:  # first letter is a vowel
+    if adj1[0] in "aeiou":  # First letter is a vowel
         article = "An"
     else:
         article = "A"
 
     # Put it all together into a poem
-    poem = f"{article} {adj1} {n1}\n\n"
-    poem = poem + f"{article} {adj1} {n1} {v1} {prep1} the {adj2} {n2}\n"
-    poem = poem + f"{adv1}, the {n1} {v2}\n"
-    poem = poem + f"the {n2} {v3} {prep2} a {adj3} {n3}"
+    poem = f"{article} {adj1} {noun1}\n\n"
+    poem = poem + f"{article} {adj1} {noun1} {verb1} {prep1} the {adj2} {noun2}\n"
+    poem = poem + f"{adv1}, the {noun1} {verb2}\n"
+    poem = poem + f"the {noun2} {verb3} {prep2} a {adj3} {noun3}"
 
     # Place the resulting poem into the label
-    result_poem.config(text=poem)
+    result_poem["text"] = poem
 
 
-# Create the application window and add a Frame
-window = tk.Tk()
-window.title("Make your own poem!")
-frame = tk.Frame()
-# Pad top and left of frame 5 pixels before grid
-frame.grid(padx=5, pady=5)
-
-# Create and add text labels for text entry boxes
-label_directions = tk.Label(
-    frame, text="Enter your favorite words, separated by commas:"
-)
-label_directions.grid(row=1, column=1, sticky=tk.S + tk.E, columnspan=2)
-label_noun = tk.Label(frame, text="Nouns:")
-label_noun.grid(row=2, column=1, sticky=tk.S + tk.E)
-label_verb = tk.Label(frame, text="Verbs:")
-label_verb.grid(row=3, column=1, sticky=tk.S + tk.E)
-label_adj = tk.Label(frame, text="Adjectives:")
-label_adj.grid(row=4, column=1, sticky=tk.S + tk.E)
-label_prep = tk.Label(frame, text="Prepositions:")
-label_prep.grid(row=5, column=1, sticky=tk.S + tk.E)
-label_adv = tk.Label(frame, text="Adverbs:")
-label_adv.grid(row=6, column=1, sticky=tk.S + tk.E)
-
-# Create and add space for user entry of text
-entry_noun = tk.Entry(frame, width=80)
-entry_noun.grid(row=2, column=2)
-entry_verb = tk.Entry(frame, width=80)
-entry_verb.grid(row=3, column=2)
-entry_adj = tk.Entry(frame, width=80)
-entry_adj.grid(row=4, column=2)
-entry_prep = tk.Entry(frame, width=80)
-entry_prep.grid(row=5, column=2)
-entry_adv = tk.Entry(frame, width=80)
-entry_adv.grid(row=6, column=2)
-
-# Create and add 'Create poem' button
-btn_create = tk.Button(frame, text="Create your poem", command=make_poem)
-btn_create.grid(row=7, column=1, columnspan=2)
-
-# Create label into which to output the poem
-result_poem = tk.Label(frame)
-result_poem.grid(row=9, column=1, rowspan=5, columnspan=2)
-
-
-def save_file():
+def save_poem_to_file():
     """Save the poem displayed in the output box into a text file"""
     type_list = [("Text files", "*.txt")]
     file_name = filedialog.asksaveasfilename(
@@ -158,14 +179,13 @@ def save_file():
     )
     # Save file if user entered a file name
     if file_name != "":
-        output_file = open(file_name, "w")
-        output_file.writelines(result_poem.cget("text"))
-        output_file.close()
+        with open(file_name, "w") as output_file:
+            output_file.writelines(result_poem["text"])
 
 
-# Create and add 'Save your poem' button
-btn_save = tk.Button(frame, text="Save your poem", command=save_file)
-btn_save.grid(row=15, column=1, columnspan=2)
+# Assign the commands to the buttons
+generate_button["command"] = generate_poem
+save_button["command"] = save_poem_to_file
 
 # Start the application
 window.mainloop()
