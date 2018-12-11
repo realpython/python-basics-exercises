@@ -19,7 +19,7 @@ for file_name in os.listdir(path):
 
 
 # Exercise 2
-# Display the full paths of any PNG files in the "images" folder
+# Display the full paths of any `*.png` files in the "images" folder
 file_matches = os.path.join(path, "*.png")
 print('All PNG files in "images" folder:')
 for file_name in glob.glob(file_matches):
@@ -27,24 +27,23 @@ for file_name in glob.glob(file_matches):
 
 
 # Exercise 3
-# Change all PNGs to JPGs in the "images" folder and its subfolders
-# Could use indexing to get the file extension, but try using
-# os.path.splitext()
+# Rename all `*.png` files in the "images" folder and its subfolders
+# to `*_backup.png`
 for current_folder, subfolders, file_names in os.walk(path):
     for file_name in file_names:
         file_path = os.path.join(current_folder, file_name)
-        file_tuple = os.path.splitext(
-            file_path
-        )  # split into (path, extension)
-        if file_tuple[1].lower() == ".png":  # check if extension is PNG
-            pass  # os.rename(file_path, file_tuple[0] + ".jpg")
+        if file_path.lower().endswith(".gif"):
+            new_path = file_path[-4] + "_backup.gif"
+            os.rename(file_path, new_path)
 
 
 # Exercsie 4
 # Check that the two files have been converted to JPGs successfully
-print(os.path.exists(os.path.join(path, "png file - not a gif.jpg")))
+print(os.path.exists(os.path.join(path, "png file - not a gif_backup.gif")))
 print(
-    os.path.exists(os.path.join(path, "additional files/one last image.jpg"))
+    os.path.exists(
+        os.path.join(path, "additional files/one last image_backup.gif")
+    )
 )
 
 
