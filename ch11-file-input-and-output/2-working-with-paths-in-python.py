@@ -32,17 +32,17 @@ for file_name in glob.glob(file_matches):
 for current_folder, subfolders, file_names in os.walk(path):
     for file_name in file_names:
         file_path = os.path.join(current_folder, file_name)
-        if file_path.lower().endswith(".gif"):
-            new_path = file_path[-4] + "_backup.gif"
+        if file_path.lower().endswith(".png"):
+            new_path = file_path[-4] + "_backup.png"
             os.rename(file_path, new_path)
 
 
 # Exercsie 4
 # Check that the two files have been converted to JPGs successfully
-print(os.path.exists(os.path.join(path, "png file - not a gif_backup.gif")))
+print(os.path.exists(os.path.join(path, "png file - not a gif_backup.png")))
 print(
     os.path.exists(
-        os.path.join(path, "additional files/one last image_backup.gif")
+        os.path.join(path, "additional files/one last image_backup.png")
     )
 )
 
