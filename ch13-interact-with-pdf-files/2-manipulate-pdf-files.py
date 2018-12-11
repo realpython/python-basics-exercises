@@ -10,8 +10,8 @@ from pyPDF2 import PdfFileReader, PdfFileWriter
 path = "C:/python-basics-exercises/ch13-interact-with-pdf-files/\
         practice_files"
 
-input_file_name = os.path.join(path, "Walrus.pdf")
-input_file = PdfFileReader(open(input_file_name, "rb"))
+input_file_path = os.path.join(path, "Walrus.pdf")
+input_file = PdfFileReader(input_file_path)
 output_PDF = PdfFileWriter()
 
 input_file.decrypt("IamtheWalrus")  # decrypt the input file
@@ -36,6 +36,6 @@ for page_num in range(0, input_file.getNumPages()):
 
 # Exercise 3
 # save new pages to an output file
-output_file_name = os.path.join(path, "Output/Updated Walrus.pdf")
-with open(output_file_name, "wb") as output_file:
+output_file_path = os.path.join(path, "Output/Updated Walrus.pdf")
+with open(output_file_path, "wb") as output_file:
     output_PDF.write(output_file)
