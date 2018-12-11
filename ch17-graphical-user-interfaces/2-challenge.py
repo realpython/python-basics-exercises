@@ -7,12 +7,12 @@ import easygui as gui
 from PyPDF2 import PdfFileReader, PdfFileWriter
 
 # let the user choose an input file
-input_file_name = gui.fileopenbox("", "Select a PDF to trim...", "*.pdf")
-if input_file_name is None:  # exit on "Cancel"
+input_file_path = gui.fileopenbox("", "Select a PDF to trim...", "*.pdf")
+if input_file_path is None:  # exit on "Cancel"
     exit()
 
 # get the page length of the input file
-input_file = PdfFileReader(open(input_file_name, "rb"))
+input_file = PdfFileReader(input_file_path)
 total_pages = input_file.getNumPages()
 
 # let the user choose a beginning page
@@ -62,15 +62,15 @@ while (
         exit()
 
 # let the user choose an output file name
-output_file_name = gui.filesavebox("", "Save the trimmed PDF as...", "*.pdf")
-while input_file_name == output_file_name:  # cannot use same file as input
+output_file_path = gui.filesavebox("", "Save the trimmed PDF as...", "*.pdf")
+while input_file_path == output_file_path:  # cannot use same file as input
     gui.msgbox(
         "Cannot overwrite original file!", "Please choose another file..."
     )
-    output_file_name = gui.filesavebox(
+    output_file_path = gui.filesavebox(
         "", "Save the trimmed PDF as...", "*.pdf"
     )
-if output_file_name is None:
+if output_file_path is None:
     exit()  # exit on "Cancel"
 
 # read in file, write new file with trimmed page range and save the new file
@@ -79,6 +79,7 @@ output_PDF = PdfFileWriter()
 for page_num in range(int(page_start) - 1, int(page_end)):
     page = input_file.getPage(page_num)
     output_PDF.addPage(page)
-output_file = open(output_file_name, "wb")
-output_PDF.write(output_file)
-output_file.close()
+
+with open(output_file_path, "wb") as output_file:
+    output_PDF.write(output_file)
+
