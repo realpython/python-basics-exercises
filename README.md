@@ -26,4 +26,4 @@ hello
 hi
 ```
 
-> **Note:** Depending on your installation, you may need to type `python3.6` or `python36` to run the examples. If you follow the [Python 3 Installation & Setup Guide](https://realpython.com/installing-python/), you should have no problem.
+> **Note:** Depending on your installation, you may need to type `python3.7` or `python37` to run the examples.
