@@ -37,16 +37,19 @@ string2 = "becomes"
 string3 = "BEAR"
 string4 = "  bEautiful"
 
-print(string1.startswidth("be"))
-print(string2.startswidth("be"))
-print(string3.startswidth("be"))
-print(string4.startswidth("be"))
+print(string1.startswith("be"))
+print(string2.startswith("be"))
+print(string3.startswith("be"))
+print(string4.startswith("be"))
 
+
+# Exercise 5
 string1 = string1.lower()
+# (string2 will pass unmodified)
 string3 = string2.lower()
 string4 = string4.strip().lower()
 
-print(string1.startswidth("be"))
-print(string2.startswidth("be"))
-print(string3.startswidth("be"))
-print(string4.startswidth("be"))
+print(string1.startswith("be"))
+print(string2.startswith("be"))
+print(string3.startswith("be"))
+print(string4.startswith("be"))
