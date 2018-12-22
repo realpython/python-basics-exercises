@@ -7,11 +7,13 @@
 my_word = "antidisestablishmentarianism"
 print(len(my_word))
 
+
 # Exercise 2
 # Concatenate two strings together
 string_left = "bat"
 string_right = "man"
 print(string_left + string_right)
+
 
 # Exercise 3
 # Display two strings together, with a space in between
