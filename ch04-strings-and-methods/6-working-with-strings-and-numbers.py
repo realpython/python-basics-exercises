@@ -26,6 +26,7 @@ my_string = "mp"
 my_int = 3
 print(my_string + str(my_int))
 
+
 # Exercise 4
 # Get two numbers from the user, multiple them,
 # and display the result
