@@ -7,7 +7,7 @@ weight = 0.2
 animal = "newt"
 
 # Concatenate a number and a string in one print statement
-print(str(weight) + " kg is the weight of the newt.")
+print(str(weight) + " kg is the weight of the " + animal + ".")
 
 
 # Exercise 2
