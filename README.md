@@ -1,4 +1,8 @@
-# Exercises for [Real Python's](https://realpython.com) *"Python Basics: A Practical Introduction to Python 3"* Book
+# Exercises for [Real Python's *"Python Basics: A Practical Introduction to Python 3"*](https://realpython.com/products/python-basics-book/) Book
+
+## Get the Book
+
+[» Click here to learn more about the book and get your copy](https://realpython.com/products/python-basics-book/)
 
 ## Downloading the Files
 
