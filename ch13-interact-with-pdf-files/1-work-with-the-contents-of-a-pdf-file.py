@@ -3,7 +3,7 @@
 
 
 import os
-from pyPDF2 import PdfFileReader, PdfFileWriter
+from PyPDF2 import PdfFileReader, PdfFileWriter
 
 
 # Exercise 1
@@ -26,7 +26,6 @@ with open(output_file_path, "w") as output_file:
     # Extract every page of text
     for page_num in range(0, input_file.getNumPages()):
         text = input_file.getPage(page_num).extractText()
-        text = text.encode("utf-8")  # convert text to unicode
         output_file.write(text)
 
 
