@@ -1,4 +1,6 @@
-# Exercises for [Real Python's *"Python Basics: A Practical Introduction to Python 3"*](https://realpython.com/products/python-basics-book/) Book
+# Exercise Solutions for [Real Python's *"Python Basics: A Practical Introduction to Python 3"*](https://realpython.com/products/python-basics-book/) Book
+
+Here you can find the solutions and sample implementations for the solutions and challenges posed in our [Python Basics](https://realpython.com/products/python-basics-book/) book.
 
 ## Get the Book
 
