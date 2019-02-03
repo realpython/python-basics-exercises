@@ -1,4 +1,4 @@
-# 4.1 - Master String Basics
+# 4.1 - What is a String?
 # Solutions to review exercies
 
 

@@ -1,4 +1,4 @@
-# 4.2 - Basic String Operations
+# 4.2 - Concatenation, Indexing, and Slicing
 # Solutions to review exercies
 
 
