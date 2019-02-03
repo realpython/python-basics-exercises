@@ -46,7 +46,7 @@ print(string4.startswith("be"))
 # Exercise 5
 string1 = string1.lower()
 # (string2 will pass unmodified)
-string3 = string2.lower()
+string3 = string3.lower()
 string4 = string4.strip().lower()
 
 print(string1.startswith("be"))
