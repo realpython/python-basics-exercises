@@ -20,9 +20,9 @@ $ git clone https://github.com/realpython/python-basics-exercises.git
 
 Alternatively, you can download the entire repository as a `.zip` file from the repository's [homepage](https://github.com/realpython/python-basics-exercises) using the green "Clone or download" button in the top right hand corner, or by [clicking here](https://github.com/realpython/python-basics-exercises/archive/master.zip).
 
-## Running the Code Examples
+## Running the Solutions & Code Examples
 
-To run the code examples, first make sure you have Python 3 installed on your machine. If you need help installing Python 3, check out our [Python 3 Installation & Setup Guide](https://realpython.com/installing-python/).
+To run the solution code and code examples, first make sure you have Python 3 installed on your machine. If you need help installing Python 3, check out our [Python 3 Installation & Setup Guide](https://realpython.com/installing-python/).
 
 Example: To run the `3-store-a-variable.py` exercise, type `python3 3-store-a-variable.py` into your terminal. Here's how that looks, with output:
 
