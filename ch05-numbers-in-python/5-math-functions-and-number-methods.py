@@ -1,4 +1,4 @@
-# 5.5 - Built-in Math Functions
+# 5.5 - Math Functions and Number Methods
 # Solutions to Review Exercises
 
 
