@@ -1,4 +1,4 @@
-# 5.5 - Print Numbers in Style
+# 5.6 - Print Numbers in Style
 # Solutions to Review Exercises
 
 # Exercise 1

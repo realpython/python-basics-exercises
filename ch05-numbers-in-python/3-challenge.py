@@ -1,4 +1,4 @@
-# 5.2 - Challenge: Perform Calculations on User Input
+# 5.3 - Challenge: Perform Calculations on User Input
 # Solution to challenge
 
 
