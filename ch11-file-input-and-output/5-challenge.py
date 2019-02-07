@@ -8,7 +8,8 @@ import csv
 import os
 
 # Change my_path to the correct path on your system
-path = "C:/python-basics-exercises/ch11-file-input-and-output/practice_files"
+path = "C:/Real Python/python-basics-exercises/\
+/ch11-file-input-and-output/practice_files"
 
 high_scores_dict = {}
 with open(os.path.join(path, "scores.csv"), "r") as myFile:

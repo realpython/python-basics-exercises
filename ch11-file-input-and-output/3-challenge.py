@@ -6,8 +6,8 @@
 
 import os
 
-path = "C:/python-basics-exercises/ch11-file-input-and-output\
-       /practice_files/little pics"
+path = "C:/Real Python/python-basics-exercises/ch11-file-input-and-output\
+/practice_files/little pics"
 
 for current_folder, subfolders, file_names in os.walk(path):
     for file_name in file_names:

@@ -7,8 +7,8 @@ import os
 import glob
 
 # This path may need to be changed depending on your setup
-path = "C:/python-basics-exercises/ch11-file-input-and-output\
-       /practice_files/images"
+path = "C:/Real Python/python-basics-exercises/ch11-file-input-and-output\
+/practice_files/images"
 
 
 # Exercise 1

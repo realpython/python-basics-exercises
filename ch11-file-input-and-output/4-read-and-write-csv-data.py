@@ -7,7 +7,8 @@ import os
 import csv
 
 # This path may need to be changed depending on your setup
-path = "C:/python-basics-exercises/ch11-file-input-and-output/practice_files"
+path = "C:/Real Python/python-basics-exercises/\
+/ch11-file-input-and-output/practice_files"
 
 # Read in a CSV and display each row except the header row
 # Append a third column and write out the resulting CSV with a new header
