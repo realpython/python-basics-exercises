@@ -1,4 +1,4 @@
-# 6.1 - Write Your Own Functions
+# 6.2 - Write Your Own Functions
 # Solutions to review exercises
 
 

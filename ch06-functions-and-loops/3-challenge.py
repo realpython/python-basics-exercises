@@ -1,4 +1,4 @@
-# 6.2 - Challenge: Convert temperatures
+# 6.3 - Challenge: Convert temperatures
 # Solution to challenge
 
 
