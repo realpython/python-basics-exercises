@@ -2,21 +2,23 @@
 # Solution to challenge
 
 
-# Convert Celsius and Fahrenheit temperatures using functions
+def convert_cel_to_far(temp_cel):
+    """Return the Celsius temperature temp_cel converted to Fahrenheit."""
+    temp_far = temp_cel * (9 / 5) + 32
+    return temp_far
 
 
-def convert_cel_to_far(cel_temp):
-    far_temp = cel_temp * 9 / 5 + 32
-    return far_temp
+def convert_far_to_cel(temp_far):
+    """Return the Fahrenheit temperature temp_far converted to Celsius."""
+    temp_cel = (temp_far - 32) * (5 / 9)
+    return temp_cel
 
 
-def convert_far_to_cel(far_temp):
-    cel_temp = (far_temp - 32) * 5 / 9
-    return cel_temp
+temp_far = input("Enter a temperature in degrees F: ")
+temp_cel = convert_far_to_cel(float(temp_far))
+print(f"{temp_far} degrees F = {temp_cel:.2f} degrees C")
 
 
-temp1 = 72
-print(f"{temp1} degrees F = {convert_far_to_cel(temp1)} degrees C")
-
-temp2 = 37
-print(f"{temp2} degrees C = {convert_cel_to_far(temp2)} degrees F")
+temp_cel = input("\nEnter a temperature in degrees C: ")
+temp_far = convert_cel_to_far(float(temp_cel))
+print(f"{temp_cel} degrees C = {temp_far:.2f} degrees F")
