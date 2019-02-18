@@ -5,7 +5,7 @@
 # Exercise 1
 def cube(num):
     """Return the cube of the input number."""
-    cube_num = num * num * num
+    cube_num = num ** 3  # Could also use pow(num, 3)
     return cube_num
 
 
@@ -14,10 +14,9 @@ print("2 cubed is", cube(2))
 
 
 # Exercise 2
-def multiply(num1, num2):
-    """Return the result of multiplying two input numbers."""
-    return num1 * num2
+def greet(name):
+    """Display a greeting."""
+    print(f"Hello {name}!")
 
 
-mult_result = multiply(2, 5)
-print("2 times 5 is", mult_result)
+greet("Guido")
