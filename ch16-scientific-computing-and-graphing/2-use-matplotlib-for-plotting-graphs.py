@@ -8,16 +8,16 @@ import csv
 import os
 
 # Change `path` to actual path on your system
-path = "C:/python-basics-exercises/ch16-scientific-computing-and-graphing/\
-        practice_files"
+path = "C:/Real Python/python-basics-exercises/ch16-scientific-computing-and-graphing/\
+practice_files"
 
 years = []
 temperatures = []
 pirates = []
 
-with open(os.path.join(path, "pirates.csv"), "rb") as my_file:
+with open(os.path.join(path, "pirates.csv"), "r") as my_file:
     my_file_reader = csv.reader(my_file)
-    my_file_reader.next()  # skip header row
+    next(my_file_reader)  # skip header row
     for year, temperature, pirate_count in my_file_reader:
         years.append(year)
         temperatures.append(temperature)
@@ -36,5 +36,5 @@ for i in range(0, len(years)):
     plt.annotate(str(years[i]), xy=(pirates[i], temperatures[i]))
 
 # save and display graph
-plt.savefig(os.path.join(path, "Output/pirates.png"))
+# plt.savefig(os.path.join(path, "Output/pirates.png"))
 plt.show()
