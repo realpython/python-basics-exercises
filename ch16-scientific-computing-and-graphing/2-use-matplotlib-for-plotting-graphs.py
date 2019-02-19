@@ -1,4 +1,4 @@
-# 1.16.2 - Use matplotlib for Plotting Graphs
+# 16.3 - Use matplotlib for Plotting Graphs
 # Solution to review exercise #2
 
 # Graph pirates versus global warming
@@ -25,16 +25,15 @@ with open(os.path.join(path, "pirates.csv"), "r") as my_file:
 
 plt.plot(pirates, temperatures, "r-o")
 
-# label graph
 plt.title("Global temperature as a function of pirate population")
 plt.xlabel("Total pirates")
 plt.ylabel("Average global temperature (Celsius)")
 plt.axis([-300, 48000, 14, 16])
 
-# annotate points with years
+# Annotate the plotted points with years.
 for i in range(0, len(years)):
     plt.annotate(str(years[i]), xy=(pirates[i], temperatures[i]))
 
-# save and display graph
+# Save and display graph.
 plt.savefig(os.path.join(path, "Output/pirates.png"))
 plt.show()
