@@ -82,4 +82,3 @@ for page_num in range(int(page_start) - 1, int(page_end)):
 
 with open(output_file_path, "wb") as output_file:
     output_PDF.write(output_file)
-
