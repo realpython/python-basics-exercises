@@ -36,5 +36,5 @@ for i in range(0, len(years)):
     plt.annotate(str(years[i]), xy=(pirates[i], temperatures[i]))
 
 # save and display graph
-# plt.savefig(os.path.join(path, "Output/pirates.png"))
+plt.savefig(os.path.join(path, "Output/pirates.png"))
 plt.show()
