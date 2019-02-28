@@ -35,7 +35,7 @@ blue_car = Car("blue", 20000)
 red_car = Car("red", 30000)
 
 for car in (blue_car, red_car):
-    print(f"The {car.color} car has {car.mileage:,d} miles")
+    print(f"The {car.color} car has {car.mileage:,} miles")
 
 
 # Exercise 3
