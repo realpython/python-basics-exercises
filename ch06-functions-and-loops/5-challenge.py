@@ -10,7 +10,7 @@ def invest(amount, rate, time):
     print("annual rate of return:", rate)
     for t in range(1, time + 1):
         amount = amount * (1 + rate)
-        print(f"year {t}: ${amount}")
+        print(f"year {t}: ${amount:,.2f}")
     print()
 
 
