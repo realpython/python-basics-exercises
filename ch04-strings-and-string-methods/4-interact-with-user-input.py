@@ -11,3 +11,9 @@ print(my_input)
 # Exercise 2
 # Display the input string converted to lower-case letters
 print(my_input.lower())
+
+
+# Exercise 3
+# Take user input and display the number of input characters.
+input_string = input("Type something else: ")
+print(len(input_string))
