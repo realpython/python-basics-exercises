@@ -31,5 +31,5 @@ for trial in range(0, trials):
     else:
         total_B_wins += 1
 
-print("Probability A wins:", total_A_wins / trials)
-print("Probability B wins:", total_B_wins / trials)
+print(f"Probability A wins: {total_A_wins / trials}")
+print(f"Probability B wins: {total_B_wins / trials}")
