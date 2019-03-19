@@ -9,8 +9,8 @@ def cube(num):
     return cube_num
 
 
-print("0 cubed is", cube(0))
-print("2 cubed is", cube(2))
+print(f"0 cubed is {cube(0)}")
+print(f"2 cubed is {cube(2)}")
 
 
 # Exercise 2
