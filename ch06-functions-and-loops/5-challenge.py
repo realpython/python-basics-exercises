@@ -4,6 +4,7 @@
 
 # Calculate compound interest to track the growth of an investment
 
+
 def invest(amount, rate, years):
     for year in range(1, years + 1):
         amount = amount * (1 + rate)
