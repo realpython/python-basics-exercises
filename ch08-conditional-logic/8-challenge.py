@@ -9,7 +9,7 @@ from random import random
 total_A_wins = 0
 total_B_wins = 0
 
-trials = 100_000
+trials = 10_000
 for trial in range(0, trials):
     A_win = 0
     B_win = 0
