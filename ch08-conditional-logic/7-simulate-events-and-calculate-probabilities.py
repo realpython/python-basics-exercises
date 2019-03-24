@@ -14,12 +14,12 @@ def roll():
 
 # Exercise 2
 # Simulate 10,000 rolls of a die and display the average number rolled.
-trials = 10000
+num_rolls = 10_000
 total = 0
 
-for trial in range(0, trials):
+for trial in range(num_rolls):
     total = total + roll()
 
-avg_roll = total / trials
+avg_roll = total / num_rolls
 
-print(f"The average result of {trials} throws is {avg_roll}")
+print(f"The average result of {num_rolls} rolls is {avg_roll}")
