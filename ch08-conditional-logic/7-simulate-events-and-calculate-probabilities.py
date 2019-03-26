@@ -6,15 +6,20 @@ from random import randint
 
 
 # Exercise 1
-# Simulate the toss of a die
-print(randint(1, 6))
+# Write a function that simulatee the roll of a die.
+def roll():
+    """Return random integer between 1 and 6"""
+    return randint(1, 6)
 
 
 # Exercise 2
-# Simulate 10,000 throws of dice and display the average result
-trials = 10000
+# Simulate 10,000 rolls of a die and display the average number rolled.
+num_rolls = 10_000
 total = 0
-for trial in range(0, trials):
-    total += randint(1, 6)
-avg_result = total / trials
-print(f"The average result of {trials} throws was {avg_result}")
+
+for trial in range(num_rolls):
+    total = total + roll()
+
+avg_roll = total / num_rolls
+
+print(f"The average result of {num_rolls} rolls is {avg_roll}")
