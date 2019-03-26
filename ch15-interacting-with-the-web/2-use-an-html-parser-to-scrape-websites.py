@@ -13,7 +13,7 @@ base_URL = "http://olympus.realpython.org"
 address = base_URL + "/profiles"
 html_page = urlopen(address)
 html_text = html_page.read().decode("utf-8")
-soup = BeautifulSoup(html_text, features="html.parser")
+soup = BeautifulSoup(html_text, "html.parser")
 
 # Exercise 2
 # Parse out all the values of the page links
@@ -26,5 +26,5 @@ for anchor in soup.find_all("a"):
     # Display the text in the HTML page of each link
     link_page = urlopen(link_address)
     link_text = link_page.read().decode("utf-8")
-    link_soup = BeautifulSoup(link_text, features="html.parser")
+    link_soup = BeautifulSoup(link_text,     s"html.parser")
     print(link_soup.get_text())
