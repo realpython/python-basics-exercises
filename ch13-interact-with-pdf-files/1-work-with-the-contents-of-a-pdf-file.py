@@ -8,7 +8,7 @@ from PyPDF2 import PdfFileReader, PdfFileWriter
 
 # Exercise 1
 path = "C:/python-basics-exercises/ch13-interact-with-pdf-files/\
-        practice_files"
+practice_files"
 
 input_file_path = os.path.join(path, "The Whistling Gypsy.pdf")
 input_file = PdfFileReader(input_file_path)
