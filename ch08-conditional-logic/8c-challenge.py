@@ -1,4 +1,4 @@
-# 8.9 - Challenge: Simulate a Coin Toss Experiement
+# 8.8 - Challenge: Simulate a Coin Toss Experiement
 # Alternative solution to challenge using functions
 
 

@@ -1,4 +1,4 @@
-# 8.9 - Challenge: Simulate a Coin Toss Experiment
+# 8.8 - Challenge: Simulate a Coin Toss Experiment
 # Solution to challenge
 
 
