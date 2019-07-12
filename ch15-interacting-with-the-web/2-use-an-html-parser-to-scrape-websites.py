@@ -26,5 +26,5 @@ for anchor in soup.find_all("a"):
     # Display the text in the HTML page of each link
     link_page = urlopen(link_address)
     link_text = link_page.read().decode("utf-8")
-    link_soup = BeautifulSoup(link_text,     s"html.parser")
+    link_soup = BeautifulSoup(link_text, "html.parser")
     print(link_soup.get_text())
