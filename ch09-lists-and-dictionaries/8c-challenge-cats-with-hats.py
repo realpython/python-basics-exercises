@@ -1,4 +1,4 @@
-# 9.7 - Challenge: Cats With Hats
+# 9.8 - Challenge: Cats With Hats
 # Alternative solution to challenge using dictionaries
 
 

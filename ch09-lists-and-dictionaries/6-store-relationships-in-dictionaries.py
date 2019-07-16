@@ -1,4 +1,4 @@
-# 9.5 - Store Relationships in Dictionaries
+# 9.6 - Store Relationships in Dictionaries
 # Solutions to review exercises
 
 

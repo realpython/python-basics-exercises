@@ -1,4 +1,4 @@
-# 9.2 - Challenge: List of Lists
+# 9.4 - Challenge: List of Lists
 # Solution to challenge
 
 

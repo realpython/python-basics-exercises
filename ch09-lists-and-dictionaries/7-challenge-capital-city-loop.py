@@ -1,4 +1,4 @@
-# 9.6 - Challenge: Capital City Loop
+# 9.7 - Challenge: Capital City Loop
 # Solution to challenge
 
 
