@@ -19,9 +19,9 @@ with open(os.path.join(path, "pirates.csv"), "r") as my_file:
     my_file_reader = csv.reader(my_file)
     next(my_file_reader)  # skip header row
     for year, temperature, pirate_count in my_file_reader:
-        years.append(year)
-        temperatures.append(temperature)
-        pirates.append(pirate_count)
+        years.append(int(year))
+        temperatures.append(float(temperature))
+        pirates.append(int(pirate_count))
 
 plt.plot(pirates, temperatures, "r-o")
 
