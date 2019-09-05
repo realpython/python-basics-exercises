@@ -4,47 +4,46 @@
 
 # Exercise 1
 # Create an empty dictionary
-birthdays = {}
+captains = {}
 
 
 # Exercise 2
 # Add some key-value pairs to the dictionary
-birthdays["Luke Skywalker"] = "5/25/19"
-birthdays["Obi-Wan Kenobi"] = "3/11/57"
-birthdays["Darth Vader"] = "4/1/41"
+captains["Enterprise"] = "Picard"
+captains["Voyager"] = "Janeway"
+captains["Defiant"] = "Sisko"
 
 
 # Exercise 3
-# Check if "Yoda" and "Darth Vader exist; if not, add them
-if "Yoda" not in birthdays:
-    birthdays["Yoda"] = "unknown"
-if "Darth Vader" not in birthdays:
-    birthdays["Darth Vader"] = "unknown"
+# Check if "Enterprise" and "Discovery" exist; if not, add them
+if "Enterprise" not in captains:
+    captains["Enterprise"] = "unknown"
+if "Discovery" not in captains:
+    captains["Discovery"] = "unknown"
 
 # Bonus points: you could instead loop over a list of names to check
-# for name in ["Yoda", "Darth Vader"]:
-#    if not name in birthdays:
-#        birthdays[name] = "unknown"
+# for name in ["Enterprise", "Discovery"]:
+#    if not ship in captains:
+#        captains[ship] = "unknown"
 
 
 # Exercise 4
 # Display the contents of the dictionary, one pair at a time
-for name in birthdays:
-    print(name, birthdays[name])
+for ship, captain in captains.items():
+    print(f"The {ship} is captained by {captain}.")
 
 
 # Exercise 5
-# Remove "Darth Vader"
-del (birthdays["Darth Vader"])
-print(birthdays)
+# Remove "Discovery"
+del captains["Discovery"]
 
 
 # Exercise 6 (Bonus)
 # Create dictionary by passing a list to dict()
-birthdays = dict(
+captains = dict(
     [
-        ("Luke Skywalker", "5/25/19"),
-        ("Obi-Wan Kenobi", "3/11/57"),
-        ("Darth Vader", "4/1/41"),
+        ("Enterprise", "Picard"),
+        ("Voyager", "Janeway"),
+        ("Defiant", "Sisko"),
     ]
 )
