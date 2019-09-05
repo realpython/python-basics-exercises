@@ -1,4 +1,4 @@
-# 9.8 - Challenge: Cats With Hats
+# 9.9 - Challenge: Cats With Hats
 # Solution to challenge
 
 
