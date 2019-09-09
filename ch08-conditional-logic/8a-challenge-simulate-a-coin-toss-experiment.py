@@ -42,7 +42,7 @@ for trial in range(num_trials):
         # coin_flip() returned "tails" on the first flip.
         # Increment the number of flips by 1
         flips = flips + 1
-        while coin_flip == "tails":
+        while coin_flip() == "tails":
             # Keep incrementing the total number of flips
             # until "heads" is returned by coin_flip()
             flips = flips + 1
