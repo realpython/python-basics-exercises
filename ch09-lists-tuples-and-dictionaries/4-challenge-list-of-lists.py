@@ -17,21 +17,16 @@ def enrollment_stats(list_of_universities):
     return total_students, total_tuition
 
 
-def mean(my_list):
-    if len(my_list) == 0:
-        return "The list is empty"
-    list_sum = 0
-    for i in range(len(my_list)):
-        list_sum += float(my_list[i])
-    return int(list_sum / len(my_list))
+def mean(values):
+    return sum(values) / len(values)
 
 
-def median(my_list):
-    sorts = sorted(my_list)
-    length = len(sorts)
+def median(values):
+    values.sort()
+    length = len(values)
     if not length % 2:
-        return (sorts[int(length / 2)] + sorts[int(length / 2 - 1)]) / 2.0
-    return sorts[int(length / 2)]
+        return values[(length - 1) / 2]
+    return values[int(length / 2)]
 
 
 universities = [
@@ -47,12 +42,12 @@ universities = [
 totals = enrollment_stats(universities)
 
 print("\n")
-print("*****" * 5)
-print(f"Total students:   {sum(totals[0])}")
-print(f"Total tuition:  $ {sum(totals[1])}")
-print(f"\nStudent mean:     {mean(totals[0])}")
-print(f"Student median:   {median(totals[0])}")
-print(f"\nTuition mean:   $ {mean(totals[1])}")
-print(f"Tuition median: $ {median(totals[1])}")
-print("*****" * 5)
+print("*****" * 6)
+print(f"Total students:   {sum(totals[0]):,}")
+print(f"Total tuition:  $ {sum(totals[1]):,}")
+print(f"\nStudent mean:     {mean(totals[0]):,.2f}")
+print(f"Student median:   {median(totals[0]):,}")
+print(f"\nTuition mean:   $ {mean(totals[1]):,.2f}")
+print(f"Tuition median: $ {median(totals[1]):,}")
+print("*****" * 6)
 print("\n")
