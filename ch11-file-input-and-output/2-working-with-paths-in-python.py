@@ -33,7 +33,7 @@ for current_folder, subfolders, file_names in os.walk(path):
     for file_name in file_names:
         file_path = os.path.join(current_folder, file_name)
         if file_path.lower().endswith(".png"):
-            new_path = file_path[-4] + "_backup.png"
+            new_path = file_path[:-4] + "_backup.png"
             os.rename(file_path, new_path)
 
 
