@@ -28,6 +28,9 @@ with open(output_file_path, "w") as output_file:
         text = input_file.getPage(page_num).extractText()
         output_file.write(text)
 
+# NOTE: On some machines, you may get a UnicodeDecodeError when
+# writing the file. To fix this, replace line 25 with the following:
+# with open(output_file_path, "w", encoding="utf-8")
 
 # Exercise 3
 # Save file without cover page
