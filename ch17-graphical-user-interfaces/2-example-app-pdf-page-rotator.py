@@ -1,9 +1,5 @@
-# 17.1 - Add GUI Elements With EasyGUI
-# Review Exercise #4
-
-# NOTE: The first three exercises in this section are instructional
-# and do not require solutions to be shown here. For this reason,
-# only the solution to the fourth exercise is presented.
+# 17.2 - Example App: PDF Page Rotator
+# Review Exercise #1
 
 import easygui as gui
 from PyPDF2 import PdfFileReader, PdfFileWriter

@@ -1,4 +1,4 @@
-# 17.6 - Challenge: Return of the Poet
+# 17.10 - Challenge: Return of the Poet
 # Solution to challenge
 
 # Please note that there are many ways to solve this challenge. The code

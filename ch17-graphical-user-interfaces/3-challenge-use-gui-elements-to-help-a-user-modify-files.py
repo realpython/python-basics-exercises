@@ -1,4 +1,4 @@
-# 17.2 - Challenge: Use GUI Elements to Help a User Modify Files
+# 17.3 - Challenge: Use GUI Elements to Help a User Modify Files
 # Solution to challenge
 
 # save part of a PDF based on a user-supplied page range using a GUI
@@ -6,25 +6,28 @@
 import easygui as gui
 from PyPDF2 import PdfFileReader, PdfFileWriter
 
-# let the user choose an input file
+# 1. Ask the user to select a PDF file to open.
 input_file_path = gui.fileopenbox("", "Select a PDF to trim...", "*.pdf")
-if input_file_path is None:  # exit on "Cancel"
+
+# 2. If no PDF file is chosen, exit the program.
+if input_file_path is None:
     exit()
 
-# get the page length of the input file
-input_file = PdfFileReader(input_file_path)
-total_pages = input_file.getNumPages()
-
-# let the user choose a beginning page
+# 3. Ask for a starting page number.
 page_start = gui.enterbox(
     "Enter the number of the first page to use:", "Where to begin?"
 )
-if page_start is None:  # exit on "Cancel"
+
+# 4. If the user does not enter a starting page number, exit the program.
+if page_start is None:
     exit()
-# check for possible problems and try again:
-#    1) input page number isn't a (non-negative) digit
-# or 2) input page number is 0
-# or 3) page number is greater than total number of pages
+
+# 5. Valid page numbers are positive integers. If the user enters an invalid page number:
+#     - Warn the user that the entry is invalid
+#     - Return to step 3.
+# This solution also checks that the starting page number is not beyond the last page of the PDF!# 3. Asl for a starting page number.
+input_file = PdfFileReader(input_file_path)  # Open the PDF
+total_pages = input_file.getNumPages()  # Get the total number of pages
 while (
     not page_start.isdigit()
     or page_start == "0"
@@ -37,17 +40,20 @@ while (
     if page_start is None:  # exit on "Cancel"
         exit()
 
-# let the user choose an ending page
+# 6. Ask for an ending page number
 page_end = gui.enterbox(
     "Enter the number of the last page to use:", "Where to end?"
 )
+
+# 7. If the user does not enter and ending page number, exit the program.
 if page_end is None:  # exit on "Cancel"
     exit()
-# check for possible problems and try again:
-#    1) input page number isn't a (non-negative) digit
-# or 2) input page number is 0
-# or 3) input page number is greater than total number of pages
-# or 4) input page number for end is less than page number for beginning
+
+# 8. If the user enters an invalid page number:
+#     - Warn the user that the entry is invalid
+#     - Return to step 6.
+# This solution also check that the ending page number is not less than the starting
+# page number, and that it is not greater than the last page in the PDF
 while (
     not page_end.isdigit()
     or page_end == "0"
@@ -61,8 +67,16 @@ while (
     if page_end is None:  # exit on "Cancel"
         exit()
 
-# let the user choose an output file name
+# 9. Ask for the location to save the extracted pages
 output_file_path = gui.filesavebox("", "Save the trimmed PDF as...", "*.pdf")
+
+# 10. If the user does not select a save location, exit the program.
+if output_file_path is None:
+    exit()
+
+# 11. If the chosen save location is the same as the input file path:
+#      - Warn the user that they can not overwrite the input file.
+#      - Return the step 9.
 while input_file_path == output_file_path:  # cannot use same file as input
     gui.msgbox(
         "Cannot overwrite original file!", "Please choose another file..."
@@ -70,12 +84,12 @@ while input_file_path == output_file_path:  # cannot use same file as input
     output_file_path = gui.filesavebox(
         "", "Save the trimmed PDF as...", "*.pdf"
     )
-if output_file_path is None:
-    exit()  # exit on "Cancel"
+    if output_file_path is None:
+        exit()
 
-# read in file, write new file with trimmed page range and save the new file
+# 12. Perform the page extraction
 output_PDF = PdfFileWriter()
-# subtract 1 from supplied start page number to get correct index value
+
 for page_num in range(int(page_start) - 1, int(page_end)):
     page = input_file.getPage(page_num)
     output_PDF.addPage(page)
