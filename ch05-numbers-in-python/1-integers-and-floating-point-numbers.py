@@ -1,10 +1,10 @@
-# 5.3 - Integers and Floating-Point Numbers
+# 5.1 - Integers and Floating-Point Numbers
 # Solutions to Review Exercises
 
 
 # Exercise 1
 num1 = 25_000_000
-num2 = 25_000_000
+num2 = 25000000
 print(num1)
 print(num2)
 
