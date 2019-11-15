@@ -19,13 +19,6 @@ print(string_left + string_right)
 # Display two strings together, with a space in between
 string_one = "heebie"
 string_two = "jeebies"
-print(string_one, string_two)
-
-
-# Exercise 3
-# Display two strings together, with a space in between
-string_one = "heebie"
-string_two = "jeebies"
 print(string_one + " " + string_two)
 
 
