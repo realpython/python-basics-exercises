@@ -8,11 +8,13 @@ print("AAA".find("a"))
 
 
 # Exercise 2
-# Try to find a number inside a string;
-# use str() to convert the number first
-version = "version 2.0"
-v_num = 2.0
-print(version.find(str(v_num)))
+# Replace every occurrence of the character `"s"`
+# with the character `"x"`
+phrase = "Somebody said something to Samantha."
+phrase = phrase.replace("s", "x")
+print(phrase)
+# NOTE: This leaves the capital "S" unchanged, so the
+# output will be "Somebody xaid xomething to Samantha."
 
 
 # Exercise 3
