@@ -2,7 +2,7 @@
 # Solution to challenge
 
 
-# Calculate compound interest to track the growth of an investment
+# Calculate interest to track the growth of an investment
 
 
 def invest(amount, rate, years):

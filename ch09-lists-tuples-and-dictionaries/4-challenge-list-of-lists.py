@@ -18,15 +18,27 @@ def enrollment_stats(list_of_universities):
 
 
 def mean(values):
+    """Return the mean value in the list `values`"""
     return sum(values) / len(values)
 
 
 def median(values):
+    """Return the median value of the list `values`"""
     values.sort()
-    length = len(values)
-    if not length % 2:
-        return values[(length - 1) / 2]
-    return values[int(length / 2)]
+    # If the number of valus is odd,
+    # return the middle value of the list
+    if len(values) % 2 == 1:
+        # The value at the center of the list is the value
+        # at whose index is half of the length of the list,
+        # rounded down
+        center_index = int(len(values) / 2)
+        return values[center_index]
+    # Otherwise, if the length of the list is even, return
+    # the mean of the two center values
+    else:
+        left_center_index = (len(values) - 1) / 2
+        right_center_index = (len(values) + 1) / 2
+        return mean([left_center_index, right_center_index])
 
 
 universities = [
