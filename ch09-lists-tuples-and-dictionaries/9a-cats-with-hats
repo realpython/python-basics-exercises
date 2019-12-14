@@ -1,5 +1,5 @@
 # At the start all cats are hatless.
-cats = [False]*100
+cats = [False]*101
 
 # We do a loop over each step size from 1 to 100
 for step in range(1,101):
