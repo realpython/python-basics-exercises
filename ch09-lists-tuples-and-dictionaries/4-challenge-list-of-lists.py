@@ -38,7 +38,7 @@ def median(values):
     else:
         left_center_index = (len(values) - 1) / 2
         right_center_index = (len(values) + 1) / 2
-        return mean([left_center_index, right_center_index])
+        return mean([values[left_center_index], values[right_center_index]])
 
 
 universities = [
