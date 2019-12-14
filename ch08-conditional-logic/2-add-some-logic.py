@@ -18,5 +18,3 @@ print(False == (not True))
 print((True and False) == (True and False))
 # not True and "A" == "B"
 print(not (True and "A" == "B"))
-# "B" and not "A" != "B"
-print(("B" and not "A") != "B")
