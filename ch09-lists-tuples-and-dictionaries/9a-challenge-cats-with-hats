@@ -14,6 +14,6 @@ for step_size in range(1, 100 + 1):
         cats[i*step_size] = not cats[i*step_size]
 
 # Print the list of cats that have a hat
-for i in range(100):
+for i in range(101):
     if cats[i]:
-        print(f"Cat {i+1} has a hat!")
+        print(f"Cat {i} has a hat!")
