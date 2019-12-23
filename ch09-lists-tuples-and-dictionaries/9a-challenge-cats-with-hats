@@ -1,0 +1,19 @@
+# At the start all cats are hatless.
+cats = [False]*101
+
+# We do a loop over each step size from 1 to 100
+for step_size in range(1, 100 + 1):
+    
+    # For each step size we calculate how many cats we are going to visit
+    cats_to_visit = 100 // step_size
+
+    # We only loop over cat indices that are a multiple of our step size
+    for i in range(1, cats_to_visit + 1):
+
+        # We reverse the hat status for each cat we loop over
+        cats[i*step_size] = not cats[i*step_size]
+
+# Print the list of cats that have a hat
+for i in range(100):
+    if cats[i]:
+        print(f"Cat {i+1} has a hat!")
