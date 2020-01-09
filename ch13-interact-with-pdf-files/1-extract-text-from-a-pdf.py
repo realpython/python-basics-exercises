@@ -1,4 +1,4 @@
-# 13.1 - Work With the Contents of a PDF File
+# 13.1 - Extract Text From a PDF
 # Solutions to review exercises
 
 
