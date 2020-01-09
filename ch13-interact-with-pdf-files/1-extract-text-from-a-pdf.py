@@ -2,44 +2,71 @@
 # Solutions to review exercises
 
 
-import os
-from PyPDF2 import PdfFileReader, PdfFileWriter
-
-
+# ***********
 # Exercise 1
-path = "C:/python-basics-exercises/ch13-interact-with-pdf-files/\
-practice_files"
+#
+# In the Chapter 13 Practice Files directory there is a PDF file called
+# `zen.pdf`. Create a `PdfFileReader` from this PDF.
+# ***********
 
-input_file_path = os.path.join(path, "The Whistling Gypsy.pdf")
-input_file = PdfFileReader(input_file_path)
+# Before you can do anything, you need to import the right objects from
+# the PyPDF2 and pathlib libraries
+from pathlib import Path
+from PyPDF2 import PdfFileReader
 
-# Display meta-data about file
-print("Title:", input_file.getDocumentInfo().title)
-print("Author:", input_file.getDocumentInfo().author)
-print("Number of pages:", input_file.getNumPages())
+# To create a PdfFileReader instance, you need to path to the PDF file.
+# We'll assume you downloaded the solutions folder and extracted it into
+# the home directory on your computer. If this is not the case, you'll
+# need to update the path below.
+pdf_path = Path.home() / "python-basics-exercises/ch13-interact-with-pdf-files" \
+    "/practice_files/zen.pdf"
+
+# Now you can create the PdfFileReader instance. Remember that
+# PdfFileReader objects can only be instantiated with path strings, not
+# Path objects!
+pdf_reader = PdfFileReader(str(pdf_path))
 
 
+# ***********
 # Exercise 2
-# Specify and open output text file
-output_file_path = os.path.join(path, "Output/The Whistling Gypsy.txt")
-with open(output_file_path, "w") as output_file:
-    # Extract every page of text
-    for page_num in range(0, input_file.getNumPages()):
-        text = input_file.getPage(page_num).extractText()
-        output_file.write(text)
+#
+# Using the `PdfFileReader` instance from Exercise 1, print the total
+# number of pages in the PDF.
+# ***********
 
-# NOTE: On some machines, you may get a UnicodeDecodeError when
-# writing the file. To fix this, replace line 25 with the following:
-# with open(output_file_path, "w", encoding="utf-8")
+# Use .getNumPages() to get the number of pages, then print the result
+# using the print() built-in
+num_pages = pdf_reader.getNumPages()
+print(num_pages)
 
+
+# ***********
 # Exercise 3
-# Save file without cover page
-output_PDF = PdfFileWriter()
-for page_num in range(1, input_file.getNumPages()):
-    output_PDF.addPage(input_file.getPage(page_num))
+#
+# Print the text from the first page of the PDF in Exercise 1.
+# ***********
 
-output_file_name = os.path.join(
-    path, "Output/The Whistling Gypsy un-covered.pdf"
-)
-with open(output_file_name, "wb") as output_file:
-    output_PDF.write(output_file)
+# Use .getPage() to get the first page. Remember pages are indexed
+# starting with 0!
+first_page = pdf_reader.getPage(0)
+
+# Then use .extractText() to extract the text
+text = first_page.extractText()
+
+# Finally, print the text
+print(text)
+
+
+# **NOTE**: The text in zen.pdf is from "The Zen Of Python" written by
+# Tim Peters in 2004. The Zen is a collection of 19 guiding principles
+# for developing with Python. The story goes that there are actually 20
+# such principles, but only 19 were written down!
+#
+# You can see the original submission for The Zen of Python in PEP20:
+# https://www.python.org/dev/peps/pep-0020/
+#
+# For some historical context surrounding The Zen, see:
+# https://mail.python.org/pipermail/python-list/1999-June/001951.html
+#
+# Author Al Seigart has an interpretation of The Zen on his blog:
+# https://inventwithpython.com/blog/2018/08/17/the-zen-of-python-explained/
