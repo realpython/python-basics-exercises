@@ -1,4 +1,4 @@
-# 13.2 - Manipulate PDF Files
+# 13.2 - Extract Pages From a PDF
 # Solutions to review exercises
 
 import os
