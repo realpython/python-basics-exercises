@@ -58,7 +58,7 @@ print(text)
 
 
 # **NOTE**: The text in zen.pdf is from "The Zen Of Python" written by
-# Tim Peters in 2004. The Zen is a collection of 19 guiding principles
+# Tim Peters in 1999. The Zen is a collection of 19 guiding principles
 # for developing with Python. The story goes that there are actually 20
 # such principles, but only 19 were written down!
 #
@@ -70,3 +70,6 @@ print(text)
 #
 # Author Al Seigart has an interpretation of The Zen on his blog:
 # https://inventwithpython.com/blog/2018/08/17/the-zen-of-python-explained/
+#
+# Moshe Zadka has another great article on The Zen:
+# https://orbifold.xyz/zen-of-python.html
