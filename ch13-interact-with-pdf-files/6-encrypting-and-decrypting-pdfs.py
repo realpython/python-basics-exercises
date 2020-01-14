@@ -1,4 +1,4 @@
-# 13.5 - Encrypting and Decrypting PDFs
+# 13.6 - Encrypting and Decrypting PDFs
 # Solutions to review exercises
 
 # ***********
