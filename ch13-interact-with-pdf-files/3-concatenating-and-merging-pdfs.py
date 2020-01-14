@@ -15,7 +15,7 @@ from pathlib import Path
 from PyPDF2 import PdfFileMerger
 
 
-BASE_PATH = Path.home() / "github/realpython/python-basics-exercises/" \
+BASE_PATH = Path.home() / "python-basics-exercises/" \
     "ch13-interact-with-pdf-files/practice_files"
 
 pdf_paths = [BASE_PATH / "merge1.pdf", BASE_PATH / "merge2.pdf"]
