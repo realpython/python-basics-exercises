@@ -11,7 +11,7 @@ class PdfFileSplitter:
 
     def __init__(self, pdf_path):
         # Open the PDF file with a new PdfFileReader instance
-        self.pdf_reader = PdfFileReader(str(pdf_path))
+        self.pdf_reader = PdfFileReader(pdf_path)
         # Initialize the .writer1 and .writer2 attributes to None
         self.writer1 = None
         self.writer2 = None
@@ -32,10 +32,10 @@ class PdfFileSplitter:
     def write(self, filename):
         """Write both PdfFileWriter instances to files"""
         # Write the first file to <filename>_1.pdf
-        with Path(str(filename) + "_1.pdf").open(mode="wb") as output_file:
+        with Path(filename + "_1.pdf").open(mode="wb") as output_file:
             self.writer1.write(output_file)
         # Write the second file to <filename>_2.pdf
-        with Path(str(filename) + "_2.pdf").open(mode="wb") as output_file:
+        with Path(filename + "_2.pdf").open(mode="wb") as output_file:
             self.writer2.write(output_file)
 
 
