@@ -21,9 +21,7 @@ pages.sort(key=get_page_text)
 
 for page in pages:
     rotation_degrees = page["/Rotate"]
-    if rotation_degrees < 0:
-        page.rotateClockwise(-rotation_degrees)
-    elif rotation_degrees > 0:
+    if rotation_degrees != 0:
         page.rotateCounterClockwise(rotation_degrees)
     pdf_writer.addPage(page)
 
