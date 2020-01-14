@@ -38,7 +38,9 @@ class PdfFileSplitter:
         with Path(str(filename) + "_2.pdf").open(mode="wb") as output_file:
             self.writer2.write(output_file)
 
-
+# Split the Pride_and_Prejudice.pdf file into two PDFs, the first
+# containing the first 150 pages, and the second containing the
+# remaining pages.
 pdf_splitter = PdfFileSplitter("ch13-interact-with-pdf-files/practice_files/Pride_and_Prejudice.pdf")
 pdf_splitter.split(breakpoint=150)
 pdf_splitter.write("pride_split")
