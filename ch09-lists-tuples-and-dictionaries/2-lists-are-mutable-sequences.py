@@ -38,3 +38,11 @@ breakfast = "eggs, fruit, orange juice".split(", ")
 # Exercise 7
 # Verify that breakfast has three items using len()
 print(len(breakfast) == 3)
+
+
+# Exercise 8
+# Create a new list called `lengths` using a list
+# comprehension that contains the lengths of each
+# string in the `breakfast` list.
+lengths = [len(item) for item in breakfast]
+print(lengths)
