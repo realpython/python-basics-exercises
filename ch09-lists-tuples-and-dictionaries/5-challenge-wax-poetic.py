@@ -93,7 +93,7 @@ def make_poem():
     # Pull one adverb
     adv1 = random.choice(adverb)
 
-    if "aeiou".find(adj1[0]) != -1:  # first letter is a vowel
+    if "aeiou".find(adj1[0]) != -1:  # First letter is a vowel
         article = "An"
     else:
         article = "A"
