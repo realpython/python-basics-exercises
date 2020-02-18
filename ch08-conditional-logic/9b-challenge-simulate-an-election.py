@@ -55,5 +55,5 @@ for trial in range(NUM_TRIALS):
 # Display the probabilities that candidate A or candidate B wins the
 # election. Note the probability that B wins can be calculated by
 # subtracting the probability that A wins from 1.
-print(f"Probability A wins: {num_times_A_wins / num_trials}")
-print(f"Probability B wins: {1 - (num_times_A_wins / num_trials)}")
+print(f"Probability A wins: {num_times_A_wins / NUM_TRIALS}")
+print(f"Probability B wins: {1 - (num_times_A_wins / NUM_TRIALS)}")
