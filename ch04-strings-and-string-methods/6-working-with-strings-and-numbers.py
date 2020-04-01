@@ -28,7 +28,7 @@ print(my_string + str(my_int))
 
 
 # Exercise 4
-# Get two numbers from the user, multiple them,
+# Get two numbers from the user, multiply them,
 # and display the result
 a = input("Enter a number: ")
 b = input("Enter another number: ")
