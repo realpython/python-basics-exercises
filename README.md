@@ -2,6 +2,8 @@
 
 In this code repository you find the solutions and sample implementations for the solutions and challenges posed in our [Python Basics](https://realpython.com/products/python-basics-book/) book. All solutions and sample files are ordered by chapter so you can quickly navigate to the code you're looking for.
 
+In most cases, the solutions presented here represent just one way out of many that the exercises and challenges can be solved. If you find a better way to solve one of the exercises or challenges feel free to open an issue or pull request!
+
 ## Get the Book
 
 [» Click here to learn more about the book and get your copy](https://realpython.com/products/python-basics-book/)
