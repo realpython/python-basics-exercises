@@ -37,7 +37,8 @@ def run_election(regional_chances):
     # "B" is the total number of regions minus the number of regions won by
     # candidate "A". The total number of regions is the same as the length
     # of the regional_chances list.
-    if num_regions_won_by_A > len(regional_chances) - num_regions_won_by_A:
+    num_regions_won_by_B = len(regional_chances) - num_regions_won_by_A
+    if num_regions_won_by_A > num_regions_won_by_B:
         return "A"
     else:
         return "B"
