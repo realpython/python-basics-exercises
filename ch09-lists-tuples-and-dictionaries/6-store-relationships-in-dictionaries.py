@@ -22,7 +22,7 @@ if "Discovery" not in captains:
     captains["Discovery"] = "unknown"
 
 # Bonus points: you could instead loop over a list of names to check
-# for name in ["Enterprise", "Discovery"]:
+# for ship in ["Enterprise", "Discovery"]:
 #    if not ship in captains:
 #        captains[ship] = "unknown"
 
