@@ -6,11 +6,11 @@ from pathlib import Path
 
 # Change the path below to match the location on your computer
 scores_csv_path = (
-    Path.home() /
-    "github/realpython" /
-    "python-basics-exercises" /
-    "ch11-file-input-and-output" /
-    "practice_files" /
+    Path.home()
+    / "github/realpython"
+    / "python-basics-exercises"
+    / "ch12-file-input-and-output"
+    / "practice_files"
     "scores.csv"
 )
 
@@ -21,7 +21,7 @@ with scores_csv_path.open(mode="r", encoding="utf-8") as file:
 high_scores = {}
 for item in scores:
     name = item["name"]
-    score = item["score"]
+    score = int(item["score"])
     # If the name has not been added to the high_score dictionary, then
     # create a new key with the name and set its value to the score
     if name not in high_scores:
