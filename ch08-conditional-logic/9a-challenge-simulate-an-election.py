@@ -10,7 +10,7 @@ num_times_A_wins = 0
 num_times_B_wins = 0
 
 num_trials = 10_000
-for trial in range(0,num_trials):
+for trial in range(0, num_trials):
     votes_for_A = 0
     votes_for_B = 0
 
