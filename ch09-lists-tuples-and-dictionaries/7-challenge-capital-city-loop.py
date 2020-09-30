@@ -56,9 +56,10 @@ capitals_dict = {
     "Wyoming": "Cheyenne",
 }
 
-state, capital = random.choice(list(capitals_dict.items()))
 
+print("To quit this game, type 'exit'")
 while True:
+    state, capital = random.choice(list(capitals_dict.items()))
     guess = input(f"What is the capital of '{state}'? ").lower()
     if guess == "exit":
         print(f"The capital of '{state}' is '{capital}'.")
@@ -66,4 +67,4 @@ while True:
         break
     elif guess == capital.lower():
         print("Correct! Nice job.")
-        break
+       
