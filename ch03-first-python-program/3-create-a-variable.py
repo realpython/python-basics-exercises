@@ -13,3 +13,6 @@ print("hello")
 # Display the contents of a string variable
 my_string = "hi"
 print(my_string)
+
+# Display the concatenation of strings using variable
+print("hello"+my_string)
