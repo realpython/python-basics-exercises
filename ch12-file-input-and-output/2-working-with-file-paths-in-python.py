@@ -18,3 +18,12 @@ print(file_path.name)
 
 # Exercise 4
 print(file_path.parent.name)
+
+
+# Using os module 
+import os
+# Get current working directory
+print(os.getcwd())
+
+# Listing files and directories in current working directory
+print(os.listdir(os.getcwd()))
