@@ -1,6 +1,6 @@
 # Exercise Solutions for [Real Python's *"Python Basics: A Practical Introduction to Python 3"*](https://realpython.com/products/python-basics-book/) Book
 
-In this code repository you find the solutions and sample implementations for the solutions and challenges posed in our [Python Basics](https://realpython.com/products/python-basics-book/) book. All solutions and sample files are ordered by chapter so you can quickly navigate to the code you're looking for.
+In this code repository you find the solutions and sample implementations for the solutions and challenges posed in our [Python Basics](https://realpython.com/products/python-basics-book/) book. All solutions and sample files are ordered by chapter so you can quickly navigate to the code you're looking for, getting better at your python skills.
 
 In most cases, the solutions presented here represent just one way out of many that the exercises and challenges can be solved. If you find a better way to solve one of the exercises or challenges feel free to open an issue or pull request!
 
