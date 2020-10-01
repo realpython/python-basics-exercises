@@ -22,6 +22,8 @@ class Dog:
 # The value for `age` can vary in your solution
 philo = Dog("Philo", 5, "brown")
 print(f"{philo.name}'s coat is {philo.coat_color}.")
+philo2 = Dog("Jimmy", 2, "white")
+print(f"{philo2.name}'s coat is {philo2.coat_color}.")
 
 
 # Exercise 2
@@ -51,3 +53,6 @@ class Car:
 blue_car = Car("blue", 0)
 blue_car.drive(100)
 print(blue_car.mileage)
+red_car = Car("red", 0)
+red_car.drive(150)
+print(red_car.mileage)
