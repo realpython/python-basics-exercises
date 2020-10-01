@@ -12,7 +12,7 @@ print(("good" != "Good") and not (1 == 1))
 # Add parentheses so that the following expressions all
 # evaluate to True
 
-# False == not True
+# checking boolean logics 
 print(False == (not True))
 # True and False == True and False
 print((True and False) == (True and False))
