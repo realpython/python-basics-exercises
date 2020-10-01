@@ -30,3 +30,6 @@ print("x" in my_name)
 # Exercise 6
 # Create tuple containing all but the first letter in my_name
 print(my_name[1:])
+# Exercise 7
+# Create last letter in my_name
+print(my_name[2:],)
