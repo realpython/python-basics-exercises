@@ -35,3 +35,5 @@ hi
 ```
 
 > **Note:** Depending on your installation, you may need to type `python3.7` or `python37` to run the examples.
+
+## Note : Practise examples are add in this repo and practise : fibonacci sequence , reverse number , factorial number , array , oop concepts , list , dictionary etc .
