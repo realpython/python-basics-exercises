@@ -3,6 +3,7 @@
 
 import random
 
+# create dictionary
 capitals_dict = {
     "Alabama": "Montgomery",
     "Alaska": "Juneau",
@@ -57,7 +58,7 @@ capitals_dict = {
 }
 
 state, capital = random.choice(list(capitals_dict.items()))
-
+# using True condition in while loop. So, to come out of loop use break statement
 while True:
     guess = input(f"What is the capital of '{state}'? ").lower()
     if guess == "exit":
