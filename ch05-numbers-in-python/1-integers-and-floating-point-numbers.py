@@ -10,6 +10,7 @@ print(num2)
 
 # Exercise 2
 num = 1.75e5
+# in 1.75e5, e represents exponent
 print(num)
 
 # Exercise 3
