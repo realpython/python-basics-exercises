@@ -9,7 +9,7 @@ print(num1)   #produce output of num1
 print(num2)    #produce output of num2
 
 # Exercise 2
-num = 1.75e5  #produce output dof num
+num = 1.75e5  #produce output of num
 print(num)
 
 # Exercise 3
