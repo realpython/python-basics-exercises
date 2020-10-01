@@ -12,6 +12,17 @@ print("good" != "bad")
 print("good" != "Good")
 print(123 == "123")
 
+print(11 > 11) # note this one
+print(11 >= 11)
+print(11 < 11)
+print(11 <= 11)
+
+print(11.0 == 11) # note this one
+print(11.0 == 11.1)
+
+print(65 == chr("A") )
+print(ord("A") == 65)
+print( ord("A") == chr(65) )
 
 # Exercise 2
 # Fill in the blank so that each of the following expressions are True
