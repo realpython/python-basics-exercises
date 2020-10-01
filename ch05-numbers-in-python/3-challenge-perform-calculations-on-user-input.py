@@ -7,4 +7,5 @@
 base = input("Enter a base: ")
 exponent = input("Enter an exponent: ")
 result = float(base) ** float(exponent)
+# print the base, exponent, and result
 print(f"{base} to the power of {exponent} = {result}")
