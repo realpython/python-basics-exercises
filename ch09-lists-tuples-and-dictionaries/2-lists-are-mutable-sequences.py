@@ -45,4 +45,5 @@ print(len(breakfast) == 3)
 # comprehension that contains the lengths of each
 # string in the `breakfast` list.
 lengths = [len(item) for item in breakfast]
+# print length
 print(lengths)
