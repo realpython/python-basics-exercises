@@ -34,4 +34,4 @@ hello
 hi
 ```
 
-> **Note:** Depending on your installation, you may need to type `python3.7` or `python37` to run the examples.
+> **Note:** Depending on your installation, you may need to type `python3.9` or `python39` to run the examples.
