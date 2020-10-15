@@ -8,9 +8,9 @@ def cube(num):
     cube_num = num ** 3  # Could also use pow(num, 3)
     return cube_num
 
-
-print(f"0 cubed is {cube(0)}")
-print(f"2 cubed is {cube(2)}")
+num = int(input("Enter your number: "))
+print(f"{num} cubed is {cube(num)}")
+# print(f"2 cubed is {cube(2)}")
 
 
 # Exercise 2
@@ -18,5 +18,5 @@ def greet(name):
     """Display a greeting."""
     print(f"Hello {name}!")
 
-
-greet("Guido")
+name = input("Enter name: ")
+greet(name)
