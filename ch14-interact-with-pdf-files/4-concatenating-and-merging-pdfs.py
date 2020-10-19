@@ -16,7 +16,7 @@ from PyPDF2 import PdfFileMerger
 
 
 BASE_PATH = Path.home() / "python-basics-exercises/" \
-    "ch13-interact-with-pdf-files/practice_files"
+    "ch14-interact-with-pdf-files/practice_files"
 
 pdf_paths = [BASE_PATH / "merge1.pdf", BASE_PATH / "merge2.pdf"]
 pdf_merger = PdfFileMerger()

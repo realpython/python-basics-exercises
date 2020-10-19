@@ -16,7 +16,7 @@ from PyPDF2 import PdfFileReader, PdfFileWriter
 
 
 pdf_path = Path.home() / "python-basics-exercises/" \
-    "ch13-interact-with-pdf-files/practice_files/split_and_rotate.pdf"
+    "ch14-interact-with-pdf-files/practice_files/split_and_rotate.pdf"
 
 pdf_reader = PdfFileReader(str(pdf_path))
 pdf_writer = PdfFileWriter()
