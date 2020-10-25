@@ -12,8 +12,13 @@ print(my_input)
 # Display the input string converted to lower-case letters
 print(my_input.lower())
 
+#Display the input string converted to upper case letters
+print(my_input.upper())
+
+#Display the input string to title case
+print(my_input.title())
 
 # Exercise 3
 # Take user input and display the number of input characters.
-input_string = input("Type something else: ")
+input_string = input('Type something else: ')
 print(len(input_string))
