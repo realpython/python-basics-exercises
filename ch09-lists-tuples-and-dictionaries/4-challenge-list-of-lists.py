@@ -36,8 +36,8 @@ def median(values):
     # Otherwise, if the length of the list is even, return
     # the mean of the two center values
     else:
-        left_center_index = (len(values) - 1) / 2
-        right_center_index = (len(values) + 1) / 2
+        left_center_index = (len(values) - 1) // 2
+        right_center_index = (len(values) + 1) // 2
         return mean([values[left_center_index], values[right_center_index]])
 
 
