@@ -38,6 +38,7 @@ for item in scores:
 output_csv_file = Path.home() / "high_scores.csv"
 with output_csv_file.open(mode="w", encoding="utf-8") as file:
     writer = csv.DictWriter(file, fieldnames=["name", "high_score"])
+    writer.writeheader()
     for name in high_scores:
         row_dict = {"name": name, "high_score": high_scores[name]}
         writer.writerow(row_dict)
