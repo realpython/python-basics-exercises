@@ -19,3 +19,20 @@ def get_cats_with_hats(array_of_cats):
 
 cats = [False] * (100 + 1)
 print(get_cats_with_hats(cats))
+
+## Alternate Solution
+
+cats = {}
+
+for i in range(1, 101):
+    cats[i] = False
+
+for i in range(1, 101):
+    for j in range(i,101,i):
+        cats[j] = not cats[j]
+
+print("Cats having hats")
+
+for i in cats:
+    if cats[i]:
+        print(f'Cat # {i} has a hat on')
