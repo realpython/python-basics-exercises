@@ -40,18 +40,31 @@ favorite_colors = [
 
 file_path = Path.home() / "favorite_colors.csv"
 
-with file_path.open(mode="w", encoding="utf-8") as file:
-    writer = csv.DictWriter(file, fieldnames=["name", "favorite_color"])
+def change_key(color, old_key, new_key):
+    value = color[old_key]
+    del color[old_key]
+    color[new_key] = value
+    return color
+
+favorite_colors =[change_key(color, 'favorite_color', 'favorite color')
+                  for color in favorite_colors]
+
+with file_path.open('w', encoding = 'utf-8') as file:
+    writer = csv.DictWriter(file, favorite_colors[0].keys())
     writer.writeheader()
     writer.writerows(favorite_colors)
-
 
 # Exercise 4
 favorite_colors = []
 
-with file_path.open(mode="r", encoding="utf-8") as file:
-    reader = csv.DictReader(file)
+with file_path.open('r', encoding = 'utf-8') as file:
+    header = file.readline()
+    header = header.replace('\n', '')
+    header = header.split(',')
+    
+    reader = csv.DictReader(file, fieldnames = header)
     for row in reader:
+        row = change_key(row, 'favorite color', 'favorite_color')
         favorite_colors.append(row)
 
 print(favorite_colors)
