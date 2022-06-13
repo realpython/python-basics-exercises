@@ -29,6 +29,7 @@ image1.replace(images_dir / "image1.png")
 file1.unlink()
 
 
-# # Exercise 5
+# Exercise 5
 import shutil
+
 shutil.rmtree(new_dir)

@@ -2,7 +2,7 @@
 # Solutions to review exercises
 
 
-# --- Exercise 1
+# Exercise 1
 # Display whether the length of user input is <, > or = 5 characters
 
 my_input = input("Type something: ")
@@ -15,7 +15,7 @@ else:
     print("Your input is 5 characters long.")
 
 
-# --- Exercise 2
+# Exercise 2
 # Number guessing program ("guess" the number 3)
 
 print("I'm thinking of a number between 1 and 10. Guess which one.")

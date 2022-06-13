@@ -5,7 +5,7 @@
 # Exercise 1
 def cube(num):
     """Return the cube of the input number."""
-    cube_num = num ** 3  # Could also use pow(num, 3)
+    cube_num = num**3  # Could also use pow(num, 3)
     return cube_num
 
 

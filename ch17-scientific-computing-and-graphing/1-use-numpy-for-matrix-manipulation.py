@@ -17,7 +17,7 @@ print(f"Mean is {first_matrix.mean()}")
 
 # Exercise 3
 # Square every entry and save in a new matrix
-second_matrix = first_matrix ** 2
+second_matrix = first_matrix**2
 
 # Exercise 4
 # Put first_matrix on top of second_matrix
