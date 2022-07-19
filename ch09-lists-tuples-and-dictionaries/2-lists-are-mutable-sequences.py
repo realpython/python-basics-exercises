@@ -8,8 +8,8 @@ food = ["rice", "beans"]
 
 
 # Exercise 2
-# Append the string "broccolo" to the food list using .append()
-food.append("brocolli")
+# Append the string "broccoli" to the food list using .append()
+food.append("broccoli")
 
 
 # Exercise 3
