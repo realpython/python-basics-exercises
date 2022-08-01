@@ -3,7 +3,6 @@
 
 
 def enrollment_stats(list_of_universities):
-
     # Variables
     total_students = []
     total_tuition = []
