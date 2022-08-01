@@ -15,8 +15,7 @@ from pathlib import Path
 from PyPDF2 import PdfFileReader, PdfFileWriter
 
 
-pdf_path = Path.home() / "python-basics-exercises/" \
-    "ch14-interact-with-pdf-files/practice_files/top_secret.pdf"
+pdf_path = Path.home() / "python-basics-exercises/ch14-interact-with-pdf-files/practice_files/top_secret.pdf"
 
 pdf_reader = PdfFileReader(str(pdf_path))
 pdf_writer = PdfFileWriter()

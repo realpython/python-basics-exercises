@@ -8,8 +8,7 @@ import csv
 import os
 
 # Change `path` to actual path on your system
-path = "C:/Real Python/python-basics-exercises/ch16-scientific-computing-and-graphing/\
-practice_files"
+path = "C:/Real Python/python-basics-exercises/ch16-scientific-computing-and-graphing/practice_files"
 
 years = []
 temperatures = []

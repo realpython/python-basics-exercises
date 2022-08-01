@@ -18,8 +18,7 @@ from PyPDF2 import PdfFileReader
 # We'll assume you downloaded the solutions folder and extracted it into
 # the home directory on your computer. If this is not the case, you'll
 # need to update the path below.
-pdf_path = Path.home() / "python-basics-exercises/" \
-    "ch14-interact-with-pdf-files/practice_files/zen.pdf"
+pdf_path = Path.home() / "python-basics-exercises/ch14-interact-with-pdf-files/practice_files/zen.pdf"
 
 # Now you can create the PdfFileReader instance. Remember that
 # PdfFileReader objects can only be instantiated with path strings, not

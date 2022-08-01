@@ -10,8 +10,7 @@ def get_page_text(page):
     return page.extractText()
 
 
-pdf_path = Path.home() / "python-basics-exercises/" \
-    "ch14-interact-with-pdf-files/practice_files/scrambled.pdf"
+pdf_path = Path.home() / "python-basics-exercises/ch14-interact-with-pdf-files/practice_files/scrambled.pdf"
 
 pdf_reader = PdfFileReader(str(pdf_path))
 pdf_writer = PdfFileWriter()
