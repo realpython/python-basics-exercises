@@ -1,4 +1,4 @@
-# 4.7 - Streamline Your Print Statements
+# 4.7 - Streamline Your Prints
 # Solutions to review exercies
 
 
@@ -6,7 +6,7 @@
 weight = 0.2
 animal = "newt"
 
-# Concatenate a number and a string in one print statement
+# Concatenate a number and a string in one print call
 print(str(weight) + " kg is the weight of the " + animal + ".")
 
 
