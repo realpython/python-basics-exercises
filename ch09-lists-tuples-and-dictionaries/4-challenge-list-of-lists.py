@@ -24,7 +24,7 @@ def mean(values):
 def median(values):
     """Return the median value of the list `values`"""
     values.sort()
-    # If the number of valus is odd,
+    # If the number of values is odd,
     # return the middle value of the list
     if len(values) % 2 == 1:
         # The value at the center of the list is the value
