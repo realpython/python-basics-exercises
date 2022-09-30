@@ -4,13 +4,7 @@
 from pathlib import Path
 
 # Change this path to match the location on your computer
-documents_dir = (
-    Path.home() /
-    "python-basics-exercises" /
-    "ch11-file-input-and-output" /
-    "practice_files" /
-    "documents"
-)
+documents_dir = Path.cwd() / "practice_files" / "documents"
 
 # Create an images/ directory in your home directory
 images_dir = Path.home() / "images"

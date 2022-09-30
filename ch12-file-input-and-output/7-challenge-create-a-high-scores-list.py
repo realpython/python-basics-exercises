@@ -6,12 +6,9 @@ from pathlib import Path
 
 # Change the path below to match the location on your computer
 scores_csv_path = (
-    Path.home()
-    / "github/realpython"
-    / "python-basics-exercises"
-    / "ch12-file-input-and-output"
+    Path.cwd()
     / "practice_files"
-    "scores.csv"
+    / "scores.csv"
 )
 
 with scores_csv_path.open(mode="r", encoding="utf-8") as file:
@@ -35,7 +32,7 @@ for item in scores:
 # The high_scores dictionary now contains one key for each name that was
 # in the scores.csv file, and each value is that player's highest score.
 
-output_csv_file = Path.home() / "high_scores.csv"
+output_csv_file = Path.cwd() / "high_scores.csv"
 with output_csv_file.open(mode="w", encoding="utf-8") as file:
     writer = csv.DictWriter(file, fieldnames=["name", "high_score"])
     writer.writeheader()
