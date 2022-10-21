@@ -56,8 +56,11 @@ capitals_dict = {
     "Wyoming": "Cheyenne",
 }
 
+# Pull random state and capital pair from the dict by casting to list of tuples
 state, capital = random.choice(list(capitals_dict.items()))
 
+# Game loop continues until the user inputs "exit"
+# or guesses the correct capital
 while True:
     guess = input(f"What is the capital of '{state}'? ").lower()
     if guess == "exit":
