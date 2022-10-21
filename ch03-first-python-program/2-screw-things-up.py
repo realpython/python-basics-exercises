@@ -5,10 +5,16 @@
 # Exercise 1
 # The following line won't run because of a syntax error
 print("hi)
+#or
+print('hi)
 
+#Single and Double quotes almost do the same work for single line string.
+      
 # We didn't close the double quotes at the end of the string.
 # The line above needed to have been:
 # print("hi")
+#or
+print('hi')
 
 
 # Exercise 2
@@ -23,4 +29,5 @@ print(hello)
 # This line could have been:
 #
 # my_string = "hello"
+#or my_string = 'hello'
 # print(my_string)
