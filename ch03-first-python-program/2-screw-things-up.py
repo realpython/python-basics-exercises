@@ -16,6 +16,7 @@ print("hi)
     even if the syntax error in the line above is corrected,
     because of a run-time error '''
 print(hello)
+print('hi')
 
 # We meant to print the string "hello";
 # a variable named 'hello' doesn't exist yet.
