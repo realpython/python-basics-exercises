@@ -14,9 +14,9 @@ print(f"2 cubed is {cube(2)}")
 
 
 # Exercise 2
-def greet(name):
+def greet(input_name):
     """Display a greeting."""
-    print(f"Hello {name}!")
+    print(f"Hello {input_name}!")
 
 
 greet("Guido")
