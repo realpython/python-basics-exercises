@@ -6,7 +6,7 @@ from random import randint
 
 
 # Exercise 1
-# Write a function that simulatee the roll of a die.
+# Write a function that simulates the roll of a die.
 def roll():
     """Return random integer between 1 and 6"""
     return randint(1, 6)
