@@ -16,9 +16,9 @@ import random
 
 
 def single_trial():
-    """Simulate repeatedly a coing  until both heads and tails are seen."""
+    """Simulate repeatedly flipping a coin until both heads and tails are seen."""
     # This function uses random.randint() to simulate a single coin toss.
-    # randing(0, 1) randomly returns 0 or 1 with equal probability. We can
+    # randint(0, 1) randomly returns 0 or 1 with equal probability. We can
     # use 0 to represent heads and 1 to represent tails.
 
     # Flip the coin the first time

@@ -26,7 +26,7 @@ for trial in range(0, num_trials):
     else:
         votes_for_B = votes_for_B + 1
 
-    # Determine who wins the erd region
+    # Determine who wins the 3rd region
     if random() < 0.17:
         votes_for_A = votes_for_A + 1
     else:

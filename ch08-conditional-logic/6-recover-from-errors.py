@@ -15,7 +15,7 @@ while True:
 
 
 # Exercise 2
-# Print character and specifid index in string
+# Print character and specified index in string
 
 input_string = input("Enter a string: ")
 

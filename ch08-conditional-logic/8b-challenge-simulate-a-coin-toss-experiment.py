@@ -31,7 +31,7 @@ for trial in range(num_trials):
     first_flip = coin_flip()
     flips = flips + 1
     # Continue flipping the coin and updating the tally until
-    # a different result is returned by coin_flips()
+    # a different result is returned by coin_flip()
     while coin_flip() == first_flip:
         flips = flips + 1
     # Increment the flip tally once more to account for the
