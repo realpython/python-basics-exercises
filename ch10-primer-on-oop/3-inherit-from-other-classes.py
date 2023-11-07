@@ -41,4 +41,7 @@ class Square(Rectangle):
 
 
 square = Square(4)
-print(square.area())
+print(square.area())  # 16
+
+square.width = 5  # Modifies .width but not .length
+print(square.area())  # 20
