@@ -43,7 +43,7 @@ ent_address1.grid(row=2, column=1)
 
 # Create the Label and Entry widgets for "Address Line 2"
 lbl_address2 = tk.Label(master=frm_form, text="Address Line 2:")
-ent_address2 = tk.Entry(master=frm_form, width=5)
+ent_address2 = tk.Entry(master=frm_form, width=50)
 # Place the widgets in the fourth row of the grid
 lbl_address2.grid(row=3, column=0, sticky=tk.E)
 ent_address2.grid(row=3, column=1)
