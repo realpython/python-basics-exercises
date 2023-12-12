@@ -23,7 +23,7 @@ print(position3)
 # Create a tuple containing the letters of your name from a string
 my_name = tuple("David")
 
-# Exercide 5
+# Exercise 5
 # Check whether or not x is in my_name
 print("x" in my_name)
 
