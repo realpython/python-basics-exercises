@@ -24,3 +24,14 @@ print(hello)
 #
 # my_string = "hello"
 # print(my_string)
+
+# other print style
+#
+# multi text print
+print("hello","world")
+print("hello"+"world")
+
+#\n for print in next line
+print("hello \nworld")
+
+
