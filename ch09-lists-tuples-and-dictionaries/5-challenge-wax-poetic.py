@@ -97,13 +97,18 @@ def make_poem():
         article = "An"
     else:
         article = "A"
+        
+    if "aeiou".find(adj3[0]) == 1: # First letter of adj3 is a vowel
+        article2 = "An"
+    else:
+        article2 = "A"
 
     # Create the poem
     poem = (
         f"{article} {adj1} {n1}\n\n"
         f"{article} {adj1} {n1} {v1} {prep1} the {adj2} {n2}\n"
         f"{adv1}, the {n1} {v2}\n"
-        f"the {n2} {v3} {prep2} a {adj3} {n3}"
+        f"the {n2} {v3} {prep2} {article2.lower()} {adj3} {n3}"
     )
 
     return poem
