@@ -15,3 +15,10 @@ print(num)
 # Exercise 3
 # NOTE: Your solution may vary!
 print(2e308)
+
+
+# Exercise 4
+print(5.22)
+      
+# Exercise 5
+print(32334.2332)
