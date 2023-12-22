@@ -24,3 +24,5 @@ print(hello)
 #
 # my_string = "hello"
 # print(my_string)
+print("hello") # if it is a string and we need to print whatever inside the "" .
+print(hello)    # If hello is a variable and we need to print the value that contained in the variable
